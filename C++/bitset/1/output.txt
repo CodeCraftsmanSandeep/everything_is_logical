@@ -1,0 +1,2 @@
+10 in binary format 0000000000001010
+111 in decimal format 7
