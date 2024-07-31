@@ -12,5 +12,6 @@
 
 | | | 
 |:--|:--|
-| to_ulong | | 
-| to_ullong | |
+| to_string(), to_ulong(), to_ullong() | | 
+
+

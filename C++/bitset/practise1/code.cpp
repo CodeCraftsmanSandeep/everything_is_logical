@@ -1,13 +1,18 @@
+#include <cmath>
 #include <bitset>
 #include <string> 
 #include <iostream>
 using namespace std;
 
+string decimalToBinary(int number){
+	if(number == 0) return "0";
+	return bitset <64> (number).to_string().substr(64 - (int(log2(number)) + 1));
+}
+
 int main(){
     // decimal to binary
-    int number = 10;
-    string binaryString = bitset <16> (number).to_string() ; // 16 bit representation of number
-    cout << number << " in binary format " << binaryString << "\n";
+    int number = 9;
+    cout << number << " in binary format " << decimalToBinary(number) << "\n";
 
     // binary to decimal
     string secondNumber = "111";
