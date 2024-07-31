@@ -1,0 +1,5 @@
+Binary to Decimal : 22
+Octal to Decimal : 505
+Hexa to Decimal(long long int) : 68719476735
+Valid number : 5
+Invalid part : 9100
