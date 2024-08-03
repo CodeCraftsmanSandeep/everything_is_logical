@@ -8,4 +8,6 @@
 | 3 | [GFG](https://www.geeksforgeeks.org/generate-n-bit-gray-codes/) |  [problem3.cpp](problem3.cpp) | Good facts of gray code and its generation | | O(2^N) | O(N) |
 | 4 | [GFG](https://www.geeksforgeeks.org/program-print-substrings-given-string/) <br/> Print all substrings of string | | | | O(N^2)** | O(N) | 
 | 5 | Find the number of distinct sub-seqeunces <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-subsequences/) | [solution4.cpp](solution4.cpp) | | ```dp``` | O(n) | O(1) |
-| 6 | Find number of times string T appears as sub-sequence in string S <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-occurrences-as-a-subsequence/) | [solution5](solution5) | See Dry run if needed | ```dp``` | O(n*m) | O(n*m) |
+| 6 | Find number of times string T appears as sub-sequence in string S <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-occurrences-as-a-subsequence/) | [solution5](solution5) | Want to see dry run? check it out here [solution5](solution5)  | ```dp``` | O(n*m) | O(n*m) |
+| 7 | [Find the length of Longest Common Subsequence (LCS)](https://leetcode.com/problems/longest-common-subsequence/submissions/1342591094/) | [highly_optimized_code](solution6.cpp) | | ```dp``` | O(n*m) | O(min(n,m)) |
+| 8 | [Find the Longest Common Subsequence string](https://www.naukri.com/code360/problems/print-longest-common-subsequence_8416383) | [my_code](find_lcs_string.cpp) | I dont think we can have better space complexity. | ```dp``` | O(n*m) | O(n*m) |  
