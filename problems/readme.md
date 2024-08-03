@@ -8,3 +8,4 @@
 | 3 | [GFG](https://www.geeksforgeeks.org/generate-n-bit-gray-codes/) |  [problem3.cpp](problem3.cpp) | Good facts of gray code and its generation | | O(2^N) | O(N) |
 | 4 | [GFG](https://www.geeksforgeeks.org/program-print-substrings-given-string/) <br/> Print all substrings of string | | | | O(N^2)** | O(N) | 
 | 5 | Find the number of distinct sub-seqeunces <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-subsequences/) | [solution4.cpp](solution4.cpp) | | ```dp``` | O(n) | O(1) |
+| 6 | Find number of times string T appears as sub-sequence in string S <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-occurrences-as-a-subsequence/) | [solution5](solution5) | See Dry run if needed | ```dp``` | O(n*m) | O(n*m) |
