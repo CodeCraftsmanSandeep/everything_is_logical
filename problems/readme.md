@@ -4,3 +4,4 @@
 | 2 | [GFG](https://www.geeksforgeeks.org/find-ith-index-character-in-a-binary-string-obtained-after-n-iterations-set-2/) | [problem2.cpp](problem2.cpp) | | | O(N) | O(N) |
 | 3 | [GFG](https://www.geeksforgeeks.org/generate-n-bit-gray-codes/) |  [problem3.cpp](problem3.cpp) | Good facts of gray code and its generation | | O(2^N) | O(N) |
 | 4 | [GFG](https://www.geeksforgeeks.org/program-print-substrings-given-string/) <br/> Print all substrings of string | | | | O(N^2) | O(N) | 
+| 5 | Find the number of distinct sub-seqeunces <br/> [GFG](https://www.geeksforgeeks.org/count-distinct-subsequences/) | [solution4.cpp](solution4.cpp) | | ```dp``` | O(n) | O(1) |
