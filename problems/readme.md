@@ -1,6 +1,6 @@
 # Indicators
 - ** is used for attenting grabbing of something placed near to it. (More fun!!)
-# Table (Most needed!!)
+# Table ( Most needed :-) )
 |S.No | Question | my stuff | notes | keywords | Time | Space
 |:---|:--|:--|:--|:--|:---|:---|
 |1 | [GFG](https://www.geeksforgeeks.org/swap-characters-in-a-string/) | [problem1.cpp](problem1.cpp) | Effecient approach is nice food for thought! | Nothing much!!, use brain to solve | O(N) | O(N) |
