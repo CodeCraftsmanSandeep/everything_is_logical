@@ -1,5 +1,9 @@
 # Indicators
 - ** is used for attenting grabbing of something placed near to it. (More fun!!)
+
+# notes
+- Highly optimized and cleaned codes are hard to understand. (especially seeing the same code after few weeks), so better do some tradeoff.
+
 # Table ( Most needed :-) )
 |S.No | Question | my stuff | notes | keywords | Time | Space
 |:---|:--|:--|:--|:--|:---|:---|
@@ -12,3 +16,4 @@
 | 7 | [Find the length of Longest Common Subsequence (LCS)](https://leetcode.com/problems/longest-common-subsequence/submissions/1342591094/) | [highly_optimized_code](solution6.cpp) | | ```dp``` | O(n*m) | O(min(n,m)) |
 | 8 | [Find the Longest Common Subsequence string](https://www.naukri.com/code360/problems/print-longest-common-subsequence_8416383) | [my_code](find_lcs_string.cpp) | I dont think we can have better space complexity. | ```dp``` | O(n*m) | O(n*m) |  
 | 9 | Find Shortest Common Subsequence <br/> [Find length](https://www.geeksforgeeks.org/shortest-common-supersequence/), [Find string](https://leetcode.com/problems/shortest-common-supersequence/description/) | [SCS.cpp](SCS.cpp), [space_optimized_SCS.cpp](space_optimized_SCS.cpp), [using_LCS_for_SCS.cpp](using_LCS_for_SCS.cpp) | Two approaches: 1) using direct dp 2) using LCS | ```dp``` | O(n*m) | O(min(n,m)) |
+| 10 | [Longest palindromic subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) | [Finding both length and string](LPS.cpp), [LPS_space_optimized.cpp](LPS_space_optimized.cpp) | Two approaches 1) using LCS 2) using direct dp | ```dp``` | O(n^2) | O(n) |
