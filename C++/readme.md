@@ -14,4 +14,11 @@
 |:--|:--|
 | to_string(), to_ulong(), to_ullong() | | 
 
+# operators
+
+| operator | notes |
+|:---------|:------|
+| / | n/m = sign(n)*sign(m)*(floor(abs(n) div abs(m))) |
+| % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0 and n != 0 |
+
 
