@@ -1,6 +1,6 @@
 - In C++ NULL is typically defined as  ```#define NULL 0``` (or) ```#define NULL ((void*)0)```
 
-```
+```cpp
 #include <iostream>
 
 void foo(int) {
