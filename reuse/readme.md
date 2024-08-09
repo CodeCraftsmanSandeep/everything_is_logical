@@ -7,7 +7,5 @@ Here, I listed the codes which **I think** are frequently used.
 | 3 | (binary to decimal) and (decimal to binary) | [../C++/bitset/practise1](../C++/bitset/practise1) | |
 | 4 | GCD and LCM | Finding_gcd(Time : O(log (min(a, b)), [euclid_recursive_code.cpp](euclid_recursive_code.cpp), [euclid_iterative_code.cpp](euclid_iterative_code.cpp) , [extended_gcd.cpp](extended_gcd.cpp))  | ```GCD(a, b) * LCM(a, b) = a*b``` <br/> Euclid's algorithm: <br/>GCD(a, b) = GCD(a - b, b) <br/>GCD(a, b) = GCD(a%b, b) <br/>  |
 | 5 | modular_multiplicative_inverse | [modular_multiplicative_inverse.cpp](modular_multiplicative_inverse.cpp) | |
-
-
-
+| 6 | Lucas theorem | | Useful for finding (n choose k)%m when m is small and n and k are large  | 
 

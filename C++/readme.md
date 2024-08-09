@@ -22,3 +22,4 @@
 | % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0 and n != 0 |
 
 
+- [nullptr vs NULL](nullptr_vs_NULL.md)
