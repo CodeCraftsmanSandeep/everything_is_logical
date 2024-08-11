@@ -18,4 +18,5 @@
 | 9 | Find Shortest Common Subsequence <br/> [Find length](https://www.geeksforgeeks.org/shortest-common-supersequence/), [Find string](https://leetcode.com/problems/shortest-common-supersequence/description/) | [SCS.cpp](SCS.cpp), [space_optimized_SCS.cpp](space_optimized_SCS.cpp), [using_LCS_for_SCS.cpp](using_LCS_for_SCS.cpp) | Two approaches: 1) using direct dp 2) using LCS | ```dp``` | O(n*m) | O(min(n,m)) |
 | 10 | [Longest palindromic subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) | [Finding both length and string](LPS.cpp), [LPS_space_optimized.cpp](LPS_space_optimized.cpp) | Two approaches 1) using LCS 2) using direct dp | ```dp``` | O(n^2) | O(n) |
 | 11 | [Longest palindromic substring] | with dp | there is effecient O(n) algo as well.| | | |
-| 12 | https://codeforces.com/problemset/problem/275/B | https://codeforces.com/contest/275/submission/275272759 | | ```dp``` | O(n^2 * m^2) | O(n*m) | 
+| 12 | https://codeforces.com/problemset/problem/275/B | https://codeforces.com/contest/275/submission/275272759 | | ```2-d dp``` | O(n^2 * m^2) | O(n*m) | 
+| 13 | Pair sum ([ques1](https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/)) | | | | ϴ(nlogn) if not sorted <br/> ϴ(n) if sorted | ϴ(1) |

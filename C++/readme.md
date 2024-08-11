@@ -22,4 +22,31 @@
 | % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0 and n != 0 |
 
 
+# vector
+- https://www.geeksforgeeks.org/vector-in-cpp-stl/
+
+# OOPS
+- Abstraction
+- Encapsulation
+- Data hiding
+- Inheritence
+	- Single inheritence
+	- Multilevel inheritence (Destructors are always called in reverse order of constructors) ([related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-4/))	
+	- Multiple inheritence
+	- Hierarchial inheritence
+	- Hybrid inheritence
+- Reusability
+
+### notes
+- getters and setters
+- diamond problem (src: [link](https://www.geeksforgeeks.org/multiple-inheritance-in-c/), [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-12/))
+	- solution: use ```virtual keyword```
+- The base class members cannot be directly assigned using initializer list in derived class member function. (src: [question_link](https://www.geeksforgeeks.org/questions/c-inheritance-question-11/))
+- A Base class pointer/reference can point/refer to a derived class object, but the other way is not possible. (src: [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-6/))
+- Object slicing [article](https://www.geeksforgeeks.org/object-slicing-in-c/)
+	- object slicing is not possible when base class has at least one **pure virtual method**
+
+# General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)
+- The default visibility in struct is public, whereas in class is private
+
