@@ -1,3 +1,0 @@
-- detect and remove cycle from linked list:
-	- https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
-	- using floyd's cycle detection algo

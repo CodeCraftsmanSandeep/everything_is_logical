@@ -1,0 +1,8 @@
+- detect and remove cycle from linked list:
+	- https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
+	- using floyd's cycle detection algo
+- Merge sort for linked list
+	- https://www.geeksforgeeks.org/merge-sort-for-doubly-linked-list/
+- Merge k sorted lists
+    - https://www.geeksforgeeks.org/merge-k-sorted-linked-lists/
+- 

@@ -1,0 +1,10 @@
+- Binary trees
+  - traversal techniques
+    - DFS
+      - inorder
+      - preorder
+      - postorder (can be used for deletion of binary tree)
+    - BFS (or) level order traversal
+  - Serilization and deserialization of binary trees
+    - https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/
+    - can we construct binary tree from inorder and preorder when the tree can have duplicates.
