@@ -40,7 +40,8 @@
 
 		string add(int num1, int num2){
 			return to_string(num1) + to_string(num2);
-		}```
+		}
+		```
 	  - But the below code will not cause any compilation errors <br/>
 		```cpp
 		int add(int num1, int num2){
@@ -52,6 +53,7 @@
 		}
 		```
 - function definition
+  - which contains the logic as well as it can define the function as well.
 
 # OOPS
 - Abstraction
@@ -64,22 +66,47 @@
 	- Hierarchial inheritence
 	- Hybrid inheritence
 - Reusability
+- Polymorphism
+  - ability to take many forms
+  - types
+    - compile time polymorphism
+      - function overloading
+        - functions can be overloaded, if the signatures are not the same
+        - do not forget to note the const keyword in function overloading. see this [article](https://www.geeksforgeeks.org/function-overloading-and-const-functions/)
+      - operator overloading
+    - run time polymorphism (Late binding and dynamic polymorphism are other names for runtime polymorphism)
+      - function overriding
+      - virtual functions
 
 ### notes
 - getters and setters
+- friend classes and functions in c++
 - diamond problem (src: [link](https://www.geeksforgeeks.org/multiple-inheritance-in-c/), [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-12/))
 	- solution: use ```virtual keyword```
 - The base class members cannot be directly assigned using initializer list in derived class member function. (src: [question_link](https://www.geeksforgeeks.org/questions/c-inheritance-question-11/))
 - A Base class pointer/reference can point/refer to a derived class object, but the other way is not possible. (src: [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-6/))
 - virtual functions
+  - virtual functions are resolved late, at runtime.
   - pure virtual functions
+    - [some more code](pure_virtual.cpp)
+  - vtable and vptr are used to get corresponding function definition at run-time.
+  - virtual destructors ([article](https://www.geeksforgeeks.org/virtual-destructor/))
 - Interfaces/pure abstract classes in C++
 - Object slicing [article](https://www.geeksforgeeks.org/object-slicing-in-c/)
 	- object slicing is not possible when base class has at least one **pure virtual method**
 
+# structures in c++
+
+# union in c++
+
+# exception handling in c++
+
+# Generic programming
+- https://www.geeksforgeeks.org/generics-in-c/
 
 # General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)
 - [segmentation fault in c++](https://www.geeksforgeeks.org/segmentation-fault-c-cpp/)
 - The default visibility in struct is public, whereas in class is private
+- shallow copy vs deep copy
 
