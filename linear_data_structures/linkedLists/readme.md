@@ -5,4 +5,6 @@
 	- https://www.geeksforgeeks.org/merge-sort-for-doubly-linked-list/
 - Merge k sorted lists
     - https://www.geeksforgeeks.org/merge-k-sorted-linked-lists/
-- 
+- [Flattening a linked list](https://www.geeksforgeeks.org/flattening-a-linked-list/)
+- [Partition the linked list](https://www.geeksforgeeks.org/partitioning-a-linked-list-around-a-given-value-and-keeping-the-original-order/)
+- [Cloning a linked list]9https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/)
