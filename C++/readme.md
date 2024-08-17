@@ -24,6 +24,8 @@
 
 # vector
 - https://www.geeksforgeeks.org/vector-in-cpp-stl/
+- Difference between ```emplace_back``` and ```push_back```
+  - [stackoverflow](https://stackoverflow.com/questions/26198350/c-stacks-push-vs-emplace/26198609)
 
 # functions
 - function prototype
@@ -99,10 +101,19 @@
 
 # union in c++
 
+# namepsace 
+- helps in avoiding name collisions.
+- gives good logical view.
+- can be nested.
+
 # exception handling in c++
 
 # Generic programming
 - https://www.geeksforgeeks.org/generics-in-c/
+- templates in c++
+- template spcialization
+- template argument deduction
+- template metaprogramming (computation at compile time)
 
 # General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)

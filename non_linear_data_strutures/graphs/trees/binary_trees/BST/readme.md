@@ -1,0 +1,2 @@
+- Iterative approach to check if the given binary tree is BST or not
+	- https://www.geeksforgeeks.org/iterative-approach-to-check-if-a-binary-tree-is-bst-or-not/

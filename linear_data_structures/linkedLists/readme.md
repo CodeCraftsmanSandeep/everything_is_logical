@@ -1,6 +1,7 @@
 - detect and remove cycle from linked list:
 	- https://www.geeksforgeeks.org/detect-and-remove-loop-in-a-linked-list/
 	- using floyd's cycle detection algo
+	- [find length of loop in linked list](https://www.geeksforgeeks.org/problems/find-length-of-loop/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
 - Merge sort for linked list
 	- https://www.geeksforgeeks.org/merge-sort-for-doubly-linked-list/
 - Merge k sorted lists
