@@ -22,4 +22,9 @@
 
 | title | notes |
 |:------|:------|
-| [min_heap.cpp](min_heap.cpp) | generic, dynamic min heap |
+| [min_heap.hpp](min_heap.hpp), [min_heap_test.cpp](min_heap_test.cpp) | generic, dynamic min heap |
+| [make_heap_and_heap_sort.cpp](make_heap_and_heap_sort.cpp) | Time complexity is O(n), space O(1), see proof: [proof_page1.jpg](proof_page1.jpg), [proof_page2.jpg](proof_page2.jpg) |
+| [make_heap_and_heap_sort.cpp](make_heap_and_heap_sort.cpp) | heap sort, time: O(nlogn), space: O(1) |
+
+
+

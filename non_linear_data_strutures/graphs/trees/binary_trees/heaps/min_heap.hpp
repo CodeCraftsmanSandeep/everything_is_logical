@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+
 template <typename T> class min_heap{
 private:
     T* arr;
@@ -17,6 +18,12 @@ public:
     void remove();
     T get();
     bool isEmpty();
+
+    min_heap(){
+    }
+
+    min_heap(T*& arr, int size): arr(arr), actual_size(size), reserved_size(size){
+    }
 };
 
 template <typename T> void min_heap<T>:: reallocate(){
@@ -86,16 +93,4 @@ template <typename T> void min_heap<T>::remove(){
     swap(arr[0], arr[actual_size-1]);
     actual_size--;
     min_heapify(0);
-}
-
-int main(){
-    min_heap <double> my_heap;
-    my_heap.insert(10);
-    my_heap.insert(100);
-    my_heap.insert(-10.923);
-
-    while(!my_heap.isEmpty()){
-        cout << my_heap.get() << "\n";
-        my_heap.remove();
-    }
 }
