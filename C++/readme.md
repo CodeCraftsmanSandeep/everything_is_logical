@@ -122,3 +122,5 @@
 - shallow copy vs deep copy
 - C++ arrays does not perform bound checking (but why??, this can cause memory leak)
   - see this code: [mem_leak.cpp](mem_leak.cpp)
+- Emplace vs insert in C++ containers
+  - [GFG](https://www.geeksforgeeks.org/emplace-vs-insert-c-stl/)

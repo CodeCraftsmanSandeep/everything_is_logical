@@ -63,4 +63,19 @@ int main(){
     std::stack<int,std::vector<int> > fourth (myvector);
 
     cout << "fourth top ele: " << fourth.top() << "\n";
+
+    // swapping two stacks
+    stack <int> st1;
+    stack <int> st2;
+
+    st1.push(100);
+    st1.push(200);
+
+    st2.push(-100);
+    cout << "Before swapping: " << st1.size() << ", " << st2.size() << "\n";
+
+    // time: O(1)
+    st1.swap(st2);
+
+    cout << "After swapping: " << st1.size() << ", " << st2.size() << "\n";
 }

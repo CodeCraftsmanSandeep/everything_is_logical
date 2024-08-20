@@ -1,0 +1,4 @@
+- Sort a nearly sorted array (or) k sorted array
+	- [nearly sorted array](https://www.geeksforgeeks.org/nearly-sorted-algorithm/)
+	- [k-sorted doubly linked list](https://www.geeksforgeeks.org/sort-k-sorted-doubly-linked-list/)
+	- [nearly_sorted.cpp](nearly_sorted.cpp)
