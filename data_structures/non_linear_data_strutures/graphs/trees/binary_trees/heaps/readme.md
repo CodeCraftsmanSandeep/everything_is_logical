@@ -18,7 +18,8 @@
     - BST O(logn)
 - Heap vs PQ
   - Heap is a specific data structure with the heap property and is commonly used to implement Priority Queues.
-  - Priority Queue is an abstract concept for a queue where each element has a priority, and the element with the highest or lowest priority is served first. A heap is one of the most efficient ways to implement a priority queue.  
+  - Priority Queue is an abstract concept for a queue where each element has a priority, and the element with the highest or lowest priority is served first. A heap is one of the most efficient ways to implement a priority queue. 
+- Height of heap (complete binary tree) is : floor(log2(n)) where n is the number of elements in heap.
 
 | title | notes |
 |:------|:------|
