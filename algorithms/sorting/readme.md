@@ -2,3 +2,7 @@
 	- [nearly sorted array](https://www.geeksforgeeks.org/nearly-sorted-algorithm/)
 	- [k-sorted doubly linked list](https://www.geeksforgeeks.org/sort-k-sorted-doubly-linked-list/)
 	- [nearly_sorted.cpp](nearly_sorted.cpp)
+- Merge k sorted lists
+  - Merge k sorted arrays:
+    - [question](https://www.geeksforgeeks.org/problems/merge-k-sorted-arrays/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
+    - [my_code](k_sorted_lists1.cpp)

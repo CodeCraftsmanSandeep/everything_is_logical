@@ -4,6 +4,11 @@
 
 ## pointers and references
 - In C++, once a reference is initialized to a variable, it cannot be changed to refer to another variable. A reference must always refer to the variable it was initialized with. This is in contrast to pointers, which can be reassigned to point to different variables.
+- Dangling references
+  - example: [pointers_and_references/practise1.cpp](pointers_and_references/practise1.cpp)
+  - Can be overcommed by:
+    - [pointers_and_references/practise2.cpp](pointers_and_references/practise2.cpp)
+    - [pointers_and_references/practise3.cpp](pointers_and_references/practise3.cpp)
 
 ## Strings
 | memorize | quick notes | my_stuff |
@@ -132,7 +137,9 @@
 
 # Type inference in C++
 - [Rules of inference](https://www.geeksforgeeks.org/rules-of-inference)
-- 
+- Type inference in C++
+  - By using keywords ```cpp auto ```, ```cpp decltype``` 
+    - [reference](https://www.geeksforgeeks.org/type-inference-in-c-auto-and-decltype/)
 
 # General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)
