@@ -1,4 +1,4 @@
-# Strings
+## Strings
 | memorize | quick notes | my_stuff |
 |:--|:--|:--|
 | reverse() | | |
@@ -8,26 +8,26 @@
 | stoi(), stol(), stoll() | | [string/practise1](string/practise1) |
 
 
-# bitset
+## bitset
 
 | | | 
 |:--|:--|
 | to_string(), to_ulong(), to_ullong() | | 
 
-# operators
+## operators
 
 | operator | notes |
 |:---------|:------|
 | / | n/m = sign(n)*sign(m)*(floor(abs(n) div abs(m))) |
-| % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0 and n != 0 |
+| % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0|
 
 
-# vector
+## vector
 - https://www.geeksforgeeks.org/vector-in-cpp-stl/
 - Difference between ```emplace_back``` and ```push_back```
   - [stackoverflow](https://stackoverflow.com/questions/26198350/c-stacks-push-vs-emplace/26198609)
 
-# functions
+## functions
 - function prototype
   - A function prototype is a declaration of a function that specifies the function’s name, return type, and parameters. It informs the compiler about the function’s existence and how it should be called, but it does not include the function body. Prototypes are usually placed at the beginning of the code file or in header files.
 - function signature
@@ -56,8 +56,16 @@
 		```
 - function definition
   - which contains the logic as well as it can define the function as well.
+- structs can be defined inside functions, which are called as local structs.
+- classes can be defined inside functions, which are called as local classes.
+- functions cannot be defined inside functions, but the similar functionality can be obtained by defining lambda functions inside functions.
+- 
 
-# OOPS
+
+### lambda functions
+
+
+## OOPS
 - Abstraction
 - Encapsulation
 - Data hiding
@@ -80,7 +88,7 @@
       - function overriding
       - virtual functions
 
-### notes
+### oops notes
 - getters and setters
 - friend classes and functions in c++
 - diamond problem (src: [link](https://www.geeksforgeeks.org/multiple-inheritance-in-c/), [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-12/))
@@ -115,6 +123,10 @@
 - template argument deduction
 - template metaprogramming (computation at compile time)
 
+# Type inference in C++
+- [Rules of inference](https://www.geeksforgeeks.org/rules-of-inference)
+- 
+
 # General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)
 - [segmentation fault in c++](https://www.geeksforgeeks.org/segmentation-fault-c-cpp/)
@@ -124,3 +136,4 @@
   - see this code: [mem_leak.cpp](mem_leak.cpp)
 - Emplace vs insert in C++ containers
   - [GFG](https://www.geeksforgeeks.org/emplace-vs-insert-c-stl/)
+
