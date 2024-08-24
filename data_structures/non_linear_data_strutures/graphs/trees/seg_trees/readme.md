@@ -7,6 +7,6 @@
 # questions
 - For each query (l, r, k) find number of i such l <= i <= k and a[i] > k
   - [question link](https://www.spoj.com/problems/KQUERY/)
-  - [effecient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the quries
+  - [effecient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the quries, inspired from comments from [blog](https://codeforces.com/blog/entry/10183#comment-156355)
   - [using merge sort tree](kqueryMergeSortTree.cpp), O(log^2(n)) on average per query on average, online quries
   - [using persistent seg tree](kqueryPersistent.cpp) , O(logn) time per query on average, online quries
