@@ -3,6 +3,11 @@
 	- [k-sorted doubly linked list](https://www.geeksforgeeks.org/sort-k-sorted-doubly-linked-list/)
 	- [nearly_sorted.cpp](nearly_sorted.cpp)
 - Merge k sorted lists
-  - Merge k sorted arrays:
+  - Merge k sorted arrays: [article](https://www.geeksforgeeks.org/merge-k-sorted-arrays/)
     - [question](https://www.geeksforgeeks.org/problems/merge-k-sorted-arrays/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
-    - [my_code](k_sorted_lists1.cpp)
+    - [my_code](k_sorted_lists1.cpp) using min heap
+    - another notable method is using divide and conquer technique.
+  - Merge k sorted linked lists
+    - [article](https://www.geeksforgeeks.org/merge-k-sorted-linked-lists/)
+- External merge sort
+  - [article](https://www.geeksforgeeks.org/external-sorting/)

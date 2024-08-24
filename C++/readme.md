@@ -144,8 +144,6 @@
 # General notes 
 - [nullptr vs NULL](nullptr_vs_NULL.md)
 - [segmentation fault in c++](https://www.geeksforgeeks.org/segmentation-fault-c-cpp/)
-- The default visibility in struct is public, whereas in class is private
-- shallow copy vs deep copy
 - C++ arrays does not perform bound checking (but why??, this can cause memory leak)
   - see this code: [mem_leak.cpp](mem_leak.cpp)
 - Emplace vs insert in C++ containers

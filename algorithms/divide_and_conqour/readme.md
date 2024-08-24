@@ -1,0 +1,2 @@
+- To do list:
+  - https://www.geeksforgeeks.org/introduction-to-divide-and-conquer-algorithm/
