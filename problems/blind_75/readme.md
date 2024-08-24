@@ -4,7 +4,8 @@
 | dp | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/description/) | [my code](climbing_stairs.cpp) | ✅ |
 | | [Coin change](https://leetcode.com/problems/coin-change/) | [my code](coin_change.cpp) | ✅ |
 | | Longest Increasing Subsequence | Need to do using BIT tree | ✅ |
-
+| | Longest Common Subsequence | | ✅ |
+| | Word break | [my code](word_break.cpp) | ✅ | 
 
 
 
