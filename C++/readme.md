@@ -2,6 +2,12 @@
 - STL (Standard Template Library): The STL specifically refers to components that use templates to provide generic algorithms and data structures, such as containers (std::vector, std::map), iterators, and algorithms.
 - Standard Library: This is a broader term that includes STL components as well as other components such as std::string, input/output facilities (like iostream), and other utilities.
 
+
+# enums in cpp
+- [GFG article](https://www.geeksforgeeks.org/enumeration-in-cpp/0)
+- Be careful while using enums
+  - see this example code : [enums.cpp](enums.cpp)
+
 ## pointers and references
 - In C++, once a reference is initialized to a variable, it cannot be changed to refer to another variable. A reference must always refer to the variable it was initialized with. This is in contrast to pointers, which can be reassigned to point to different variables.
 - Dangling references
