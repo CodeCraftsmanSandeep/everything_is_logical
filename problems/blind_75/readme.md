@@ -6,7 +6,12 @@
 | | Longest Increasing Subsequence | Need to do using BIT tree | ✅ |
 | | Longest Common Subsequence | | ✅ |
 | | Word break | [my code](word_break.cpp) | ✅ | 
-
+| | Combination sum | [my code](combinationSum.cpp) | ✅ |
+| | House robber | [my code](house_robber.cpp), n time, O(1) space | ✅ |
+| | House robber 2 | [my code](house_robber2.cpp), 2*n time, O(1) space | ✅ |
+| | Decode ways | [my code](decode_ways.cpp), n time, O(1) space is possible but makes code not cleaner, so I used a dummy string in my code | ✅ |
+| | Unique paths | [my code](unique_paths.cpp), n + m time, O(1) space, using combinatorics | ✅ |
+| | Jump game | [my code](jump_game.cpp), n time, O(1) space | ✅ |
 
 
 

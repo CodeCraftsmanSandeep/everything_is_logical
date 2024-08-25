@@ -7,7 +7,7 @@ This repository contains my scriblings on DSA(Data Structures and Algorithms) an
 
 # notes
 - cylomatic complexity:
-  - https://www.geeksforgeeks.org/cyclomatic-complexity/
+  - [GFG article](https://www.geeksforgeeks.org/cyclomatic-complexity/)
 
 
 
