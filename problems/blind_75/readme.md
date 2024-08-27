@@ -19,7 +19,7 @@
 | | 5 | Longest consecutive subsequence | [my code](longest_consecutive_subsequence.cpp), O(n) time (taking hashing: O(1)), O(n) space | ✅ |
 | | 6 |**[Alien dictionary](https://www.geeksforgeeks.org/problems/alien-dictionary/1) | [my code](alien_dictionary.cpp), O(k + n) space, O(k + n) time | ✅ |
 | | 7 |[Graph valid tree](https://www.geeksforgeeks.org/problems/is-it-a-tree/1) | [my code](graph_valid_tree.cpp), O(n + m) time (assuming time complexity for merge in union-find using path compression is constant time), O(n) space | ✅ |
-| | 8 |Number of connected compoentns | i) can be done using union find <br/> ii) doing dfs for every unvisited vertices |  ✅ | 
+| | 8 |Number of connected compoentns | Methods: <br/> i) using union find <br/> ii) doing dfs for every unvisited vertices |  ✅ | 
 
 <!-- 
 🔲
