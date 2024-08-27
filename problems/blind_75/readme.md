@@ -14,7 +14,8 @@
 | | Jump game | [my code](jump_game.cpp), n time, O(1) space | ✅ |
 | Graph | Clone graph | [my code](clone_graph.cpp), n+m time, O(n) space | ✅ |
 | | Course schedule | [my code](course_schedule.cpp), n+m time, n space |✅ |
-
+| | **pacific_atlantic_water_flow | [my code](pacific_atlantic_water_flow.cpp), 2*n*m time, O(n*m) space | ✅ |
+| | number_of_islands | [my code](number_of_islands.cpp), O(n*m) time, O(n*m) space | ✅ |
 
 
 <!-- 
