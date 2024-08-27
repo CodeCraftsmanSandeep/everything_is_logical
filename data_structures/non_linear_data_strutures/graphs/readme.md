@@ -23,3 +23,22 @@
     - Method 2:
       - Using khans algo, we can detect there is a cycle.
       - [cycle_detection_topo_sort.cpp](cycle_detection_topo_sort.cpp)
+
+- Disjoint set union (dsu)
+  - [GFG article](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
+  - Union by rank 
+    - logn time 
+  - Union by size
+  - Path compression
+    - nearly constant time 
+    -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
+
+
+- Connectivity
+  - Undirected graphs
+    - A undireted graph G is connnected graph if the number of connected components in G = 1
+  - Directed graphs
+    - SCC (Stringly Connected Components)
+      - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
+    - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
+    - 
