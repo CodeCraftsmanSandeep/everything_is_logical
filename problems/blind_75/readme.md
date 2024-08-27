@@ -18,6 +18,8 @@
 | | number_of_islands | [my code](number_of_islands.cpp), O(n*m) time, O(n*m) space | ✅ |
 | | Longest consecutive subsequence | [my code](longest_consecutive_subsequence.cpp), O(n) time (taking hashing: O(1)), O(n) space | ✅ |
 | | **[Alien dictionary](https://www.geeksforgeeks.org/problems/alien-dictionary/1) | [my code](alien_dictionary.cpp), O(k + n) space, O(k + n) time | ✅ |
+| | [Graph valid tree](https://www.geeksforgeeks.org/problems/is-it-a-tree/1) | [my code](graph_valid_tree.cpp), O(n + m) time (assuming time complexity for merge in union-find using path compression is constant time), O(n) space | ✅ |
+
 
 <!-- 
 🔲
