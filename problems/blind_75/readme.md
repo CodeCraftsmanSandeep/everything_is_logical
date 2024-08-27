@@ -16,7 +16,8 @@
 | | Course schedule | [my code](course_schedule.cpp), n+m time, n space |✅ |
 | | **pacific_atlantic_water_flow | [my code](pacific_atlantic_water_flow.cpp), 2*n*m time, O(n*m) space | ✅ |
 | | number_of_islands | [my code](number_of_islands.cpp), O(n*m) time, O(n*m) space | ✅ |
-
+| | Longest consecutive subsequence | [my code](longest_consecutive_subsequence.cpp), O(n) time (taking hashing: O(1)), O(n) space | ✅ |
+| | **[Alien dictionary](https://www.geeksforgeeks.org/problems/alien-dictionary/1) | [my code](alien_dictionary.cpp), O(k + n) space, O(k + n) time | ✅ |
 
 <!-- 
 🔲

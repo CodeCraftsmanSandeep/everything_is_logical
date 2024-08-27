@@ -11,3 +11,5 @@
     - [LIS_binary_search.cpp](LIS_binary_search.cpp)
     - [LIS_segment_tree.cpp](LIS_segment_tree.cpp)
     - LIS_BIT.cpp yet to come!!
+- Longest consecutive sub-sequence
+  - see blind 75 solutions for solution
