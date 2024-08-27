@@ -12,5 +12,5 @@
 
 ## problems
 1) [Given inorder, preorder and postorder of a tree, check whether they are of same tree](https://www.geeksforgeeks.org/problems/check-tree-traversal--141628/1):
-  - [my code](check_validity.cpp)
+     - [my code](check_validity.cpp)
 2) 
