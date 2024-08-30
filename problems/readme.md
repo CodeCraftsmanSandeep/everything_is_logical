@@ -19,7 +19,6 @@
 | 10 | [Longest palindromic subsequence](https://www.geeksforgeeks.org/longest-palindromic-subsequence-dp-12/) | [Finding both length and string](LPS.cpp), [LPS_space_optimized.cpp](LPS_space_optimized.cpp) | Two approaches 1) using LCS 2) using direct dp | ```dp``` | O(n^2) | O(n) |
 | 11 | Longest palindromic substring | with dp | there is effecient O(n) algo as well.| | | |
 | 12 | https://codeforces.com/problemset/problem/275/B | https://codeforces.com/contest/275/submission/275272759 | | ```2-d dp``` | O(n^2 * m^2) | O(n*m) | 
-| 13 | Pair sum ([ques1](https://www.geeksforgeeks.org/find-pairs-given-sum-doubly-linked-list/)) | | | | ϴ(nlogn) if not sorted <br/> ϴ(n) if sorted | ϴ(1) |
 | 14 | Find kth smallest element [ques](https://www.geeksforgeeks.org/kth-smallest-largest-element-in-unsorted-array/) | quick_select approach, count sort approach |
 | 15 | Kadanes algorithm, Maximum sub-array sum | [kadanes_algo.cpp](kadanes_algo.cpp) | | | O(n) | O(1) |
 
