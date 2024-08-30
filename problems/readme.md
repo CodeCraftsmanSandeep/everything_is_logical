@@ -20,6 +20,6 @@
 | 11 | Longest palindromic substring | with dp | there is effecient O(n) algo as well.| | | |
 | 12 | https://codeforces.com/problemset/problem/275/B | https://codeforces.com/contest/275/submission/275272759 | | ```2-d dp``` | O(n^2 * m^2) | O(n*m) | 
 | 14 | Find kth smallest element [ques](https://www.geeksforgeeks.org/kth-smallest-largest-element-in-unsorted-array/) | quick_select approach, count sort approach |
-| 15 | Kadanes algorithm, Maximum sub-array sum | [kadanes_algo.cpp](kadanes_algo.cpp) | | | O(n) | O(1) |
+
 
 

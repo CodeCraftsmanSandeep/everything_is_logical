@@ -1,0 +1,32 @@
+## Subarrays, Subsequences, Substrings problems:
+- Find the Longest Increasing Subseqeunce
+  - [article](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
+  - cool approaches:
+    - [LIS_dp.cpp](LIS_dp.cpp)
+    - [LIS_binary_search.cpp](LIS_binary_search.cpp)
+    - [LIS_segment_tree.cpp](LIS_segment_tree.cpp)
+    - LIS_BIT.cpp yet to come!!
+- Longest consecutive sub-sequence
+  - see blind 75 solutions for solution
+- [Maximum product subarray](https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
+  - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp) 
+- Maximum sub-array sum
+  - kadanes algo
+  - O(n) time
+  - O(1) space
+  - [kadanes_algo.cpp](kadanes_algo.cpp)
+- find the maximum for each sub-array of size k
+  - [question](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
+  - [max_sub_array.cpp](max_sub_array.cpp)
+- Longest palindromic substring
+  - [Find the length of longest palidromic substring]()
+    - 
+  - [Find the longest palindromic substring](https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1)
+    - O(n^2) time, O(1) space method: [LPSubstr1.cpp](LPS1.cpp)
+    - O(n^2) time, O(n^2) space method(dp method): [LPSubstr2.cpp](LPS2.cpp)
+    - slower algorithm 
+      - O(n^2) time, O(n) space (extra space for augumenting string)
+      - [LPSubstr3.cpp](LPSubstr3.cpp)
+    - manacher's algo 
+      - O(n) time, O(n) space
+      - Very complicated, need to do!!
