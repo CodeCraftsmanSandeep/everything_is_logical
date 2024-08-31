@@ -21,8 +21,8 @@
 - Longest palindromic substring
   - Find the length of longest palidromic substring
   - [Find the longest palindromic substring](https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1)
-    - O(n^2) time, O(1) space method: [LPSubstr1.cpp](LPS1.cpp)
-    - O(n^2) time, O(n^2) space method(dp method): [LPSubstr2.cpp](LPS2.cpp)
+    - O(n^2) time, O(1) space method: [LPSubstr1.cpp](LPSubstr1.cpp)
+    - O(n^2) time, O(n^2) space method(dp method): [LPSubstr2.cpp](LPSubstr2.cpp)
     - slower algorithm 
       - O(n^2) time, O(n) space (extra space for augumenting string)
       - [LPSubstr3.cpp](LPSubstr3.cpp)
