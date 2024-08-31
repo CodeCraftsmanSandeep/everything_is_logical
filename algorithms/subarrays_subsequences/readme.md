@@ -19,8 +19,7 @@
   - [question](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
   - [max_sub_array.cpp](max_sub_array.cpp)
 - Longest palindromic substring
-  - [Find the length of longest palidromic substring]()
-    - 
+  - Find the length of longest palidromic substring
   - [Find the longest palindromic substring](https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1)
     - O(n^2) time, O(1) space method: [LPSubstr1.cpp](LPS1.cpp)
     - O(n^2) time, O(n^2) space method(dp method): [LPSubstr2.cpp](LPS2.cpp)
