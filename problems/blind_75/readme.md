@@ -1,5 +1,7 @@
 | Class | local count |problem | notes | status |
 |:--------|:---|:---|:---------|:--------|
+| Array | 1 | | | | 
+| | 8 | [Search in rotated sorted array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/) | O(logn) time approach, O(1) space: [search_in_rotated_sorted_array.cpp](search_in_rotated_sorted_array.cpp), ```binary search``` | ✅ |
 | Binary | | Sum of Two integers without using arthimetic operators | [useful article](https://leetcode.com/problems/sum-of-two-integers/solutions/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently/) |✅|
 | dp | 1 | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/description/) | [my code](climbing_stairs.cpp) | ✅ |
 | | 2 | [Coin change](https://leetcode.com/problems/coin-change/) | [my code](coin_change.cpp) | ✅ |
