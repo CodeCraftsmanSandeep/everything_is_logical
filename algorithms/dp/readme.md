@@ -3,3 +3,6 @@
 - Number of times string 2 apperas as sub-string in string s1
   - [article](https://www.sanfoundry.com/c-program-count-occurrence-substring/)
   - not sure whether this is the optimized
+- **Edit distance**
+  - [Minimum number of operations (insert/delete/update) should be perfomed inorder to make two strings equal](https://www.geeksforgeeks.org/problems/edit-distance3702/1)
+  - [edit_distance.cpp](edit_distance.cpp)
