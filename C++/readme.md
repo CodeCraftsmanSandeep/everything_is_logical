@@ -1,7 +1,9 @@
 # libraries
 - STL (Standard Template Library): The STL specifically refers to components that use templates to provide generic algorithms and data structures, such as containers (std::vector, std::map), iterators, and algorithms.
 - Standard Library: This is a broader term that includes STL components as well as other components such as std::string, input/output facilities (like iostream), and other utilities.
-
+- std::initializer_list 
+  - [article](https://www.geeksforgeeks.org/std-initializer_list-in-cpp-11/)
+  - Important for implementing STL classes like vector, set etc..
 
 # enums in cpp
 - [GFG article](https://www.geeksforgeeks.org/enumeration-in-cpp/0)

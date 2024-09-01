@@ -1,65 +1,42 @@
 #include <iostream>
+#include <initializer_list>
+
 namespace my_space{
     template <typename T> 
     class vector{
     private:
         const int maximum_size = (int)1e9;
-        int reserved_size = 0;
-        int actual_size = 0;
+        int reserved_size = 0;                  // capacity
+        int actual_size = 0;                    // size
         T* arr = nullptr;
         void expand();
 
     public:
         vector();
-        vector(int );
-        vector(int, int);
-        int size();
-        int max_size();
-        bool empty();
+        vector(int );                       // size 
+        vector(int, T);                     // size, initial_value
+        vector(const vector <T>& );         // vector is created with assignment operator
+        vector(std::initializer_list <T>);  // initialized
+        ~vector();
+
+        int capacity() const;
+        int size() const;
+        int max_size() const;
+        bool empty() const ;
         void push_back(T );
         void pop_back();
         void resize(int );
-        T operator[](int );
+        void reserve(int );
+        T& operator[](int ) const;
+        vector <T>& operator=(const vector <T>& );
     };
-
-    template <typename T>
-    vector<T>::vector() {}
-
-    template <typename T>
-    vector<T>::vector(int n){
-        reserved_size = n;
-        actual_size = n;
-        arr = new T[n];
-    }
-
-    template <typename T>
-    vector<T>::vector(int n, int initial_value){
-        reserved_size = n;
-        actual_size = n;
-        arr = new T[n];
-        for(int i = 0; i < actual_size; i++) arr[i] = initial_value;
-    }
-
-    template <typename T> 
-    int vector<T>::size(){
-        return this->actual_size;
-    }
-
-    template <typename T>
-    int vector<T>::max_size(){
-        return this->maximum_size;
-    }
-
-    template <typename T>
-    bool vector<T>::empty(){
-        return actual_size == 0;
-    }
 
     template <typename T>
     void vector<T>::expand(){
         int new_size;
         if(reserved_size == 0) new_size = 1;
         else new_size = std::min(2*reserved_size, maximum_size);
+
         if(reserved_size == new_size){
             throw std::runtime_error("Maximum size reached, and size cannot be increased more\n");
         }
@@ -68,6 +45,69 @@ namespace my_space{
         reserved_size = new_size;
         delete[] arr;
         arr = new_arr;
+    }
+
+    template <typename T>
+    vector<T>::~vector() {delete[] arr; }
+
+    // custom construtor with no initialization
+    template <typename T>
+    vector<T>::vector() {}
+
+    // custom constructor with size
+    template <typename T>
+    vector<T>::vector(int n){
+        reserved_size = n;
+        actual_size = n;
+        arr = new T[n];
+    }
+
+    // custom constructor with size, initial_value
+    template <typename T>
+    vector<T>::vector(int n, T initial_value){
+        reserved_size = n;
+        actual_size = n;
+        arr = new T[n];
+        for(int i = 0; i < actual_size; i++) arr[i] = initial_value;
+    }
+
+    // custom constructor with assignment operator
+    template <typename T>
+    vector<T>::vector(const vector <T>& obj){
+        this->arr = new T[obj.size()];
+        for(int i = 0; i < obj.size(); i++) this->arr[i] = obj[i];
+        this->actual_size = obj.size();
+        this->reserved_size = obj.size();
+    }
+
+    template <typename T>
+    vector<T>::vector(std::initializer_list <T> list){
+        int n = list.size();
+        this->arr = new T[n];
+        reserved_size = n;
+        actual_size = n;
+        int i = 0;
+        for(auto ele: list) this->arr[i++] = ele;
+    }
+
+    template <typename T>
+    int vector<T>::capacity() const{
+        return this->reserved_size;
+    }
+
+    template <typename T> 
+    int vector<T>::size() const{
+        return this->actual_size;
+    }
+
+    template <typename T>
+    int vector<T>::max_size() const{
+        return this->maximum_size;
+    }
+
+    template <typename T>
+    bool vector<T>::empty() const {
+        return actual_size == 0;
     }
 
     template <typename T>
@@ -82,8 +122,9 @@ namespace my_space{
         actual_size--;
     }
 
+    // rvalue
     template <typename T>
-    T vector <T>::operator[](int index){
+    T& vector <T>::operator[](int index) const{
         if(index < actual_size) return arr[index];
         throw std::runtime_error("Out of bound\n");
     }
@@ -102,6 +143,33 @@ namespace my_space{
         delete[] arr;
         arr = new_arr;
     }
+
+
+    template <typename T>
+    void vector <T>::reserve(int n){
+        // reserving space for atleat n elements
+        if(n <= reserved_size) return;
+        T* new_arr = new T[n];
+        for(int i = 0; i < actual_size; i++) new_arr[i] = arr[i];
+        reserved_size = n;
+        delete[] arr;
+        arr = new_arr;
+    }
+
+    // assignment operation
+    template <typename T>
+    vector <T>& vector<T>::operator=(const vector <T>& obj){
+        if(this == &obj){
+            // self-assignment check
+            return *this;
+        }
+        delete[] arr;
+        arr = new T[obj.size()];
+        reserved_size = obj.size();
+        actual_size = obj.size();
+        for(int i = 0; i < obj.size(); i++) arr[i] = obj[i]; // copying elements
+        return *this;
+    }
 }
 
 int main(){
@@ -114,8 +182,24 @@ int main(){
 
     vec1.pop_back();
     vec1.pop_back();
-    vec1.pop_back();
-        // gives an error
+    // vec1.pop_back(); // gives a run-time error
+    std::cout << "Size: " << vec1.size() << "\n";
 
+    for(int i = 100; i < 200; i++) vec1.push_back(i);
+    std::cout << "Size: "  << vec1.size() << "\n";
+
+    my_space::vector <double> vec2 = vec1;
+    std::cout << vec1.size() << "\n";
+
+    my_space::vector <double> vec3 = {1, 2, 3};
+    vec2 = vec3;
+    vec2[0] = 100;
+    std::cout << "Size: " << vec2.size() << "\n";
+    std::cout << vec2[0] << "\n";
     
+    my_space::vector <double> vec4(vec3);
+    std::cout << "Size: " << vec4.size() << "\n";
+
+    my_space::vector <std::string> vec5(10, "sandeep");
+    std::cout << vec5[0] << "\n";
 }
