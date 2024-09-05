@@ -11,4 +11,17 @@ Below is a list of code snippets that I find frequently useful in solving proble
 | 5️⃣ | Modular Multiplicative Inverse | [modular_multiplicative_inverse.cpp](modular_multiplicative_inverse.cpp) | |
 | 6️⃣ | Lucas Theorem | N/A | Useful for finding `(n choose k) % m` when `m` is small and `n` and `k` are large |
 
+## Notes
+- **Stirling's Approximation**:  
+    Stirling’s approximation is one of the most famous and useful bounds for \( n! \). For large \( n \), the factorial grows very fast, and Stirling's approximation gives an estimate for \( n! \):
+    \[
+    n! \approx \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n
+    \]
+
+    This can be refined to give both lower and upper bounds:
+    \[
+    \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n \leq n! \leq \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n e^{\frac{1}{12n}}
+    \]
+    This is useful for asymptotic analysis of algorithms involving \( n! \).
+
 Feel free to explore these snippets and see how they can aid in problem-solving! 🚀
