@@ -8,6 +8,9 @@
   - Serilization and deserialization of binary trees
     - https://www.geeksforgeeks.org/serialize-deserialize-binary-tree/
     - can we construct binary tree from inorder and preorder when the tree can have duplicates??
+  - Lowest common ancestor (LCA) of two nodes in a binary tree
+    - [LCA](https://www.geeksforgeeks.org/problems/lowest-common-ancestor-in-a-binary-tree/1?page=2&company=Google&sortBy=submissions)
+    - [lca.cpp](lca.cpp)
 
 
 ## problems

@@ -1,4 +1,10 @@
+This is one of the hottest topics among competetive programming and dsa problems, which is also one of my favourite:
+
 ## Subarrays, Subsequences, Substrings problems:
+- [Find the smallest sub-array with sum greater than x](https://www.geeksforgeeks.org/problems/smallest-subarray-with-sum-greater-than-x5651/1)
+  - my code: [smallest_sub_array.cpp](smallest_sub_array.cpp)
+    - O(n) time
+    - O(1) space
 - Find the Longest Increasing Subseqeunce
   - [article](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
   - cool approaches:
@@ -29,3 +35,6 @@
     - manacher's algo 
       - O(n) time, O(n) space
       - Very complicated, need to do!!
+- Longest k unique characters substring
+  - [question](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
+  - My code: [longest_k_unique_characters.cpp](longest_k_unique_characters.cpp)
