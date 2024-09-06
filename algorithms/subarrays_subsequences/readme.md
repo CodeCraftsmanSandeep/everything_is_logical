@@ -17,7 +17,7 @@ This is one of the hottest topics among competetive programming and dsa problems
 - [Maximum product subarray](https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
   - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp) 
 - Maximum sub-array sum
-  - kadanes algo
+  - [kadanes algo](https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1)
   - O(n) time
   - O(1) space
   - [kadanes_algo.cpp](kadanes_algo.cpp)

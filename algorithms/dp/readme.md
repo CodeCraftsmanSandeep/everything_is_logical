@@ -10,3 +10,15 @@
 - **Edit distance**
   - [Minimum number of operations (insert/delete/update) should be perfomed inorder to make two strings equal](https://www.geeksforgeeks.org/problems/edit-distance3702/1)
   - [edit_distance.cpp](edit_distance.cpp)
+- **[Coin change](https://www.geeksforgeeks.org/problems/number-of-coins1824/1)**
+  - My code: [coin_change.cpp](coin_change.cpp)
+    - Time: O(sum*n)
+    - Space: O(sum)
+- **Knapsack variants**
+  - Zero one knapsack
+    - [Knapsack with duplicates](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1)
+      - [My code](zero_one_knap_sack_with_duplicates.cpp)
+        - Time: O(W*n)
+        - Space: O(W)
+  
+  

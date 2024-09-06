@@ -14,6 +14,4 @@ Below is a list of code snippets that I find frequently useful in solving proble
 ## Notes
 - **Stirling's Approximation**: 
     - n! ~= sqrt(2 * pi * n) * (n/e)^n
-
-
 Feel free to explore these snippets and see how they can aid in problem-solving! 🚀
