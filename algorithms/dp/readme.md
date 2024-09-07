@@ -44,7 +44,7 @@
           | 4 | Space optimized DP (tabulation approach) | [zero_one_knap_sack_4.cpp](zero_one_knap_sack_4.cpp) | O(N*W) | O(W) |
       - Printing items that are resulting in maximum value (a optimal solution)
         - [code](zero_one_knap_sack_with_duplicates_print_items.cpp)
-        - input-output pair:
+        - input-output pair1:
           - input: <br/> 
           ```
             7 20
@@ -59,5 +59,16 @@
             item 4 : (w=6, v=6)
             Maximum value: 24
           ```
-  
-  
+        - input-output pair2:
+          - input: <br/>
+          ```
+            3 50
+            10 20 30
+            60 100 120
+          ```
+          - output: <br/>
+          ```
+            item 1 : (w=20, v=100)
+            item 2 : (w=30, v=120)
+            Maximum value: 220
+          ```
