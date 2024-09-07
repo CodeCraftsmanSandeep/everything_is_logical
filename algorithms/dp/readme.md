@@ -26,13 +26,13 @@
     - Time: O(sum*n)
     - Space: O(sum)
 - **Knapsack variants** [article](https://www.geeksforgeeks.org/introduction-to-knapsack-problem-its-types-and-how-to-solve-them/)
-  - Zero one knapsack
-    - [Knapsack with duplicates](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1)
+  - 0-1 knapsack
+    - [0-1 Knapsack with duplicates](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1)
       - This is called unbounded knap-sack 
       - [My code](zero_one_knap_sack_with_duplicates.cpp)
         - Time: O(W*n)
         - Space: O(W)
-    - [Knapsack without duplicates](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
+    - [0-1 Knapsack without duplicates](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
       - This problem is bounded knapsack (but here number of items selected <= number of items (instead of some k))
       - It is important to understand why [zero_one_knap_sack_with_duplicates.cpp](zero_one_knap_sack_with_duplicates.cpp) fails for this problem.
       - Different solutions to find the maximum value that can be obtained
@@ -72,7 +72,7 @@
             item 2 : (w=30, v=120)
             Maximum value: 220
           ```
-    - **Bounded knapsack**
+    - 0-1 Bounded knapsack
       - Variant1:
         - Given N items, each item having a given weight Ci and a profit value Pi, the task is to maximize the profit by selecting a maximum of K items adding up to a maximum weight W.
         - [Different solutions](https://www.geeksforgeeks.org/maximize-profit-by-picking-elements-of-different-types-with-total-weight-k/):
