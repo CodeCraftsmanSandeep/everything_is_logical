@@ -5,10 +5,25 @@
   - [article](https://www.geeksforgeeks.org/std-initializer_list-in-cpp-11/)
   - Important for implementing STL classes like vector, set etc..
 
-# enums in cpp
-- [GFG article](https://www.geeksforgeeks.org/enumeration-in-cpp/0)
-- Be careful while using enums
-  - see this example code : [enums.cpp](enums.cpp)
+# Enums in C++
+- [GFG Article on Enums](https://www.geeksforgeeks.org/enumeration-in-cpp/)
+- **Key Considerations:**
+  - Be cautious when using enums. Check this example: [enums/enums.cpp](enums/enums.cpp)
+  
+- **Type Safety:**
+  - In C++, enums are strongly typed, meaning you can't implicitly convert between an enum and an `int` without an explicit cast. This provides better type safety than in C.
+  
+- **How the Compiler Handles Enums:**
+  - Enums are stored as integers by default. Internally, an enum variable holds the corresponding integer value of the defined constant.
+
+- **Restrictions:**
+  - C++ enums can only hold integral values (`int`, `char`, `bool`). Non-integral values like floating-point numbers are not allowed.
+
+- **Enum Classes (C++11 and later):**
+  - [Why Enum Classes?](https://www.geeksforgeeks.org/enum-classes-in-c-and-their-advantage-over-enum-datatype/)
+    - Prevents name conflicts: Two enums can't share the same name, and no variable can have a name that’s already part of an enum.
+    - Unlike traditional enums, they are strongly typed and scoped. Enum classes do not allow implicit conversion to `int`, and comparisons between different enums are not permitted.
+  - Example code: [enums/enum_classes.cpp](enums/enum_classes.cpp)
 
 ## pointers and references
 - In C++, once a reference is initialized to a variable, it cannot be changed to refer to another variable. A reference must always refer to the variable it was initialized with. This is in contrast to pointers, which can be reassigned to point to different variables.
