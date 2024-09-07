@@ -9,3 +9,6 @@ int knapSack(int W, vector <int>& wt, vector <int>& val){
     vector <vector <int>> dp(wt.size(), vector <int> (1+W, -1));
     return recurse(W, wt, val, wt.size() - 1, dp);
 }
+
+// works for
+// w[i] >= 0

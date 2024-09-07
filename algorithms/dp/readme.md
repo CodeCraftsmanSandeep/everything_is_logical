@@ -25,21 +25,39 @@
   - My code: [coin_change.cpp](coin_change.cpp)
     - Time: O(sum*n)
     - Space: O(sum)
-- **Knapsack variants**
+- **Knapsack variants** [article](https://www.geeksforgeeks.org/introduction-to-knapsack-problem-its-types-and-how-to-solve-them/)
   - Zero one knapsack
     - [Knapsack with duplicates](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1)
+      - This is called unbounded knap-sack 
       - [My code](zero_one_knap_sack_with_duplicates.cpp)
         - Time: O(W*n)
         - Space: O(W)
     - [Knapsack without duplicates](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
+      - This problem is bounded knapsack (but here number of items selected <= number of items (instead of some k))
       - It is important to understand why [zero_one_knap_sack_with_duplicates.cpp](zero_one_knap_sack_with_duplicates.cpp) fails for this problem.
-      - Different solutions
+      - Different solutions to find the maximum value that can be obtained
         - | S.no | Notes | code | time | space|
           |:-----|:------|:-----|:-----|:-----|
           | 1 | Using choose and not-choose recursive brute force approach. (generating all 2^N subsequences) | [zero_one_knap_sack_1.cpp](zero_one_knap_sack_1.cpp) | O(2^N) | O(N) recursive stack space |
           | 2 | Using choose and not-choose recursive memoization approach. (Top-down approach) | [zero_one_knap_sack_2.cpp](zero_one_knap_sack_2.cpp) | O(N*W) | O(N*W) space for table + O(N) recursive stack space |
           | 3 | DP (tabulation approach) | [zero_one_knap_sack_3.cpp](zero_one_knap_sack_3.cpp) | O(N*W) | O(N*W) |
           | 4 | Space optimized DP (tabulation approach) | [zero_one_knap_sack_4.cpp](zero_one_knap_sack_4.cpp) | O(N*W) | O(W) |
-
+      - Printing items that are resulting in maximum value (a optimal solution)
+        - [code](zero_one_knap_sack_with_duplicates_print_items.cpp)
+        - input-output pair:
+          - input: <br/> 
+          ```
+            7 20
+            6 5 1 5 6 5 9
+            5 3 4 9 6 1 1
+          ```
+          - output: <br/>
+          ```
+            item 0 : (w=6, v=5)
+            item 2 : (w=1, v=4)
+            item 3 : (w=5, v=9)
+            item 4 : (w=6, v=6)
+            Maximum value: 24
+          ```
   
   
