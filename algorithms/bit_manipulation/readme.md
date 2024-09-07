@@ -4,6 +4,7 @@
   - [question](https://leetcode.com/problems/bitwise-and-of-numbers-range/description/)
 - Number of 1 bits in a binary representation of number n
   - [question](https://leetcode.com/problems/number-of-1-bits/submissions/1363323311/)
+- [Find nth number in a sequence in which every number containing 9 is removed from sequence.](https://www.geeksforgeeks.org/problems/nth-natural-number/1)
 
 # notes
 - n = n&(n-1) 
