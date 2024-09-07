@@ -1,3 +1,12 @@
+# Notes
+- The following are the two main properties of a problem that suggest that the given problem can be solved using dp
+  - 1) Overlapping subproblems
+  - 2) Optimal substructure
+    - A given problem is said to have Optimal Substructure Property if the optimal solution of the given problem can be obtained by using the optimal solution to its subproblems instead of trying every possible way to solve the subproblems. 
+
+
+# Problems
+
 - [Rod cutting problem](https://www.geeksforgeeks.org/problems/rod-cutting0840/1)
   - [rod_cutting.cpp](rod_cutting.cpp)
   - O(n^2) time
@@ -20,5 +29,8 @@
       - [My code](zero_one_knap_sack_with_duplicates.cpp)
         - Time: O(W*n)
         - Space: O(W)
+    - [Knapsack without duplicates](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
+      - It is important to understand why [zero_one_knap_sack_with_duplicates.cpp](zero_one_knap_sack_with_duplicates.cpp) fails for this problem.
+      - 
   
   
