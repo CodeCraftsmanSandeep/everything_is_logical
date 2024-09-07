@@ -3,7 +3,9 @@
   - 1) Overlapping subproblems
   - 2) Optimal substructure
     - A given problem is said to have Optimal Substructure Property if the optimal solution of the given problem can be obtained by using the optimal solution to its subproblems instead of trying every possible way to solve the subproblems. 
-
+- [Tabulation vs Memoization](https://www.geeksforgeeks.org/tabulation-vs-memoization/)
+  - Memoization is a top-down approach where we cache the results of function calls and return the cached result if the function is called again with the same inputs. Memoization is typically implemented using recursion and is well-suited for problems that have a relatively small set of inputs.
+  - Tabulation is a bottom-up approach where we store the results of the subproblems in a table and use these results to solve larger subproblems until we solve the entire problem. Tabulation is typically implemented using iteration and is well-suited for problems that have a large set of inputs.
 
 # Problems
 
@@ -31,6 +33,13 @@
         - Space: O(W)
     - [Knapsack without duplicates](https://www.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1)
       - It is important to understand why [zero_one_knap_sack_with_duplicates.cpp](zero_one_knap_sack_with_duplicates.cpp) fails for this problem.
-      - 
+      - Different solutions
+        - | S.no | Notes | code | time | space|
+          |:-----|:------|:-----|:-----|:-----|
+          | 1 | Using choose and not-choose recursive brute force approach. (generating all 2^N subsequences) | [zero_one_knap_sack_1.cpp](zero_one_knap_sack_1.cpp) | O(2^N) | O(N) recursive stack space |
+          | 2 | Using choose and not-choose recursive memoization approach. (Top-down approach) | [zero_one_knap_sack_2.cpp](zero_one_knap_sack_2.cpp) | O(N*W) | O(N*W) space for table + O(N) recursive stack space |
+          | 3 | DP (tabulation approach) | [zero_one_knap_sack_3.cpp](zero_one_knap_sack_3.cpp) | O(N*W) | O(N*W) |
+          | 4 | Space optimized DP (tabulation approach) | [zero_one_knap_sack_4.cpp](zero_one_knap_sack_4.cpp) | O(N*W) | O(W) |
+
   
   
