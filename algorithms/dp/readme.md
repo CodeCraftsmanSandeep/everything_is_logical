@@ -72,3 +72,12 @@
             item 2 : (w=30, v=120)
             Maximum value: 220
           ```
+    - **Bounded knapsack**
+      - Variant1:
+        - Given N items, each item having a given weight Ci and a profit value Pi, the task is to maximize the profit by selecting a maximum of K items adding up to a maximum weight W.
+        - [Different solutions](https://www.geeksforgeeks.org/maximize-profit-by-picking-elements-of-different-types-with-total-weight-k/):
+          - | S.No | Notes | code | time | space
+            | 1 | Memoized approach | [bounded_knapsack_1.cpp](bounded_knapsack_1.cpp) | O(N*W*K) | O(N*W*K) |
+            | 2 | dp (tabulation) | [bounded_knapsack_2.cpp](bounded_knapsack_2.cpp) | O(N*W*K) | O(N*W*K) | 
+            | 3 | space optimized dp (tabulation) | [bounded_knapsack_3.cpp](bounded_knapsack_3.cpp) | O(N*W*K) | O(W*K) |
+        
