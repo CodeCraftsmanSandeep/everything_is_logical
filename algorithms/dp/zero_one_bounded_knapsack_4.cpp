@@ -37,3 +37,14 @@ int main(){
 
     cout << findOptimalValue(n, W, u, w, c) << "\n";
 }
+
+/*
+Test case:
+4 17
+5 3 4 8 
+6 1 2 8 
+7 6 7 8
+
+Output:
+53
+*/

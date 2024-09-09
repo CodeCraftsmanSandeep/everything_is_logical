@@ -8,37 +8,47 @@ in total?
 #include <vector>
 using namespace std;
 
-int findOptimalValue(int n, int W, vector <int>& u, vector <int>& weight, vector <int>& cost){
-    vector <int> new_weights;
-    vector <int> new_costs;
-    for(int i = 0; i < n; i++){
-        int two_power = 0;
-        int completed = 0;
-        while((1 << two_power) <= cost[i]){
-            completed += (1 << two_power);
-            
-        }
-    }
-
-
-    vector <vector <int> > dp(1+n, vector <int> (W, 0));
+int zero_one_knapsack(const int n, const int W, const vector <int>& weight, vector <int>& cost){
+    // dp[i][w] = optimal value where the knapsack capacity is w using items weight[i:], cost[i:]
+    vector < vector <int> > dp(1+n, vector <int> (1+W, 0));
     for(int i = n-1; i >= 0; i--){
-        for(int w = 1; w <= W; w++){
+        for(int w = W; w >= 0; w--){
             dp[i][w] = dp[i+1][w];
-            for(int j = 1; j <= u[i] && w >= j*weight[i]; j++){
-                dp[i][w] = max(dp[i][w], j*cost[i] + dp[i+1][w-j*weight[i]]);
-            }
+            if(weight[i] <= w) dp[i][w] = max(dp[i][w], cost[i] + dp[i+1][w-weight[i]]);
         }
     }
     return dp[0][W];
+}
+
+int findOptimalValue(int n, int W, vector <int>& freq, vector <int>& weight, vector <int>& cost){
+    vector <int> new_weights;
+    vector <int> new_costs;
+    int two_power, completed;
+    for(int i = 0; i < n; i++){
+        two_power = 0;
+        completed = 0;
+        while((1 << two_power) + completed <= freq[i]){
+            completed += (1 << two_power);
+            new_weights.push_back(weight[i]*(1 << two_power));
+            new_costs.push_back(cost[i]*(1 << two_power));
+            two_power++;
+        }
+        if(completed != freq[i]){
+            new_weights.push_back((freq[i] - completed)*weight[i]);
+            new_costs.push_back((freq[i] - completed)*cost[i]);
+            completed += (freq[i] - completed);
+        }
+    }
+
+    return zero_one_knapsack(new_weights.size(), W, new_weights, new_costs);
 }
 
 int main(){
     int n, W;
     cin >> n >> W;
 
-    vector <int> u(n);
-    for(int i = 0; i < n; i++) cin >> u[i];
+    vector <int> freq(n);
+    for(int i = 0; i < n; i++) cin >> freq[i];
 
     vector <int> w(n);
     for(int i = 0; i < n; i++) cin >> w[i];
@@ -46,5 +56,17 @@ int main(){
     vector <int> c(n);
     for(int i = 0; i < n; i++) cin >> c[i];
 
-    cout << findOptimalValue(n, W, u, w, c) << "\n";
+    cout << findOptimalValue(n, W, freq, w, c) << "\n";
 }
+
+/*
+Test case:
+4 17
+5 3 4 8 
+6 1 2 8 
+7 6 7 8
+
+Output:
+53
+
+*/

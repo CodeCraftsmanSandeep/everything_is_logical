@@ -83,11 +83,10 @@
             | 3 | space optimized dp (tabulation) | [zero_one_bounded_knapsack_3.cpp](zero_one_bounded_knapsack_3.cpp) | O(N*W*K) | O(W*K) |
       - Variant 2:
         - You are given n types of items, you have ui items of ith type, and each item of ith type weighs wi and costs ci. What is the maximal cost you can get by picking some items weighing at most W in total?
-        - [Solutions blog](http://dhruvbird.blogspot.com/2011/09/integer-01-bounded-knapsack-problem.html), Let M the mean of number of items of each type
+        - [Solutions blog](http://dhruvbird.blogspot.com/2011/09/integer-01-bounded-knapsack-problem.html), Let M the mean of number of items of each type. 
+        - Brute force solution [broute_force_zero_one_bounded_knapsack.cpp](broute_force_zero_one_bounded_knapsack.cpp), Time: O((1+freq[0]) * (1 + freq[1]) * .. * (1+freq[n-1])), Space: O(n) 
           - | S.No | Notes | code | time | space |
             |:-----|:------|:-----|:-----|:------|
             | 1 | Directly using knapsack, without using much brain | [zero_one_bounded_knapsack_4.cpp](zero_one_bounded_knapsack_4.cpp) | O(W * N * M) | O(W*N), can be optimized to O(W) but not done to maintain clarity |
-            | 2 | Using knapsack and little 🧠, Try to proove as the proof is hot. | | O(W * N * logM) | O(W * N * logM), can be optimized to O(W) but not done to maintain clarity | 
-            | 3 | using knapsack and 🧠 | | | |
-
-        
+            | 2 | Using knapsack and little 🧠, Try to prove as the proof is hot. | [zero_one_bounded_knapsack_5.cpp](zero_one_bounded_knapsack_5.cpp) | O(W * N * logM) | O(W * N * logM), can be optimized to O(W) but not done to maintain clarity | 
+            | 3 | using knapsack and 🧠 | [zero_one_bounded_knapsack_6.cpp](zero_one_bounded_knapsack_6.cpp) NEED TO CODE | O(W * N) | O(W * N) can be optimzed to O(W) but not done to maintain clarity |
