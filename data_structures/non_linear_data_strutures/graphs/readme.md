@@ -34,11 +34,21 @@
     -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
 
 
-- Connectivity
+- **Connectivity**
   - Undirected graphs
     - A undireted graph G is connnected graph if the number of connected components in G = 1
   - Directed graphs
-    - SCC (Stringly Connected Components)
+    - SCC (Strongly Connected Components)
       - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
     - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
-    - 
+-------
+- Euler path:
+  - In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits every edge exactly once (allowing for revisiting vertices)
+- Eulerian circuit or Eulerian cycle
+  - An Eulerian circuit or Eulerian cycle is an Eulerian trail that starts and ends on the same vertex.
+  - Euler's theorem:
+    - A connected graph has an Euler cycle if and only if every vertex has even degree.
+- For the existence of Eulerian trails it is necessary that zero or two vertices have an odd degree. If there are no vertices of odd degree, all Eulerian trails are circuits. If there are exactly two vertices of odd degree, all Eulerian trails start at one of them and end at the other. A graph that has an Eulerian trail but not an Eulerian circuit is called semi-Eulerian.
+-------
+
+
