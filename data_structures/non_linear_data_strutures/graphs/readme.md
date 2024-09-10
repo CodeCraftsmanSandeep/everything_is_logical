@@ -42,13 +42,28 @@
       - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
     - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
 -------
-- Euler path:
+- **Euler path**:
   - In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits every edge exactly once (allowing for revisiting vertices)
-- Eulerian circuit or Eulerian cycle
+- **Eulerian circuit or Eulerian cycle**
   - An Eulerian circuit or Eulerian cycle is an Eulerian trail that starts and ends on the same vertex.
-  - Euler's theorem:
+  - **Euler's theorem**:
     - A connected graph has an Euler cycle if and only if every vertex has even degree.
+  - A graph which has eulerian cycle is called Euler graph.
 - For the existence of Eulerian trails it is necessary that zero or two vertices have an odd degree. If there are no vertices of odd degree, all Eulerian trails are circuits. If there are exactly two vertices of odd degree, all Eulerian trails start at one of them and end at the other. A graph that has an Eulerian trail but not an Eulerian circuit is called semi-Eulerian.
--------
+- An undirected graph has euler cycle if
+  1) All vertices with non-zero degree are connected. We don’t care about vertices with zero degree because they don’t belong to Eulerian Cycle or Path (we only consider all edges). 
+  2) All vertices have even degree.
+- An undirected graph has euler path if:
+  1) All vertices with non-zero degree are connected. We don’t care about vertices with zero degree because they don’t belong to Eulerian Cycle or Path (we only consider all edges). 
+  2) zero or two vertices have odd degree and all other vertices have even degree. Note that only one vertex with odd degree is not possible in an undirected graph (sum of all degrees is always even in an undirected graph with no self-loops)
+- [Check if a graph is euler (or) semi-euler graph?](https://www.geeksforgeeks.org/problems/euler-circuit-and-path/1)
+  - [My code](euler_graphs_detection.cpp)
+    - O(n + m) time, O(n) space
+- [Find the euler cycle (or) euler path if exists?]()
 
+-------
+- Hamiltonian
+
+-------
+--
 
