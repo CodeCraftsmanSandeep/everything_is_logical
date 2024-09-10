@@ -13,6 +13,7 @@ class Solution{
 	
 	void explore(vector <vector <int>>& adj, vector <bool>& visited, int u){
 	    visited[u] = true;
+        // using add cout << u << " "; to print the current SCC
 	    for(auto v: adj[u]) if(!visited[v]) explore(adj, visited, v);
 	}
 	

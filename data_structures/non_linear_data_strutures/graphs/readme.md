@@ -66,7 +66,10 @@
     - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
     - Kosaraju's algorithm
       - can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
-        - [Find number of SCC's ?](kosarajus_algo.cpp)
+        - [Find number of SCC's ?](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)
+          - [My code](kosarajus_algo.cpp)
+          - Time: 2 times DFS, O(n + m)
+          - Space: O(n + m) for transpose of the graph + O(n) for stack + O(m) recursive stack for dfs
     - Find the number of SCC's
     - Print all SCC's
 -------
