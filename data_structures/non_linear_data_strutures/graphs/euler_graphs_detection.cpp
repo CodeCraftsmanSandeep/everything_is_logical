@@ -21,7 +21,9 @@ public:
             size[p2] += size[p1];
         }
     }
-    
+
+    // this is correct assuming that there no self loops
+    // if self loops are there need to be care
     bool connectedWithoutDegreeZeroVertices(int n, vector <int> adj[]){
         vector <int> parent(n);
         iota(parent.begin(), parent.end(), 0);

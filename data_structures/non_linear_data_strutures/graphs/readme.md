@@ -1,8 +1,31 @@
+# Concepts
+1) Graph traversals
+  - DFS
+  - BFS
+2) Topological sorting
+  - DFS based approach
+  - Kahn's algorithm
+3) Cycle detection
+  - back edge detection in undirected graphs
+4) DSU
+  - path compression
+5) Connectivity
+  - SCC (Strongly Connected Components)
+6) Articulation point (or) cut vertices
+7) Euler paths and circuits
+8) Hamiltonian
+
+
+
+-------
+
+
+
 - graphs can be 
   - weighted (or) unweighted
   - directed (or) undirected
 
-# Concepts
+
 - Topological sorting
   - Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u-v, vertex u comes before v in the ordering.
   - Topological order is defined for directed graph, because a undirected edge is itself a cycle!!
@@ -38,9 +61,19 @@
   - Undirected graphs
     - A undireted graph G is connnected graph if the number of connected components in G = 1
   - Directed graphs
-    - SCC (Strongly Connected Components)
+    - SCC (Strongly Connected Components) [article](https://www.geeksforgeeks.org/strongly-connected-components/)
       - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
     - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
+    - Kosaraju's algorithm
+      - can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
+        - [Find number of SCC's ?](kosarajus_algo.cpp)
+    - Find the number of SCC's
+    - Print all SCC's
+-------
+#### **Articulation point (or) cut vertex**:
+- A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
+- 
+
 -------
 - **Euler path**:
   - In graph theory, an Eulerian trail (or Eulerian path) is a trail in a finite graph that visits every edge exactly once (allowing for revisiting vertices)
