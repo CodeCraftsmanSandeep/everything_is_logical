@@ -24,9 +24,28 @@
 - graphs can be 
   - weighted (or) unweighted
   - directed (or) undirected
+-------
+#### Traversal techniques
+- **DFS**
+  - DFS tree:
+    - A rooted directed tree which is constructed by doing DFS on a graph
+  -  In the DFS tree, a vertex u is the parent of another vertex v, if v is discovered by u. 
+  - DFS forest:
+    - Collection of DFS trees
+  - Tree edge:
+    - Edge that is part of DFS tree, i.e edge which is used while performing DFS traversal.
+  - Back Edge: 
+    - An edge that connects a vertex to one of its ancestors in the DFS tree. Back edges indicate cycles and are used to help find strongly connected components.
+  - Forward Edge: 
+    - An edge that connects a vertex to one of its descendants, but is not part of the DFS tree.
+  - Cross Edge: 
+    - An edge that connects two vertices that are in different DFS trees (i.e., different branches) and do not have an ancestor-descendant relationship.
+  - Cross edges do not affect the identification of SCCs since they don't form part of cycles. Therefore, while identifying SCCs, you only care about tree edges and back edges because they help identify cycles and strongly connected components.
 
+  
 
-- Topological sorting
+-------
+#### Topological sorting
   - Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u-v, vertex u comes before v in the ordering.
   - Topological order is defined for directed graph, because a undirected edge is itself a cycle!!
   - Topological order exists iff G is DAG
@@ -46,8 +65,9 @@
     - Method 2:
       - Using khans algo, we can detect there is a cycle.
       - [cycle_detection_topo_sort.cpp](cycle_detection_topo_sort.cpp)
-
-- Disjoint set union (dsu)
+-------
+#### Disjoint set union (dsu)
+  - This is a spicy data structure.
   - [GFG article](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
   - Union by rank 
     - logn time 
@@ -55,27 +75,43 @@
   - Path compression
     - nearly constant time 
     -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
-
-
-- **Connectivity**
+-------
+#### Connectivity
   - Undirected graphs
     - A undireted graph G is connnected graph if the number of connected components in G = 1
   - Directed graphs
     - SCC (Strongly Connected Components) [article](https://www.geeksforgeeks.org/strongly-connected-components/)
       - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
     - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
-    - Kosaraju's algorithm
-      - can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
+    - kosaraju's algo and Tarjan's algo can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
+    - **Kosaraju's algorithm**
+      - This algo has very interesting proof of correctness.
         - [Find number of SCC's ?](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)
           - [My code](kosarajus_algo.cpp)
           - Time: 2 times DFS, O(n + m)
-          - Space: O(n + m) for transpose of the graph + O(n) for stack + O(m) recursive stack for dfs
-    - Find the number of SCC's
-    - Print all SCC's
+          - Auxillary space: O(n + m) for transpose of the graph + O(n) for stack + O(n) recursive stack for dfs
+    - **Tarjan's algorithm**
+      - Only one DFS tarversal of graph is needed.
+      - [Find SCC's?](https://www.geeksforgeeks.org/problems/strongly-connected-component-tarjanss-algo-1587115621/1)
+        - [My code](tarjans_algo.cpp)
+          - Time: O(n + m) for dfs + O(n) for stack
+          - Auxillary space: O(n) 
+  
 -------
-#### **Articulation point (or) cut vertex**:
+#### Bridges (cut-edge) in a graph
+- A edge e is called a bridge if by erasing the edge e, the number of connected components in graph increases by one.
+- If you remove an edge from a graph, the maximum difference in the number of connected components is 1.
+
+-------
+#### Articulation point (or) cut vertex:
 - A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
-- 
+- [Find all articulation points](https://www.geeksforgeeks.org/problems/articulation-point2616/1)
+  - [My code](articulation_points.cpp)
+    - O(|V| + |E|) time
+    - O(|V|) auxillary space
+- In DFS tree, a vertex u is an articulation point if one of the following two conditions is true. 
+  1) u is the root of the DFS tree and it has at least two children. 
+  2) u is not the root of the DFS tree and it has a child v such that no vertex in the subtree rooted with v has a back edge to one of the ancestors in DFS tree of u.
 
 -------
 - **Euler path**:
