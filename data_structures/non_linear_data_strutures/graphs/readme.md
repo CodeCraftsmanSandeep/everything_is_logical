@@ -1,25 +1,21 @@
 # Concepts
 1) Graph traversals
-  - DFS
-  - BFS
+    - DFS
+    - BFS
 2) Topological sorting
-  - DFS based approach
-  - Kahn's algorithm
+    - DFS based approach
+    - Kahn's algorithm
 3) Cycle detection
-  - back edge detection in undirected graphs
+    - back edge detection in undirected graphs
 4) DSU
-  - path compression
+    - path compression
 5) Connectivity
-  - SCC (Strongly Connected Components)
+    - SCC (Strongly Connected Components)
 6) Articulation point (or) cut vertices
 7) Euler paths and circuits
 8) Hamiltonian
 
-
-
 -------
-
-
 
 - graphs can be 
   - weighted (or) unweighted
@@ -56,8 +52,8 @@
       - DAG has at least one vertex v such that indegree(v) = 0
       - DAG has at least one vertex v such that outdegree(u) = 0
       - [topo_sort_khans_algo.cpp](topo_sort_khans_algo.cpp) is my code.
-
-- Cycle detection
+-------
+#### Cycle detection
   - In directed graphs
     - Method 1:
       - A directed graph G has a cycle in it iff there is a back edge [i.e., a node points to one of its ancestors in a DFS tree] present in the graph.
