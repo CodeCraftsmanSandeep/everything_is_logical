@@ -38,66 +38,92 @@
     - An edge that connects two vertices that are in different DFS trees (i.e., different branches) and do not have an ancestor-descendant relationship.
   - Cross edges do not affect the identification of SCCs since they don't form part of cycles. Therefore, while identifying SCCs, you only care about tree edges and back edges because they help identify cycles and strongly connected components.
 
-  
-
 -------
 #### Topological sorting
-  - Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u-v, vertex u comes before v in the ordering.
-  - Topological order is defined for directed graph, because a undirected edge is itself a cycle!!
-  - Topological order exists iff G is DAG
-  - Topological order is not unique.
-  - Find any topological order of G
-    1) using stack(or linked list) and dfs. [topo_sort_dfs.cpp](topo_sort_dfs.cpp), O(n + m) time, O(n) space
-    2) (it is a BFS kind of algo) Kahn's algo
-      - DAG has at least one vertex v such that indegree(v) = 0
-      - DAG has at least one vertex v such that outdegree(u) = 0
-      - [topo_sort_khans_algo.cpp](topo_sort_khans_algo.cpp) is my code.
+- Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u-v, vertex u comes before v in the ordering.
+- Topological order is defined for directed graph, because a undirected edge is itself a cycle!!
+- Topological order exists iff G is DAG
+- Topological order may not be unique.
+- Find any topological order of G
+  1) using stack(or linked list) and dfs. 
+    - [topo_sort_dfs.cpp](topo_sort_dfs.cpp)
+      - Time: O(n + m) for dfs
+      - Space: O(n) auxillary space for stack
+  2) (it is a BFS kind of algo) Kahn's algo
+    - DAG has at least one vertex v such that indegree(v) = 0
+    - DAG has at least one vertex v such that outdegree(u) = 0
+    - [topo_sort_khans_algo.cpp](topo_sort_khans_algo.cpp) is my code.
+      - Time: O(n + m) + O(n) + O(n + m)
+      - Space: O(n) auxillary space for indegree array and queue.
+    - Kahn's algo can also be used for cycle detection.
+    - More than a algorithm, khan's algorithm is food for thought.
 -------
 #### Cycle detection
-  - In directed graphs
-    - Method 1:
-      - A directed graph G has a cycle in it iff there is a back edge [i.e., a node points to one of its ancestors in a DFS tree] present in the graph.
-      - [back_edge_detection.cpp](back_edge_detection.cpp) uses above fact. n+m time and 2n + O(n) space
-    - Method 2:
-      - Using khans algo, we can detect there is a cycle.
-      - [cycle_detection_topo_sort.cpp](cycle_detection_topo_sort.cpp)
+- Directed graphs:
+  - DFS (or) BFS can be used to detect cycle.
+    - Time: O(n)
+      - Only O(n) time is required to find a cycle in an n-vertex graph, since at most n − 1 edges can be tree edges.
+    - Space: O(n)
+  - DSU can also be used to detect cycle.
+    - [My code](cycle_detection_using_dsu.cpp)
+      - Time: O((n)*alpha(n))
+        - it is not n+m because atmost n edges needed to be merged to detect whether a 
+      - Space: O(n) auxillary space for storing representatives.
+  - Finding all cycles in a undirected graph is a hard problem
+    - The largest cycle (hamiltonian cycle) bound is iteself is (n-1)!/2
+    - Note: Each back edge need not nessarily correspond to one cycle in graph G.
+      - Example: Complete graph K4
+- In directed graphs
+  - Method 1:
+    - A directed graph G has a directed cycle in it iff there is a back edge [i.e., a node points to one of its ancestors in a DFS tree] present in the graph.
+    - [back_edge_detection.cpp](back_edge_detection.cpp) uses above fact. 
+      - Time: n+m
+      - Space: 2n + O(n)
+  - Method 2:
+    - Using khans algo, we can detect there is a cycle.
+    - [cycle_detection_topo_sort.cpp](cycle_detection_topo_sort.cpp)
+
 -------
 #### Disjoint set union (dsu)
-  - This is a spicy data structure.
-  - [GFG article](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
-  - Union by rank 
-    - logn time 
-  - Union by size
-  - Path compression
-    - nearly constant time 
-    -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
+- This is a spicy data structure.
+- [GFG article](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
+- Union by rank 
+  - O(logn) time 
+- Union by size
+- Path compression
+  - nearly constant time 
+  -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
 -------
 #### Connectivity
-  - Undirected graphs
-    - A undireted graph G is connnected graph if the number of connected components in G = 1
-  - Directed graphs
-    - SCC (Strongly Connected Components) [article](https://www.geeksforgeeks.org/strongly-connected-components/)
-      - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
-    - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
-    - kosaraju's algo and Tarjan's algo can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
-    - **Kosaraju's algorithm**
-      - This algo has very interesting proof of correctness.
-        - [Find number of SCC's ?](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)
-          - [My code](kosarajus_algo.cpp)
-          - Time: 2 times DFS, O(n + m)
-          - Auxillary space: O(n + m) for transpose of the graph + O(n) for stack + O(n) recursive stack for dfs
-    - **Tarjan's algorithm**
-      - Only one DFS tarversal of graph is needed.
-      - [Find SCC's?](https://www.geeksforgeeks.org/problems/strongly-connected-component-tarjanss-algo-1587115621/1)
-        - [My code](tarjans_algo.cpp)
-          - Time: O(n + m) for dfs + O(n) for stack
-          - Auxillary space: O(n) 
-  
+- Undirected graphs
+  - A undireted graph G is connnected graph if the number of connected components in G = 1
+- Directed graphs
+  - SCC (Strongly Connected Components) [article](https://www.geeksforgeeks.org/strongly-connected-components/)
+    - A strongly connected component of a directed graph is a maximal subgraph where every pair of vertices is mutually reachable.
+  - A directed graph G is stronlgy connected graph if the number of strongly connected components in G = 1
+  - kosaraju's algo and Tarjan's algo can be used to solve both problems of (Q1. Finding the number of SCC's) and (Q2. Print all SCC's)
+  - **Kosaraju's algorithm**
+    - This algo has very interesting proof of correctness.
+      - [Find number of SCC's ?](https://www.geeksforgeeks.org/problems/strongly-connected-components-kosarajus-algo/1)
+        - [My code](kosarajus_algo.cpp)
+        - Time: 2 times DFS, O(n + m)
+        - Auxillary space: O(n + m) for transpose of the graph + O(n) for stack + O(n) recursive stack for dfs
+  - **Tarjan's algorithm**
+    - Only one DFS tarversal of graph is needed.
+    - [Find SCC's?](https://www.geeksforgeeks.org/problems/strongly-connected-component-tarjanss-algo-1587115621/1)
+      - [My code](tarjans_algo.cpp)
+        - Time: O(n + m) for dfs + O(n) for stack
+        - Auxillary space: O(n) 
+
 -------
 #### Bridges (cut-edge) in a graph
 - A edge e is called a bridge if by erasing the edge e, the number of connected components in graph increases by one.
 - If you remove an edge from a graph, the maximum difference in the number of connected components is 1.
-
+- [Check whether a edge is bridge edge (or) not?](https://www.geeksforgeeks.org/problems/bridge-edge-in-graph/1)
+  - [is_bridge.cpp](is_bridge.cpp)
+    - O(n+m) for dfs
+    - O(n) auxillary space
+  
 -------
 #### Articulation point (or) cut vertex:
 - A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
@@ -130,8 +156,8 @@
 - [Find the euler cycle (or) euler path if exists?]()
 
 -------
-- Hamiltonian
-
+- **Hamiltonian**
+- Number of hamiltonian cycles O((n-1)! / 2)
 -------
 --
 

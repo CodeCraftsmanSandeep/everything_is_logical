@@ -15,3 +15,7 @@ Below is a list of code snippets that I find frequently useful in solving proble
 - **Stirling's Approximation**: 
     - n! ~= sqrt(2 * pi * n) * (n/e)^n
 Feel free to explore these snippets and see how they can aid in problem-solving! 🚀
+-----
+#### Sequence and series
+- 1 + 2 + 3 + .. + n = n(n+1)/2
+- 1^2 + 2^2 + 3^2 + ... + n^2 = n*(n+1)(2n+1)/6

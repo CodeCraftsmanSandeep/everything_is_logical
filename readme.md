@@ -25,4 +25,13 @@ Welcome to my repository! This is where I jot down my notes and practice materia
   - `1e18 < 2^(63) - 1 < 1e19`  
     (Where \(2^{63} - 1 = 9.22 \times 1e18\))
 
+- Complexity analysis
+  - Amortized analysis:
+    - Amortized time complexity is a method for analyzing the average time complexity of a sequence of operations in an algorithm, rather than the worst-case time complexity of a single operation.
+    - This approach is particularly useful for algorithms that have expensive operations that happen only rarely, such as:
+      - Eg: Dynamic arrays, DSU using path compression. 
+      - Amortized time complexity typically refers to analyzing the average time per operation over a sequence of operations, and is not typically used to describe Quick Sort. Instead, it's the average-case complexity that is Θ(n log n) for Quick Sort.
+
+-------
+
 Feel free to explore and contribute! 😊
