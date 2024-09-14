@@ -20,6 +20,7 @@
 - graphs can be 
   - weighted (or) unweighted
   - directed (or) undirected
+
 -------
 #### Traversal techniques
 - **DFS**
@@ -164,5 +165,10 @@
 - **Hamiltonian**
 - Number of hamiltonian cycles O((n-1)! / 2)
 -------
---
+
+
+## Questions
+
+1) [Find the number of paths from u to v in a DAG?](https://www.geeksforgeeks.org/count-possible-paths-two-vertices/)
+
 
