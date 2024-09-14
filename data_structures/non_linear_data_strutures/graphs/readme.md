@@ -121,9 +121,13 @@
 - If you remove an edge from a graph, the maximum difference in the number of connected components is 1.
 - [Check whether a edge is bridge edge (or) not?](https://www.geeksforgeeks.org/problems/bridge-edge-in-graph/1)
   - [is_bridge.cpp](is_bridge.cpp)
-    - O(n+m) for dfs
+    - O(n+m) time for dfs
     - O(n) auxillary space
-  
+- [Find all bridges in a graph](https://leetcode.com/problems/critical-connections-in-a-network/description/). This algorithm is based on tarjan's algorithm technique.
+  - [My code](find_bridges.cpp)
+    - O(n + m) time for dfs
+    - O(n) auxillary space for storing time, O(n) auxillary space for stack
+
 -------
 #### Articulation point (or) cut vertex:
 - A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
@@ -134,6 +138,7 @@
 - In DFS tree, a vertex u is an articulation point if one of the following two conditions is true. 
   1) u is the root of the DFS tree and it has at least two children. 
   2) u is not the root of the DFS tree and it has a child v such that no vertex in the subtree rooted with v has a back edge to one of the ancestors in DFS tree of u.
+- Bridges and articulation points are important to know, as this will give information of vulnerabilities of the graph.
 
 -------
 - **Euler path**:
