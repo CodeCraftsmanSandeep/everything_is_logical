@@ -132,7 +132,7 @@
 #### Articulation point (or) cut vertex:
 - A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
 - [Find all articulation points](https://www.geeksforgeeks.org/problems/articulation-point2616/1)
-  - [My code](articulation_points.cpp)
+  - [My code](articulation_points.cpp) (code using tarjans algo technique)
     - O(|V| + |E|) time
     - O(|V|) auxillary space
 - In DFS tree, a vertex u is an articulation point if one of the following two conditions is true. 
