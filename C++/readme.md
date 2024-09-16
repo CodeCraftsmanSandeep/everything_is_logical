@@ -126,6 +126,8 @@
 ### oops notes
 - getters and setters
 - friend classes and functions in c++
+  - [Article](https://www.geeksforgeeks.org/friend-class-function-cpp/)
+  - Friendship is not inherited. [Article](https://www.geeksforgeeks.org/inheritance-and-friendship-in-cpp/)
 - diamond problem (src: [link](https://www.geeksforgeeks.org/multiple-inheritance-in-c/), [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-12/))
 	- solution: use ```virtual keyword```
 - The base class members cannot be directly assigned using initializer list in derived class member function. (src: [question_link](https://www.geeksforgeeks.org/questions/c-inheritance-question-11/))

@@ -38,3 +38,7 @@ This is one of the hottest topics among competetive programming and dsa problems
 - Longest k unique characters substring
   - [question](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
   - My code: [longest_k_unique_characters.cpp](longest_k_unique_characters.cpp)
+- [Find the longest substring which is valid parenthesis.](https://www.geeksforgeeks.org/problems/longest-valid-parentheses5657/1)
+  - [My code](longest_k_unique_characters.cpp)
+  - O(N) time
+  - O(N) auxillary space

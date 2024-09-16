@@ -15,6 +15,11 @@ Explore these problems to deepen your understanding of stacks and their applicat
 1. **Next Greater Element (NGE)**:  
    - Problem Link: [GeeksforGeeks - Next Greater Element](https://www.geeksforgeeks.org/next-greater-element/)
    - Learn about the [Monotonic Stack](https://www.geeksforgeeks.org/introduction-to-monotonic-stack-2/), which can be used to solve this problem efficiently.
+   - We can find next smaller element index and previous smaller element index in just one loop: 
+      - [next_and_prev_smaller.cpp](next_and_prev_smaller.cpp)
+         - Time: O(N)
+         - Space: O(N)
+   - Related question: [question](https://www.geeksforgeeks.org/problems/maximum-rectangular-area-in-a-histogram-1587115620/1)
 
 2. **Lexicographically Largest or Smallest Subsequence with Distinct Characters**:
    - Find the subsequence with unique characters that is lexicographically smallest or largest.

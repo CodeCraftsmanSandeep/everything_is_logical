@@ -170,5 +170,4 @@
 ## Questions
 
 1) [Find the number of paths from u to v in a DAG?](https://www.geeksforgeeks.org/count-possible-paths-two-vertices/)
-
-
+2) [Find the minimum number of edges to be removed to make a undirected graph acyclic?](https://www.geeksforgeeks.org/minimum-number-of-edges-required-to-be-removed-from-an-undirected-graph-to-make-it-acyclic/)
