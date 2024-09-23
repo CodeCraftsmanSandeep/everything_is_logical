@@ -6,6 +6,9 @@
   - [question](https://leetcode.com/problems/number-of-1-bits/submissions/1363323311/)
 - [Find nth number in a sequence in which every number containing 9 is removed from sequence.](https://www.geeksforgeeks.org/problems/nth-natural-number/1)
 - [Find non-duplicate numbers](https://www.geeksforgeeks.org/problems/finding-the-numbers0215/1)
+- [Find the maximum of two numbers without using comprision operator](https://www.geeksforgeeks.org/compute-maximum-of-two-integers-in-c-c-using-bitwise-operators/)
+  - [My code](finding_max.cpp) 
+  - related question: [Find the smallest number in 3 numbers.](https://www.geeksforgeeks.org/smallest-of-three-integers-without-comparison-operators/)
 
 # notes
 - n = n&(n-1) 
