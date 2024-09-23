@@ -9,6 +9,10 @@
 - [Find the maximum of two numbers without using comprision operator](https://www.geeksforgeeks.org/compute-maximum-of-two-integers-in-c-c-using-bitwise-operators/)
   - [My code](finding_max.cpp) 
   - related question: [Find the smallest number in 3 numbers.](https://www.geeksforgeeks.org/smallest-of-three-integers-without-comparison-operators/)
+- [Find two repeated numbers](https://www.geeksforgeeks.org/problems/two-repeated-elements-1587115621/1)
+  - [find_two_repeated_numbers.cpp](find_two_repeated_numbers.cpp)
+    - Time: O(n)
+    - Auxillary space: O(1)
 
 # notes
 - n = n&(n-1) 

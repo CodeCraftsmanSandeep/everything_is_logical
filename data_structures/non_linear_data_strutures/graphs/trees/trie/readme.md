@@ -1,4 +1,4 @@
-1) [Word break problem](https://www.geeksforgeeks.org/problems/word-break1352/1)
+1) [Word break problem](https://www.geeksforgeeks.org/problems/word-break-trie--141631/1)
     - [word_break_dp_optimized.cpp](word_break_dp_optimized.cpp)
         - Time: O(n^2 * hashing_time)
         - Auxillary space: O(n)
