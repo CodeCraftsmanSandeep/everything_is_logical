@@ -5,5 +5,5 @@
     - [Trie based solution](word_break_using_trie.cpp)
         - Time: O(n*m)
             - where n is the length of the string
-            -       m is the length of the longest string in dictionary
+            - m is the length of the longest string in dictionary
         - Auxillary space: O(n + 26*m)
