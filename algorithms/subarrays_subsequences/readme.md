@@ -42,3 +42,10 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [My code](longest_k_unique_characters.cpp)
   - O(N) time
   - O(N) auxillary space
+- [Find the smallest substring in s which contains all characters in string p]
+  - [smallest_substring_1.cpp](smallest_substring_1.cpp)
+    - Time: 26*|s| = O(|s|)
+    - Auxillary space: O(26*2) = O(1)
+  - [smallest_substring_2.cpp](smallest_substring_2.cpp), optimized code
+    - Time: |s| + 26 = O(|s|)
+    - Auxillary space: O(26*2) = O(1)
