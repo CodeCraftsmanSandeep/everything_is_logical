@@ -11,7 +11,16 @@
 - C and C++ are fast because statically typed languages are faster than dynamically typed languages.
 - C/C++ are general purpose languages.
     - SQL, HTML, Verilog are not general purpose programming languages.
-
+- Mid, Low, High level languages
+    - High level languages
+        - Python, Java
+    - Mid level languages
+        - C, C++
+    - Low level languages
+        - Assembly languages
+        - Machine code
+- auto keyword is present in C but is redundant. 
+    - auto in C and C++ are completely different.
 # Contents
 1) Stack libraries and dynamic libraries
     - [Article](https://www.geeksforgeeks.org/static-vs-dynamic-libraries/)
@@ -38,6 +47,10 @@
     - scanf stands for scan fromatted string.
 10) format specifiers in C
     - [GFG Article](https://www.geeksforgeeks.org/format-specifiers-in-c/)
+11) [enums](https://www.geeksforgeeks.org/enumeration-enum-c/)
+12) extern 
+13) [register](https://www.geeksforgeeks.org/understanding-register-keyword/)
+
     
 
 ## Strings

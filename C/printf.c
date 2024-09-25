@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <unistd.h>
+
 
 int main(){
     int n = 100;
@@ -56,6 +58,12 @@ int main(){
     i = 0;
     while(temp[i] != '\0') printf("%c", temp[i++]);
     printf("\n");
+
+    printf("\n");
+
+    // alterrnative to printf
+    puts("Sandeep reddy\n"); 
+    write(1, "Sandeep\n", 8); 
 }
 
 /*
