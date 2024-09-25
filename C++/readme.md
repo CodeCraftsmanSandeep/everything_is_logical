@@ -55,6 +55,7 @@
 |:---------|:------|
 | / | n/m = sign(n)*sign(m)*(floor(abs(n) div abs(m))) |
 | % | n%m = sign(n) * (abs(n)%abs(m)) i.e sign of n%m is same as n except the case of abs(n)%abs(m) = 0|
+| ! | Not operator. !(2) = 0 = !(-2), because any non-zero integer is treated as true by ! operator. !(0) = 1 |
 
 
 ## vector
