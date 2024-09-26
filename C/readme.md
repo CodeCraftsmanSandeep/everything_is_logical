@@ -22,7 +22,7 @@
 - auto keyword is present in C but is redundant. 
     - auto in C and C++ are completely different.
 # Contents
-1) Stack libraries and dynamic libraries
+1) static libraries and dynamic libraries
     - [Article](https://www.geeksforgeeks.org/static-vs-dynamic-libraries/)
     - [Article](https://www.geeksforgeeks.org/static-and-dynamic-linking-in-operating-systems/?ref=asr2)
 2) [Static functions in C](https://www.geeksforgeeks.org/what-are-static-functions-in-c/)
@@ -31,6 +31,7 @@
     - static variables and global variables are stored in data segment.
 4) [Memory layout of C program](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 5) [Printing environment variables in C](https://www.geeksforgeeks.org/c-program-print-environment-variables/)
+    - Environment variables are dynamic values that affect the behavior of processes running on an operating system. They provide a way to store configuration information that can be used by both system processes and user applications. These variables are usually used to define system-wide settings, such as file paths, language preferences, and system-specific options, without hardcoding them into scripts or applications.
 6) Conversions
     - string to integer
         - atoi and strtol, strtoll: [atoi_strtol.c](atoi_strtol.c)
@@ -48,11 +49,15 @@
 10) format specifiers in C
     - [GFG Article](https://www.geeksforgeeks.org/format-specifiers-in-c/)
 11) [enums](https://www.geeksforgeeks.org/enumeration-enum-c/)
+    - An enum is a user-defined type that consists of a set of named integer constants.
+11.1) Macros
 12) extern 
 13) [register](https://www.geeksforgeeks.org/understanding-register-keyword/)
+14) 
+
 
     
 
 ## Strings
 - [strings_1.c](strings_1.c)
-- 
+- strcpy
