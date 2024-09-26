@@ -140,18 +140,26 @@ Booting is crucial as it sets up the system environment for running the OS, allo
 - Zombie vs Orphan vs Daemon process
     - Zombie process
         - A process which has been terminated but still has an entry in the process table is called Zombie process
+        - A zombie process occurs when a child process has completed its execution, but its parent process has not yet called wait() to read its exit status. This leaves an entry in the process table for the terminated child process, thus it becomes a "zombie."
     - Orphan process
         - A process continues to run, whose parent has terminated is called Orphan process.
     - Daemon process
         - A daemon process is a background process which starts with system boot and runs until shutdown.
+- The init process is the parent of all processes in Linux, identified by the process ID (PID) of 1. It is the first process that starts when a computer boots up and continues to run until the system shuts down. The term init stands for “initialization,” and its primary role is to create and manage processes based on instructions from configuration scripts, specifically those stored in the ‘/etc/inittab‘ file. 
+
 # Some code on system calls using C
 - file descriptor: A unique id to identify a open file.
     - 0: for stdin
     - 1: for stdout
     - 2: for stderr
 - system calls
+    - open()
     - write()
-    - read()
+    - execvp()
+    - close()
+    - exit()
+    - wait()
+    - sleep() which internally calls system calls
 
 1) Program to create a file and write number from 1 to 100 in it.
     - [os_code1.c](os_code1.c)
@@ -169,5 +177,12 @@ Booting is crucial as it sets up the system environment for running the OS, allo
         - ./os_ocde2_parent.out even
     - Ouptut:
         - Upon successful execution 
-3) Program to read from a file and then execute another process which will write the contents read from the file.
-    
+3) Reade input from a file and write the same input to another file
+    - [os_code3.c](os_code3.c)
+    - Running:
+        - gcc os_code3.c -o os_code3.out
+        - ./os_code3.out input.txt output.txt
+    - Output:
+        - Upon successful creation the contents from input.txt are copied to output.txt
+4) Program to read from a file and then execute another process which will write the contents read from the file.
+ 
