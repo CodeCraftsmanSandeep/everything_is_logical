@@ -23,9 +23,9 @@ int main(int argc, char* argv[]){
         return 1;
     }
 
-    // writing character by character
-    // this is bad beccause too many system calls
-    int buff_size = 10;
+    // writing character by character is bad
+    // so 1024 bytes of data is read everytime
+    int buff_size = 1024;
     char buff[buff_size];
     int read_data;
     while((read_data = read(input_fd, buff, buff_size)) > 0){

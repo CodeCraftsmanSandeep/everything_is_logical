@@ -177,7 +177,7 @@ Booting is crucial as it sets up the system environment for running the OS, allo
         - ./os_ocde2_parent.out even
     - Ouptut:
         - Upon successful execution 
-3) Reade input from a file and write the same input to another file
+3) Read input from a file and write the same input to another file
     - [os_code3.c](os_code3.c)
     - Running:
         - gcc os_code3.c -o os_code3.out
