@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using  namespace std;
 
+class XORLinkedList;
+
 class Node{
 private:
     int data;

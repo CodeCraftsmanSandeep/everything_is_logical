@@ -7,7 +7,8 @@ Based on circularity:
 Based on storage of node:
 	1) Singly linked list
 	2) Doubly linked list
-		a) A memory effecient double linked list: XOR linked list
+		a) A memory effecient double linked list: XOR linked list. [My xor linked list](XorLinkedList.cpp)
+			- Given a arbitary node in XOR linked list, we cannot move forward (or) backward from that node unlike Doubly linked list
 
 # Well known problems
 - detect and remove cycle from linked list:
