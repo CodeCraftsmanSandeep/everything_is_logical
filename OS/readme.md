@@ -147,6 +147,7 @@ Booting is crucial as it sets up the system environment for running the OS, allo
     - MRU
 - Demand paging
 
+- Virtual memory is a combination of RAM and disk space that running processes can use. Swap space is the portion of virtual memory that is on the hard disk, used when RAM is full. 
 
 - Two main types of virtual memory managment
     1) paging
@@ -245,6 +246,9 @@ Paging is a memory management technique that helps mitigate fragmentation issues
     - Daemon process
         - A daemon process is a background process which starts with system boot and runs until shutdown.
 - The init process is the parent of all processes in Linux, identified by the process ID (PID) of 1. It is the first process that starts when a computer boots up and continues to run until the system shuts down. The term init stands for “initialization,” and its primary role is to create and manage processes based on instructions from configuration scripts, specifically those stored in the ‘/etc/inittab‘ file. 
+    - When a process's parent terminates before the process itself, init adopts these orphaned processes and ensures their proper termination.
+    - The init process launches and manages system services (like daemons) needed to run the OS. This includes starting services like network management, logging, and scheduling.
+- PID 0 refers to the kernel’s swapper/idle process, which handles CPU idle time and was originally tasked with swapping memory in early Unix systems.
 - Thread 
     - Threads run in parallel improving the application performance. Each such thread has its own CPU state and stack, but they share the address space of the process and the environment. 
     - Threads can share common data so they do not need to use inter-process communication. Like the processes, threads also have states like ready, executing, blocked, etc. 
