@@ -177,6 +177,13 @@ Page faults are detected when a process tries to access a page not currently in 
     - FIFO
     - Optimal page replacement
     - LRU
+        - LRU is also used as cache replacement algorithm
+        - [LRU_without_dummies.cpp](LRU_without_dummies.cpp) is complex as no dummies are used.
+            - Time: O(1) per operation
+            - Auxillary space: capacity * 2 
+        - [LRU_simple.cpp](LRU_simple.cpp) is simplified by using dummies
+            - Time: O(1) per operation
+            - Auxillary space: capacity * 2 
     - MRU
 - Demand paging
 
