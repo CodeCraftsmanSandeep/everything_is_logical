@@ -140,6 +140,39 @@ Booting is crucial as it sets up the system environment for running the OS, allo
 - A **page fault** occurs when a process attempts to access data or code that is in its address space but is not currently located in the system RAM. This triggers a sequence of events where the operating system must manage the fault by loading the required data from secondary storage into RAM.
     - Page replacement becomes necessary when a page fault occurs and no free page frames are in memory.
     - Paging
+-------
+## Detection of page fault
+A page fault is detected by the operating system (OS) when a process tries to access a page of memory that is not currently mapped in its address space. Here's how the detection process typically works:
+
+### Steps in Page Fault Detection:
+
+1. **Accessing Memory**:
+   - When a program accesses memory (e.g., reading from or writing to a variable), the CPU generates a memory address.
+
+2. **Translation Lookaside Buffer (TLB)**:
+   - The CPU first checks the **TLB**, a cache that stores recently used virtual-to-physical address mappings. If the translation is found in the TLB, the corresponding physical address is used, and the access continues without any issue.
+
+3. **Page Table Lookup**:
+   - If the TLB does not have the mapping (a TLB miss), the CPU then accesses the **page table** for the process. The page table contains the mapping of virtual addresses to physical addresses.
+
+4. **Page Table Entry (PTE) Status**:
+   - Each entry in the page table (Page Table Entry, PTE) has a status bit indicating whether the page is in physical memory or not:
+     - **Present Bit**: If this bit is set, it means the page is currently loaded in physical memory.
+     - **Not Present Bit**: If this bit is not set, it indicates that the page is not in physical memory.
+
+5. **Page Fault Trigger**:
+   - If the access results in a PTE with the **not present** bit (indicating the page is not currently in RAM), a **page fault** is triggered.
+
+6. **Page Fault Handler**:
+   - The operating system's page fault handler is invoked to handle the page fault. The handler typically:
+     - Determines the cause of the page fault (e.g., whether it was a valid access or an invalid access).
+     - If it's a valid access, the handler will find the needed page (from disk or other storage) and load it into memory.
+     - Updates the page table with the new mapping.
+     - Restarts the instruction that caused the page fault.
+
+### Summary:
+Page faults are detected when a process tries to access a page not currently in physical memory. The detection process involves checking the TLB and the page table, leading to the invocation of a page fault handler if the page is not present in memory.
+-----------
 - [Page replacement algo](https://www.geeksforgeeks.org/page-replacement-algorithms-in-operating-systems/)
     - FIFO
     - Optimal page replacement
