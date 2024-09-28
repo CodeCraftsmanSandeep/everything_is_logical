@@ -425,29 +425,31 @@ Paging is a memory management technique that helps mitigate fragmentation issues
     - When a process's parent terminates before the process itself, init adopts these orphaned processes and ensures their proper termination.
     - The init process launches and manages system services (like daemons) needed to run the OS. This includes starting services like network management, logging, and scheduling.
 - PID 0 refers to the kernel’s swapper/idle process, which handles CPU idle time and was originally tasked with swapping memory in early Unix systems.
-- Thread 
-    - Threads run in parallel improving the application performance. Each such thread has its own CPU state and stack, but they share the address space of the process and the environment. 
-    - Threads can share common data so they do not need to use inter-process communication. Like the processes, threads also have states like ready, executing, blocked, etc. 
+- **Thread**
+    - Threads run in parallel, improving application performance. Each thread has its own CPU state and stack, but they share the address space of the process and the environment. 
+    - Threads can share common data, so they do not need to use inter-process communication. Like processes, threads also have states such as ready, executing, and blocked.
     - The multiple threads of a given process may be executed concurrently (via multithreading capabilities), sharing resources such as memory, while different processes do not share these resources. In particular, the threads of a process share its executable code and the values of its dynamically allocated variables and non-thread-local global variables at any given time.
-    - Benifits of multi threading
+    - **Benefits of multithreading**
         - Concurrent execution.
-        - Less costly can creating a brand new process.
-    - Each thread has its own Thread Control Block (TCB). Like the process, a context switch occurs for the thread, and register contents are saved in (TCB). As threads share the same address space and resources, synchronization is also required for the various activities of the thread.
-    - Types of threads:
-        - User level thread
+        - Less costly than creating a brand-new process.
+    - Each thread has its own Thread Control Block (TCB). Like a process, a context switch occurs for the thread, and register contents are saved in the TCB. As threads share the same address space and resources, synchronization is also required for the various activities of the thread.
+    - **Types of threads:**
+        - **User-level thread**
             - User-level threads are managed by user-space libraries rather than the operating system's kernel. The OS is unaware of the existence of these threads and sees them as a single process.
             - In case of a page fault, the whole process can be blocked.
-        - Kernel level thread
-            - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.<br/>
-        - | **Feature**             | **User-Level Threads (ULT)**                             | **Kernel-Level Threads (KLT)**                       |
-        |:-------------------------|:---------------------------------------------------------|:------------------------------------------------------|
-        | **Managed by**           | User-space libraries                                    | Operating system kernel                              |
-| **Context Switching**    | Faster (handled in user space)                          | Slower (requires system calls)                       |
-| **Parallelism**          | No true parallelism (one CPU/core at a time)            | True parallelism on multi-core systems               |
-| **Blocking Calls**       | Entire process blocks if a thread blocks                | Only the blocking thread is affected                 |
-| **Thread Management**    | More efficient, no kernel overhead                      | Higher overhead due to kernel involvement            |
-| **Scheduling**           | Application-level (more control but less optimized)     | Kernel-level (better resource utilization)           |
-| **Portability**          | High, as threading is managed in user space             | Less portable due to kernel-specific implementations |
+        - **Kernel-level thread**
+            - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.
+
+| Feature              | User-Level Threads (ULT)                  | Kernel-Level Threads (KLT)                 |
+|---------------------|-------------------------------------------|--------------------------------------------|
+| Managed by          | User-space libraries                       | Operating system kernel                     |
+| Context Switching    | Faster (handled in user space)            | Slower (requires system calls)             |
+| Parallelism         | No true parallelism (one CPU/core at a time) | True parallelism on multi-core systems     |
+| Blocking Calls      | Entire process blocks if a thread blocks  | Only the blocking thread is affected       |
+| Thread Management    | More efficient, no kernel overhead       | Higher overhead due to kernel involvement   |
+| Scheduling          | Application-level (more control but less optimized) | Kernel-level (better resource utilization) |
+| Portability         | High, as threading is managed in user space | Less portable due to kernel-specific implementations |
+
 
 - Jacketing technique
     - The jacketing technique is used to convert a blocking system call into a non-blocking system call. In a traditional system call, the calling thread is blocked until the I/O operation is completed. Jacketing introduces an intermediate layer, known as a jacket routine, which checks if the I/O device is busy before making the system call. If the device is busy, the jacket routine queues the request and returns control to the calling thread, allowing it to continue executing other tasks. When the I/O device becomes available, the jacket routine resumes the original system call.
