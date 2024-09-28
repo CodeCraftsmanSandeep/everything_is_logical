@@ -1,6 +1,6 @@
 # 🚀 DSA & CP Scribblings
 
-Welcome to my repository! This is where I jot down my notes and practice materials for **Data Structures and Algorithms (DSA)** and **Competitive Programming (CP)**. Dive in and explore!
+Welcome to my repository! This is where I wrote down my notes and practice materials for **Data Structures and Algorithms (DSA)**, **Competitive Programming (CP)**, **Operating Systems**, **Compilers** and **DBMS**. Dive in and explore!
 
 > **Note:** This repository is continuously being updated and improved. Stay tuned for new content and enhancements! 🔄
 
