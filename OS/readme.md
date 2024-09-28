@@ -438,7 +438,7 @@ Paging is a memory management technique that helps mitigate fragmentation issues
             - User-level threads are managed by user-space libraries rather than the operating system's kernel. The OS is unaware of the existence of these threads and sees them as a single process.
             - In case of a page fault, the whole process can be blocked.
         - Kernel level thread
-            - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.
+            - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.<br/>
         | **Feature**             | **User-Level Threads (ULT)**                             | **Kernel-Level Threads (KLT)**                       |
         |-------------------------|---------------------------------------------------------|------------------------------------------------------|
         | **Managed by**           | User-space libraries                                    | Operating system kernel                              |
