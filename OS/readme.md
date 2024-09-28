@@ -440,8 +440,8 @@ Paging is a memory management technique that helps mitigate fragmentation issues
         - Kernel level thread
             - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.<br/>
         - | **Feature**             | **User-Level Threads (ULT)**                             | **Kernel-Level Threads (KLT)**                       |
-|:-------------------------|:---------------------------------------------------------|:------------------------------------------------------|
-| **Managed by**           | User-space libraries                                    | Operating system kernel                              |
+        |:-------------------------|:---------------------------------------------------------|:------------------------------------------------------|
+        | **Managed by**           | User-space libraries                                    | Operating system kernel                              |
 | **Context Switching**    | Faster (handled in user space)                          | Slower (requires system calls)                       |
 | **Parallelism**          | No true parallelism (one CPU/core at a time)            | True parallelism on multi-core systems               |
 | **Blocking Calls**       | Entire process blocks if a thread blocks                | Only the blocking thread is affected                 |
