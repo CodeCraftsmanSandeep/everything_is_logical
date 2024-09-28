@@ -53,6 +53,15 @@
         - SSH (secure shell)
             - A protocol used to securely connect to remote servers via the command line. The ssh command initiates an encrypted connection between a client and server.
             - SSH replaced telnet: SSH (Secure Shell) encrypts data during transmission, providing a secure channel over an unsecured network, while Telnet transmits data in plain text, making it vulnerable to eavesdropping and attacks.
+        - shell vs terminal
+            - shell:
+                - The shell is a command-line interpreter that provides a user interface for accessing the services of the operating system. It interprets user commands and communicates with the kernel to execute those commands.
+                - Examples:
+                    1) Bash (In linux (or) unix)
+                    2) Zsh (In macOS)
+            - terminal:
+                -  A terminal is a physical or virtual interface that allows users to interact with the shell. It serves as a window where users can input commands and view output.
+                - Allows users to enter commands and displays text output from the shell.
         - grep:
             - A command used to search for specific patterns or text within files or output.
             - grep commands:
@@ -73,6 +82,13 @@
                         - This matches lines which has pattern one or more "a"s followed by one or more "b"s.
                     - grep -E "ab*" filename
                         - This matches line which has pattern one 'a' followed by one (or) more 'b's
+        - mount
+            - "Mounting" refers to the process of making a storage device (such as a hard drive, SSD, USB drive, or network storage) accessible to the system by associating it with a directory (mount point).
+            - When you mount a file system, the operating system can read and write data on the storage device. Without mounting, the OS doesn't have access to the device.
+            - A mount point is the directory where the file system is made accessible. For example, / is the root directory, and various other file systems or devices are mounted at different directories.
+            - Commands:
+                - mount 
+                    - When you run the mount command, you're essentially listing all the file systems and devices that are currently "mounted" and available for the operating system to access.
         - man
             - The command to display documentation about other Linux commands. For example, man ls shows the manual for the ls command.
         - script
@@ -127,10 +143,12 @@
         - cd
             - cd ..
                 - go to parent directory of current direcotry.
-
-
-
-
+        - ps
+            - The ps command provides a snapshot of currently running processes at the moment it is invoked. It does not update in real-time; you must run it again to see changes.
+        - top
+            - The top command provides a real-time, dynamic view of the system's processes. It updates the display continuously, allowing you to see process activity as it happens.
+        - Root Filesystem (/)
+            - The root filesystem is the primary filesystem that contains the top-level directories like /bin, /etc, /home, /usr, etc., which are essential for the system's functionality.
 
 - Types of OS
     1) Batch OS (Batch processing systems)
@@ -161,6 +179,8 @@
         - A website that is easy to use, meets the user's needs, and provides a satisfying experience is a good UX.
         - UI is a subset of UX.
         - UI focuses on aesthetics and usability, while UX focuses on the entire user journey.
+- Embedded systems are specialized computing systems designed to perform dedicated functions or tasks within a larger system. Unlike general-purpose computers, which can run a variety of applications, embedded systems are typically optimized for specific applications and have constraints on resources such as power, memory, and processing speed.
+- In computing, the term "spawns" refers to the process of creating a new child process from an existing parent process. The parent process uses a system call (like fork() in Unix/Linux) to create a duplicate of itself, which becomes the child process. The child process can then execute a different program (using system calls like exec()), such as a shell or a login prompt.
 
 
 ## CPU scheduling algorithms
@@ -183,44 +203,37 @@ There are two types of booting:
 1. **Cold Booting (Hard Booting):** When the computer is turned on from a completely powered-off state.
 2. **Warm Booting (Soft Booting):** When the system is restarted without fully turning off the power (e.g., using the "Restart" option in an operating system).
 
-### Steps in the Booting Process:
+### Steps in the Booting Process (Unix based systems)
+- Bootstrap is a term that refers to the process of starting a system or a software environment from a minimal set of resources. It originally comes from the phrase "pulling oneself up by one’s bootstraps," meaning to start something without external help.
+    - In the context of OS: It is the process by which a computer system initializes itself and loads the operating system into memory from a powered-off state.
 
-1. **Power On Self-Test (POST):**
-   - When the computer is powered on, the Basic Input/Output System (BIOS) or Unified Extensible Firmware Interface (UEFI) performs a POST, which tests the hardware components like RAM, CPU, storage devices, and other peripherals to ensure they are functioning properly.
-   - If any hardware issues are detected, the boot process halts, and an error is displayed (or a beep code sounds).
-
-2. **BIOS/UEFI Initialization:**
-   - The BIOS/UEFI initializes the hardware and checks for attached bootable devices (like hard drives, USB drives, or CDs). It determines the boot sequence (which device to boot from first).
-   - BIOS/UEFI then locates the **bootloader** on the boot device and hands over control.
-
-3. **Bootloader Execution:**
-   - The bootloader, often called **GRUB** (for Linux systems) or **Windows Boot Manager** (for Windows), is a small program that loads the operating system into memory.
-   - It locates the OS kernel (the core part of the OS) and starts the process of loading the OS.
-
-4. **Operating System Loading:**
-   - Once the kernel is loaded, the operating system takes control of the system.
-   - The OS initializes the rest of the hardware components (like the graphical user interface, device drivers, and user processes) and prepares the system for user interaction.
-
-5. **Login and User Interface:**
-   - After the OS has been fully loaded, the system displays the login screen or desktop environment, allowing the user to interact with the computer.
-
-### Booting Sequence Overview:
-1. Power on → 
-2. POST (Power On Self-Test) → 
-3. BIOS/UEFI initializes hardware → 
-4. Bootloader loads the OS kernel → (BOOTSTRAP)
-5. OS initializes the system → 
-6. User login/interface
-
-### Types of Bootloaders:
-- **GRUB (GRand Unified Bootloader):** Used in Linux-based systems to manage multiple operating systems or kernels.
-- **Windows Boot Manager (BOOTMGR):** Used in Microsoft Windows systems to start the Windows OS.
+1. **BIOS (or) UEFI intilization**
+    - BIOS (or) UEFI is the first code that runs when you power on your machine.
+    - It performs basic system initialization, including hardware checks (Power-On Self-Test or POST which tests the hardware coponents like RAM, CPU, and other storage devices) and boot device identification.
+    - BIOS looks for a bootable device (e.g., hard drives, USB or CDs), locates the **bootloader** on bootable device and hands over the control to bootloader.
+2. **Bootloader (GRUB/LILO)**
+    - The bootloader is a small program that loads the kernel into memory.
+    - GRUB (GRand Unified Bootloader) is the most commonly used bootloader for Linux.
+        - GRUB loads its configuration file (/boot/grub/grub.cfg) and presents a boot menu to the user.
+        - The user can choose which kernel to boot if multiple kernels are installed.
+        - After the selection, GRUB loads the selected kernel and an initial RAM disk (initramfs) into memory.
+        - initramfs is a temporary root filesystem loaded into memory by the bootloader. It contains essential drivers and scripts required to mount the real root filesystem (e.g., from a hard disk or SSD).
+        - Once the real root filesystem is mounted (mounted to '/), the kernel transitions to the actual operating system environment.
+    -  **Windows Boot Manager (BOOTMGR):** Used in Microsoft Windows systems to start the Windows OS.
+        - Note that windows boot manager does not give a option to show which kernel to use for a user.
+3. **Kernel initilization**
+    - The Linux kernel is loaded into memory and starts executing.
+    - The kernel initializes the hardware (such as CPU, memory, and storage devices) and mounts the root filesystem.
+    - The kernel also loads drivers required to access the system's hardware.
+    - After mounting the root filesystem, the kernel launches the init process as the first user-space process (with Process ID 1).
+    - Traditionally, init is the parent of all processes and is responsible for initializing user-space services.
+    - Getty: As part of its initialization tasks, init (or systemd) starts the Getty process, which is responsible for presenting a login prompt on the console (tty).
+    - Login: The Getty process spawns the login process, which authenticates users. When you enter your credentials at the login prompt, the login process handles the validation.
+    - User Shell: After successful authentication, the login process spawns the user's shell (such as bash, zsh, etc.), and the user can begin their session.
 
 ### Cold Boot vs. Warm Boot:
 - **Cold Boot:** Starting the computer from a powered-off state.
 - **Warm Boot:** Restarting the system without turning off the power (like pressing the restart button or using software commands).
-
-Booting is crucial as it sets up the system environment for running the OS, allowing the user to access and use the computer.
 
 # Inter process communication
 **Inter-Process Communication (IPC)** allows processes to communicate and synchronize their actions in a multitasking environment. Here’s a brief overview:
@@ -437,8 +450,18 @@ Paging is a memory management technique that helps mitigate fragmentation issues
         - **User-level thread**
             - User-level threads are managed by user-space libraries rather than the operating system's kernel. The OS is unaware of the existence of these threads and sees them as a single process.
             - In case of a page fault, the whole process can be blocked.
+            - Applications with high context switching needs use user-level threads.
+                - Certain web servers or microservices.
+                - Applications that require extensive user interface responsiveness.
+            - Embedded Systems: Often found in embedded systems where resources are limited, and user-level thread management is more efficient.
         - **Kernel-level thread**
             - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.
+            - General-Purpose Operating Systems: Most modern operating systems, including Windows, Linux, and macOS, primarily use kernel-level threads because they provide true parallelism and efficient resource management.
+                - Desktop applications that perform multiple I/O operations and need responsiveness.
+                - Server applications that need to handle multiple client requests simultaneously.
+            - High-Performance Computing (HPC): Used in HPC environments where tasks can be parallelized across multiple cores or processors.
+            - Real-Time Systems: Applications requiring strict timing and scheduling guarantees, as the kernel can prioritize threads effectively.
+
 
 | Feature              | User-Level Threads (ULT)                  | Kernel-Level Threads (KLT)                 |
 |---------------------|-------------------------------------------|--------------------------------------------|
@@ -460,6 +483,20 @@ Paging is a memory management technique that helps mitigate fragmentation issues
     - CREW (Concurrent Read Exculsive Write)
     - CRCW (Concurrent Read Concurrent Write)
 - The main objective of process synchronization is to ensure that multiple processes access shared resources without interfering with each other and to prevent the possibility of inconsistent data due to concurrent access.
+- A critical section is a code segment that can be accessed by only one process at a time.
+    - Any solution to the critical section problem must satisfy three requirements:
+        1) Mutual Exclusion: If a process is executing in its critical section, then no other process is allowed to execute in the critical section.
+        2) Progress: If no process is executing in the critical section and other processes are waiting outside the critical section, then only those processes that are not executing in their remainder section can participate in deciding which will enter the critical section next, and the selection can not be postponed indefinitely.
+        3) Bounded Waiting: A bound must exist on the number of times that other processes are allowed to enter their critical sections after a process has made a request to enter its critical section and before that request is granted.
+    - Peterson's solution to critical section problem:
+        - [Producer consumer problem can be solved using peterson's algorithm](https://www.geeksforgeeks.org/petersons-algorithm-in-process-synchronization/)
+        - Disadvantages of peterson's solution:
+            1) It involves busy waiting. (In the Peterson’s solution, the code statement- “while(flag[j] && turn == j);” is responsible for this. Busy waiting is not favored because it wastes CPU cycles that could be used to perform other tasks.)
+            2) It is limited to 2 processes. But of coarse it can be generalized for more than 2 processes.
+        - [How do you extend peterson's algorithm from 2 processes to n processes?](https://www.geeksforgeeks.org/n-process-peterson-algorithm/?ref=asr1)
+- A set of instructions S is atomic, if the either all the instructions in set S are executed (or) none of them are executed 
+    - When a set of instructions S is atomic, only one thread can execute it at a time, preventing other threads from interfering and potentially causing inconsistencies.
+
 #### Race conditions
 A **race condition** occurs when two or more threads or processes try to access and modify shared data simultaneously, leading to unpredictable or incorrect results depending on the timing of their execution.
 
