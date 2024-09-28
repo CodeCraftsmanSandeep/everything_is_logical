@@ -439,15 +439,15 @@ Paging is a memory management technique that helps mitigate fragmentation issues
             - In case of a page fault, the whole process can be blocked.
         - Kernel level thread
             - Kernel-level threads are managed directly by the operating system’s kernel. The kernel is fully aware of each thread and is responsible for scheduling and managing them.<br/>
-        | **Feature**             | **User-Level Threads (ULT)**                             | **Kernel-Level Threads (KLT)**                       |
-        |:-------------------------|:---------------------------------------------------------|:------------------------------------------------------|
-        | **Managed by**           | User-space libraries                                    | Operating system kernel                              |
-        | **Context Switching**    | Faster (handled in user space)                          | Slower (requires system calls)                       |
-        | **Parallelism**          | No true parallelism (one CPU/core at a time)            | True parallelism on multi-core systems               |
-        | **Blocking Calls**       | Entire process blocks if a thread blocks                | Only the blocking thread is affected                 |
-        | **Thread Management**    | More efficient, no kernel overhead                      | Higher overhead due to kernel involvement            |
-        | **Scheduling**           | Application-level (more control but less optimized)     | Kernel-level (better resource utilization)           |
-        | **Portability**          | High, as threading is managed in user space             | Less portable due to kernel-specific implementations |
+    | **Feature**             | **User-Level Threads (ULT)**                             | **Kernel-Level Threads (KLT)**                       |
+    |:-------------------------|:---------------------------------------------------------|:------------------------------------------------------|
+    | **Managed by**           | User-space libraries                                    | Operating system kernel                              |
+    | **Context Switching**    | Faster (handled in user space)                          | Slower (requires system calls)                       |
+    | **Parallelism**          | No true parallelism (one CPU/core at a time)            | True parallelism on multi-core systems               |
+    | **Blocking Calls**       | Entire process blocks if a thread blocks                | Only the blocking thread is affected                 |
+    | **Thread Management**    | More efficient, no kernel overhead                      | Higher overhead due to kernel involvement            |
+    | **Scheduling**           | Application-level (more control but less optimized)     | Kernel-level (better resource utilization)           |
+    | **Portability**          | High, as threading is managed in user space             | Less portable due to kernel-specific implementations |
 
 - Jacketing technique
     - The jacketing technique is used to convert a blocking system call into a non-blocking system call. In a traditional system call, the calling thread is blocked until the I/O operation is completed. Jacketing introduces an intermediate layer, known as a jacket routine, which checks if the I/O device is busy before making the system call. If the device is busy, the jacket routine queues the request and returns control to the calling thread, allowing it to continue executing other tasks. When the I/O device becomes available, the jacket routine resumes the original system call.
