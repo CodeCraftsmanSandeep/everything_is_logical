@@ -635,7 +635,7 @@ Using **locks**, we ensure one thread completes before the other starts.
             return curr_val;
         }
         ```
-- Implementing atomicAdd usinf CAS:
+- Implementing atomicAdd using CAS:
     - ```cpp 
         function add(p: pointer to int, a: int) returns int
             done ← false
