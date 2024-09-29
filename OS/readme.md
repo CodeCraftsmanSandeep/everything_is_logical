@@ -12,6 +12,7 @@
 - Two basic components of OS
     1) Shell
         - A program which provides a communication platform for users to use hardware.
+        - Shell is an interactive program that communicates with the user through the terminal and with the OS through system calls.
     2) Kernel
         - Kernel is the core component of OS, which is responsible for handling various features such as: process managmenet, memory managmenet, disk managment, IPC etc.
         - The kernel is a computer program at the core of a computer's operating system and generally has complete control over everything in the system. The kernel is also responsible for preventing and mitigating conflicts between different processes. It is the portion of the operating system code that is always resident in memory and facilitates interactions between hardware and software components.
@@ -165,7 +166,22 @@
 - Must read article for comparision among multi-programming, multi-procesing, multi-tasking and multi-threading: [GFG article](https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/)
 - [Spooling](https://www.geeksforgeeks.org/what-exactly-spooling-is-all-about/)
 - A bus is a communication system that transfers data between components of a computer, like the CPU, memory, and peripherals.
-- An address bus is a type of bus that carries memory addresses from the CPU to other components, such as RAM, to specify where data should be read or written. It determines the addressing capacity of the system.
+- Address bus:
+    - Purpose: Used to specify the memory location or I/O device where data is to be transferred.
+    - Function: Carries the memory address or I/O device address to the appropriate component.
+    - Width: The width of the address bus determines the maximum amount of memory or I/O devices that can be addressed. For example, a 16-bit address bus can address 2^16 = 65,536 memory locations or I/O devices.
+- Data Bus:
+    - Purpose: Used to transfer data between the CPU, memory, and I/O devices.
+    - Function: Carries data to and from the CPU, memory, and I/O devices.
+    - Width: The width of the data bus determines the amount of data that can be transferred in a single cycle. For example, a 32-bit data bus can transfer 32 bits of data at a time.
+- Control bus:
+    - Purpose: Used to control the operation of the CPU, memory, and I/O devices.
+    - Function: Carries control signals that determine the timing and sequence of operations.
+    - Signals: Common control signals include read, write, clock, interrupt, and reset.
+- System bus:
+    - Purpose: A collection of buses that connects the CPU, memory, and I/O devices.
+    - Components: Typically consists of an address bus, a data bus, and a control bus.
+    - Function: Enables communication and data transfer between the various components of the computer system.
 
 
 # Definitions
@@ -285,6 +301,7 @@ There are two types of booting:
         i) PROM
         ii) EPROM
         iii) EEPROM
+- Memory mapped IO vs isolated IO: [GFG article](https://www.geeksforgeeks.org/memory-mapped-i-o-and-isolated-i-o/)
 - A **page fault** occurs when a process attempts to access data or code that is in its address space but is not currently located in the system RAM. This triggers a sequence of events where the operating system must manage the fault by loading the required data from secondary storage into RAM.
     - Page replacement becomes necessary when a page fault occurs and no free page frames are in memory.
     - Paging
@@ -413,7 +430,7 @@ Paging is a memory management technique that helps mitigate fragmentation issues
 - [Source](https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/). A process control block (PCB) stores various  information about a process so that the operating system can manage it properly. Like:
     1) Process ID (PID)
     2) Process Status
-    3) CPU Registers
+    3) Registers save area (CPU registers)
     4) Memory Management Information
     5) I/O Information
     6) stack pointer
@@ -434,6 +451,11 @@ Paging is a memory management technique that helps mitigate fragmentation issues
         - A process continues to run, whose parent has terminated is called Orphan process.
     - Daemon process
         - A daemon process is a background process which starts with system boot and runs until shutdown.
+        - Examples:
+            1) httpd or apache2:
+                - The Apache HTTP server daemon, which handles web requests and serves web pages to users.
+            2) sshd (Linux/Unix):
+                - The Secure Shell Daemon handles remote login via SSH. It runs in the background, waiting for incoming SSH connection requests.
 - The init process is the parent of all processes in Linux, identified by the process ID (PID) of 1. It is the first process that starts when a computer boots up and continues to run until the system shuts down. The term init stands for “initialization,” and its primary role is to create and manage processes based on instructions from configuration scripts, specifically those stored in the ‘/etc/inittab‘ file. 
     - When a process's parent terminates before the process itself, init adopts these orphaned processes and ensures their proper termination.
     - The init process launches and manages system services (like daemons) needed to run the OS. This includes starting services like network management, logging, and scheduling.
@@ -496,6 +518,14 @@ Paging is a memory management technique that helps mitigate fragmentation issues
         - [How do you extend peterson's algorithm from 2 processes to n processes?](https://www.geeksforgeeks.org/n-process-peterson-algorithm/?ref=asr1)
 - A set of instructions S is atomic, if the either all the instructions in set S are executed (or) none of them are executed 
     - When a set of instructions S is atomic, only one thread can execute it at a time, preventing other threads from interfering and potentially causing inconsistencies.
+- Mutual exclusion
+    - Mutual Exclusion is a property of process synchronization that states that “no two processes can exist in the critical section at any given point of time“. 
+    - The requirement of mutual exclusion is that when process P1 is accessing a shared resource R1, another process should not be able to access resource R1 until process P1 has finished its operation with resource R1.
+        - Examples of such resources include files, I/O devices such as printers, and shared data structures.
+    - Approaches to implement mutual exclusion:
+        1) Software Method: Leave the responsibility to the processes themselves. These methods are usually highly error-prone and carry high overheads.
+        2) Hardware Method: Special-purpose machine instructions are used for accessing shared resources. This method is faster but cannot provide a complete solution. Hardware solutions cannot give guarantee the absence of deadlock and starvation.
+        3) Programming Language Method: Provide support through the operating system or through the programming language.
 
 #### Race conditions
 A **race condition** occurs when two or more threads or processes try to access and modify shared data simultaneously, leading to unpredictable or incorrect results depending on the timing of their execution.
@@ -516,7 +546,132 @@ In a bank application, if two threads try to update a shared balance (say $100):
 Final balance = $120 instead of $170.
 
 Using **locks**, we ensure one thread completes before the other starts.
+------
+- volatile keyword in C (C++)
+    - The volatile keyword in C (and C++) tells the compiler that a variable's value may change at any time, without any action taken by the code the compiler is aware of. It prevents the compiler from optimizing code that might assume the value of the variable remains unchanged within a specific block.
+    - volatile is used to ensure that:
+        - The variable is always read from memory and not from a CPU register or cache. This is important when the variable can be changed by something external to the program (e.g., hardware or another thread).
+        - The compiler does not optimize out reads and writes to that variable.
+    - Common use cases:
+        1) Memory-mapped hardware registers: When dealing with low-level hardware programming (like embedded systems), memory-mapped I/O ports or hardware registers can change their values independently of the program flow. The volatile keyword ensures that the program always reads the most up-to-date value from memory.
+        2) Variables shared between threads: In multithreaded programs, one thread might modify a shared variable while another thread reads it. The volatile keyword prevents the compiler from optimizing out repeated reads or writes to such variables, ensuring that each access reflects the most current value.
+        3) Interrupt service routines (ISRs): When handling interrupts in embedded systems, an ISR might change the value of a variable while the main program is running. Marking such variables as volatile ensures that the main program always sees the most recent value of the variable, even after an interrupt.
 
+------
+- Test-and-set and compare-and-swap are some constructs supported by hardware to make the locks possible.
+- But algorihtms like Dekker's, Peterson's and Bakery algorithm implement locks without hardware support, which are basically software techniques to solve critical section problem.
+------
+### Test-And-Swap
+- In computer science, the test-and-set instruction is an instruction used to write (set) 1 to a memory location and return its old value as a single atomic (i.e., non-interruptible) operation.
+- The caller can then "test" the result to see if the state was changed by the call.
+- If multiple processes may access the same memory location, and if a process is currently performing a test-and-set, no other process may begin another test-and-set until the first process's test-and-set is finished. 
+- Some instruction sets have an atomic test-and-set machine language instruction. Examples include x86 and IBM System/360 and its successors (including z/Architecture). Those that do not can still implement an atomic test-and-set using a read-modify-write or compare-and-swap instruction.
+- Source: wiki
+    - ```cpp
+        #define LOCKED 1
+
+        int test_and_set(int* lockPtr) {
+            int oldValue;
+
+            // -- Start of atomic segment --
+            // This should be interpreted as pseudocode for illustrative purposes only.
+            // Traditional compilation of this code will not guarantee atomicity, the
+            // use of shared memory (i.e., non-cached values), protection from compiler
+            // optimizations, or other required properties.
+            oldValue = *lockPtr;
+            *lockPtr = LOCKED;
+            // -- End of atomic segment --
+
+            return oldValue;
+        }
+    ```
+    - The above test-and-set should be atomic and only one process must execute at a time, then only it works as expected. 
+- Mutual exclusion using test-and-set:
+    - ```cpp
+        volatile int lock = 0;
+
+        void critical() {
+            // Spin lock: loop forever until we get the lock; we know the lock was
+            // successfully obtained after exiting this while loop because the 
+            // test_and_set() function locks the lock and returns the previous lock 
+            // value. If the previous lock value was 1 then the lock was **already**
+            // locked by another thread or process. Once the previous lock value
+            // was 0, however, then it indicates the lock was **not** locked before we
+            // locked it, but now it **is** locked because we locked it, indicating
+            // we own the lock.
+            while (test_and_set(&lock) == 1);  
+            critical section  // only one process can be in this section at a time
+            lock = 0;  // release lock when finished with the critical section
+        }
+    ```
+- Why the above test-and-set should be atomic:
+    - Let us say test-and-set functions is not atomic.
+    - Then consider this sequence:
+        - thread Y executing: oldValue = *lockPtr;
+        - thread X executing: lock = 0;
+        - thread Y executing: *lockPtr = LOCKED;
+    - The above sequence will lead to starvation because the lock will never be unset, it will always remain as 1.
+    - If test-and-set is atomic, then by the definition of atomic either all instructions in test-and-set are executed (or) non-of them are executed. So the above sequence will not occur.
+- Why the above test-and-set should be such that only process can execute test-and-set at a time??
+    - If mutual exclusion is not there in executing test-and-set then:
+        - Conside the following example:
+            - let P1 and P2 are executing test-and-set
+            - Both P1 and P2 are completed till oldValue = *lockPtr;
+            - As initially lock value is 1, oldValue which is local to both P1 and P2 has value 0.
+            - then lockValue is set 1, and then 0 is returned to test-and-set call made by both P1 and P2.
+            - which will lead to both P1 and P2 enter the critical section, which is not desired.
+------
+### Compare-And-Swap
+- In computer science, compare-and-swap (CAS) is an atomic instruction used in multithreading to achieve synchronization. It compares the contents of a memory location with a given value and, only if they are the same, modifies the contents of that memory location to a new given value. This is done as a single atomic operation.
+- As of 2013, most multiprocessor architectures support CAS in hardware, and the compare-and-swap operation is the most popular synchronization primitive for implementing both lock-based and non-blocking concurrent data structures.[4]
+- CAS logic:
+    - The following C function shows the basic behavior of a compare-and-swap variant that returns the old value of the specified memory location; however, this version does not provide the crucial guarantees of atomicity that a real compare-and-swap operation would:
+    - ```cpp
+        int compare_and_swap(int* reg, int oldval, int newval){
+            ATOMIC();
+            int curr_val = *reg;
+            if (curr_val == oldval) *reg = newval;
+            END_ATOMIC();
+            return curr_val;
+        }
+        ```
+- Implementing atomicAdd usinf CAS:
+    - ```cpp 
+        function add(p: pointer to int, a: int) returns int
+            done ← false
+            while not done
+                value ← *p  // Even this operation doesn't need to be atomic.
+                done ← cas(p, value, value + a)
+
+            return value + a
+        ```
+------
+## Spinlocks
+- Spinlock is a synchronization mechanism used in operating systems to protect shared resources from single access by multiple threads or processes.
+- spinlocks use a busy-wait method, where a thread continuously selects a lock until it becomes available.
+
+
+
+------
+## Semaphores
+- Semaphore is a software synchronization mechanism used in operating systems and concurrent programming to control access to shared resources.
+- Working:
+    - A semaphore S is an integer variable that apart from initilization is accessed only through two standard atomic operations: wait() and signal()
+        - wait() is P()
+        - signal is V()
+    - wait:
+        - ```cpp
+                P(semaphore S){
+                    while(S <= 0) ; // no operation
+                    S--;    
+                }
+            ```
+    - signal:
+        - ```cpp
+                S(semaphore S){
+                    S++;
+                }
+            ```
 -------
 - In multi-threaded computer programming, a function is **thread-safe** when it can be invoked or accessed concurrently by multiple threads without causing unexpected behavior, race conditions, or data corruption.
     - For example: If two threads are only reading shared data without modifying it, the execution order does not matter, and there's no race condition. Similarly, if the order of operations on shared data leads to the equivalent result regardless of execution timing, it's also safe. 
