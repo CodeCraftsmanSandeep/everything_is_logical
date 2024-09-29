@@ -584,7 +584,7 @@ Using **locks**, we ensure one thread completes before the other starts.
 
             return oldValue;
         }
-    ```
+        ```
     - The above test-and-set should be atomic and only one process must execute at a time, then only it works as expected. 
 - Mutual exclusion using test-and-set:
     - ```cpp
@@ -603,7 +603,7 @@ Using **locks**, we ensure one thread completes before the other starts.
             critical section  // only one process can be in this section at a time
             lock = 0;  // release lock when finished with the critical section
         }
-    ```
+        ```
 - Why the above test-and-set should be atomic:
     - Let us say test-and-set functions is not atomic.
     - Then consider this sequence:
