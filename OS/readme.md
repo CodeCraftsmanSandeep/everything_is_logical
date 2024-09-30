@@ -807,9 +807,9 @@ Using **locks**, we ensure one thread completes before the other starts.
     3) We can allow the system to enter a deadlocked state, detect it, and recover.
 - Deadlock prevention:
     - Ensure that at least one of the necessary conditions for deadlock (mutual exclusion, hold and wait, no preemption, circular wait) never holds.
-    - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
 - Deadlock avoidance:
     - Ensure the system never enters an unsafe state where a deadlock might occur.
+    - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
     - Efficiency: This method provides better resource utilization compared to prevention because it makes real-time decisions based on the system's state.
     - Banker's algorithm:
         - The name was chosen because the algorithm could be used in a banking system to ensure that the bank never allocated its available cash in such a way that it could no
