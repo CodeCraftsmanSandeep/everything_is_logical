@@ -516,8 +516,9 @@ Paging is a memory management technique that helps mitigate fragmentation issues
             1) It involves busy waiting. (In the Peterson’s solution, the code statement- “while(flag[j] && turn == j);” is responsible for this. Busy waiting is not favored because it wastes CPU cycles that could be used to perform other tasks.)
             2) It is limited to 2 processes. But of coarse it can be generalized for more than 2 processes.
         - [How do you extend peterson's algorithm from 2 processes to n processes?](https://www.geeksforgeeks.org/n-process-peterson-algorithm/?ref=asr1)
-- A set of instructions S is atomic, if the either all the instructions in set S are executed (or) none of them are executed 
-    - When a set of instructions S is atomic, only one thread can execute it at a time, preventing other threads from interfering and potentially causing inconsistencies.
+- A set of instructions S is atomic, if the either all the instructions in set S are executed (or) none of them are executed.
+    - atomic instruction itself is indivisible and will be executed completely by a process (or thread) without being interrupted or observed in an incomplete state by other processes (or threads).
+    - Other threads or processes cannot see the intermediate state of the atomic operation. They either see the state before or after the atomic operation, but never during the operation itself.
 - Mutual exclusion
     - Mutual Exclusion is a property of process synchronization that states that “no two processes can exist in the critical section at any given point of time“. 
     - The requirement of mutual exclusion is that when process P1 is accessing a shared resource R1, another process should not be able to access resource R1 until process P1 has finished its operation with resource R1.
@@ -561,7 +562,7 @@ Using **locks**, we ensure one thread completes before the other starts.
 - Test-and-set and compare-and-swap are some constructs supported by hardware to make the locks possible.
 - But algorihtms like Dekker's, Peterson's and Bakery algorithm implement locks without hardware support, which are basically software techniques to solve critical section problem.
 ------
-### Test-And-Swap
+### Test-And-Set
 - In computer science, the test-and-set instruction is an instruction used to write (set) 1 to a memory location and return its old value as a single atomic (i.e., non-interruptible) operation.
 - The caller can then "test" the result to see if the state was changed by the call.
 - If multiple processes may access the same memory location, and if a process is currently performing a test-and-set, no other process may begin another test-and-set until the first process's test-and-set is finished. 
@@ -612,14 +613,15 @@ Using **locks**, we ensure one thread completes before the other starts.
         - thread Y executing: *lockPtr = LOCKED;
     - The above sequence will lead to starvation because the lock will never be unset, it will always remain as 1.
     - If test-and-set is atomic, then by the definition of atomic either all instructions in test-and-set are executed (or) non-of them are executed. So the above sequence will not occur.
-- Why the above test-and-set should be such that only process can execute test-and-set at a time??
-    - If mutual exclusion is not there in executing test-and-set then:
+    - Another different example:
+    - If test-and-set is not atomic
         - Conside the following example:
             - let P1 and P2 are executing test-and-set
             - Both P1 and P2 are completed till oldValue = *lockPtr;
             - As initially lock value is 1, oldValue which is local to both P1 and P2 has value 0.
             - then lockValue is set 1, and then 0 is returned to test-and-set call made by both P1 and P2.
             - which will lead to both P1 and P2 enter the critical section, which is not desired.
+        - If test-and-set is atomic the above situation will not happen, because intermediates state of P1 cannot be occurred. By the definition of atomicity, there is nothing like P1 and P2 are completed till oldValue = *lockPtr. Because P1 and P2 can do the operation completely (or) not do the operation at all.
 ------
 ### Compare-And-Swap
 - In computer science, compare-and-swap (CAS) is an atomic instruction used in multithreading to achieve synchronization. It compares the contents of a memory location with a given value and, only if they are the same, modifies the contents of that memory location to a new given value. This is done as a single atomic operation.
@@ -649,29 +651,187 @@ Using **locks**, we ensure one thread completes before the other starts.
 ## Spinlocks
 - Spinlock is a synchronization mechanism used in operating systems to protect shared resources from single access by multiple threads or processes.
 - spinlocks use a busy-wait method, where a thread continuously selects a lock until it becomes available.
-
-
-
+- spin locks can be implemented using test-and-set (or) compare-and-swap as described above.
 ------
 ## Semaphores
 - Semaphore is a software synchronization mechanism used in operating systems and concurrent programming to control access to shared resources.
 - Working:
-    - A semaphore S is an integer variable that apart from initilization is accessed only through two standard atomic operations: wait() and signal()
+    - A semaphore S is an integer variable that apart from initilization is accessed only through two standard **atomic** operations: wait() and signal()
         - wait() is P()
         - signal is V()
+- The below version is busy waiting
+    - getSemaphore
+        - ```cpp
+            getSemaphore(int N){
+                // OS create semaphore which allows atmost N proccess to share a resource
+                // sema->S = N
+                // OS returns unique semphore_id
+                return sema_id;
+            }
+           ```
+        - process call getSemaphore() and if two processes want to communicate they will share this unique sema_id
     - wait:
         - ```cpp
-                P(semaphore S){
-                    while(S <= 0) ; // no operation
-                    S--;    
+                P(int sema_id){
+                    semaphore* sema = getSemaphoreById(sema_id);
+                    spinLock(sema->lock);
+                        // Critical section
+                        while(sema->S <= 0) ; // busy-wait
+                        sema->S--;    
+                    ReleaseLock(sema->lock);
                 }
             ```
     - signal:
         - ```cpp
-                S(semaphore S){
-                    S++;
+                V(int sema_id){
+                    semaphore* sema = getSemaphoreById(sema_id);
+                    spinLock(sema->lock);
+                        // critical section
+                        sema->S++;
+                    ReleaseLock(sema->lock);
                 }
             ```
+- Putting into queue:
+    - wait: Decrements the value of the semaphore variable by 1. If the new value of the semaphore variable is negative, the process executing wait is blocked (i.e., added to the semaphore's queue). Otherwise, the process continues execution, having used a unit of the resource.
+    - signal: Increments the value of the semaphore variable by 1. After the increment, if the pre-increment value was negative (meaning there are processes waiting for a resource), it transfers a blocked process from the semaphore's waiting queue to the ready queue.
+    - wait:
+        - ```cpp
+            P(int sema_id){
+                semaphore* sema = getSemaphoreById(sema_id);
+                spinLock(sema->lock);
+                    // critical section
+                    if(sema->S <= 0){
+                        sema->waitQueue.insert(currentProcess);
+                        block(currentProcess);
+                    }else sema_id->S--;
+                releaseLock(sema->lock);
+            }
+          ```
+    - signal:
+        - ```cpp
+            V(int sema_id){
+                semaphore* sema = getSemaphoreById(sema_id);
+                spinLock(sema->lock);
+                    // criticalSection
+                    if(sema->waitQeueu is Empty){
+                        sema->S++;
+                    }else{
+                        process = sema->waitQueue.dequeue(); // First In First Out
+                        unBlock(process);
+                    }
+                releaseLock(sema->lock);
+            }
+          ```
+- Though semaphores are useful for preventing race conditions, they do not guarantee their absence. Semaphores that allow an arbitrary resource count are called counting semaphores, while semaphores that are restricted to the values 0 and 1 (or locked/unlocked, unavailable/available) are called binary semaphores and are used to implement locks.
+-------
+## Producer consumer problem
+- In the producer–consumer problem, one process (the producer) generates data items and another process (the consumer) receives and uses them. They communicate using a queue of maximum size N and are subject to the following conditions:
+    1) the consumer must wait for the producer to produce something if the queue is empty.
+    2) the producer must wait for the consumer to consume something if the queue is full.
+- Semaphore solution to producer-consumer-problem
+    - initially:
+        - useQueue is a binary semaphore initilized with value 1
+        - emptyCount is a counting semaphore initialized with value N
+        - fullCount is a counting semaphore initialized with value 0
+    - producer Code:
+        - ```cpp
+            produce:
+                P(emptyCount)
+                    // atmost N items are allowed to put into queue
+                    P(useQueue)
+                        // queue is a shared resourse
+                        // At a time only one producer (or) one consumer can access the queue
+                        // mutual exclusion
+                        putItemIntoQueue(item)
+                    V(useQeueu)
+                V(fullCount)
+          ```
+    - Consumer code:
+        - ```cpp
+            consume:
+                P(fullCount)
+                    // a consumer is allowed here only when there is a item to consume for it
+                    P(useQueue)
+                        // queue is a shared resourse
+                        // At a time only one producer (or) one consumer can access the queue
+                        // mutual exclusion
+                        consumeItem = getItemFromQueue()
+                    V(useQueue)
+                V(emptyCount)
+          ```  
+    
+-------
+## Mutex
+- A Mutex (short for “Mutual Exclusion”) is a programming concept used to synchronize access to shared resources in a multithreaded environment. It ensures that only one thread can execute a critical section of code at a time, preventing concurrent access and potential data inconsistencies.
+- In other words, a mutex is a lock that allows only one thread to access a shared resource (such as a variable, memory location, or file) while other threads wait until the lock is released.
+- A Mutex object allows multiple process threads to access a shared resource, but only one at a time. On the other hand, Semaphores allow multiple process threads to access a finite instance of a resource until a finite instance of the resource becomes available. 
+-------
+- Pressing question: Mutex vs Semaphore
+-------
+## Monitors
+
+-------
+## Deadlocks
+- A deadlock is a situation where a set of processes is blocked because each process is holding a resource and waiting for another resource acquired by some other process.
+- Necessary conditions for deadlock in OS:
+    1) Mutually exclusion:
+        - Each resource can be accessed by at most one process.
+    2) Hold and wait:
+        - A process is holding at least one resource at a time and waiting for other resources.
+    3) No Preemption: 
+        - A resource cannot be taken from a process unless the process release the resource.
+    4) Cyclic dependency:
+        - A set of processes waiting for each other in circular form.
+- Resource allocation graph:
+    - A resource allocation graphs shows which resource is held by which process and which process is waiting for a resource of a specific kind. 
+    - Given the definition of a resource-allocation graph, it can be shown that, if the graph contains no cycles, then no thread in the system is deadlocked.
+    - If each resource type has exactly one instance, then a cycle implies that a deadlock has occurred.
+    - If each resource type has several instances, then a cycle does not necessarily imply that a deadlock has occurred.
+    - If a resource-allocation graph does not have a cycle, then the system is not in a deadlocked state. If there is a cycle, then the system may or may not be in a deadlocked state.
+    - Example of deadlock:
+        - ![RAG_with_deadlock.png](RAG_with_deadlock.png)
+        - Two minimal cycles:
+            1) T1 → R1 → T2 → R3 → T3 → R2 → T1
+            2) T2 → R3 → T3 → R2 → T2
+        - Processes T1, T2 and T3 are deadlocked
+    - Non-examples of deadlock:
+        - ![RAG_without_deadlock.png](RAG_without_deadlock.png)
+        - we also have a cycle: T1 → R1 → T3 → R2 → T
+        - However, there is no deadlock. Observe that thread T4 may release its instance of resource type R2. That resource can then be allocated to T3, breaking the cycle.
+- Methods for handling deadlocks:
+    1) We can ignore the problem altogether and pretend that deadlocks never occur in the system.
+        - this is widely used method in current OS like linux-based OS and windows.
+        - Ignoring the possibility of deadlocks is cheaper than the other approaches. Since in many systems, deadlocks occur infrequently (say, once per month), the extra expense of the other methods may not seem worthwhile.
+        - The undetected (or) unprevented deadlock will cause the system’s performance to deteriorate, because resources are being held by threads that cannot run and because more and more threads, as they make requests for resources, will enter a deadlocked state. Eventually, the system will stop functioning and will need to be restarted manually.
+    2) We can use a protocol to prevent or avoid deadlocks, ensuring that the system will never enter a deadlocked state.
+    3) We can allow the system to enter a deadlocked state, detect it, and recover.
+- Deadlock prevention (or) avoidance:
+    - Ensure that at least one of the necessary conditions for deadlock (mutual exclusion, hold and wait, no preemption, circular wait) never holds.
+    - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
+- Deadlock avoidance:
+    - Ensure the system never enters an unsafe state where a deadlock might occur.
+    - Efficiency: This method provides better resource utilization compared to prevention because it makes real-time decisions based on the system's state.
+    - Banker's algorithm:
+        - The name was chosen because the algorithm could be used in a banking system to ensure that the bank never allocated its available cash in such a way that it could no
+        longer satisfy the needs of all its customers
+        - When a new thread enters the system, it must declare the maximum number of instances of each resource type that it may need.
+        - Let n be the number of threads in the system and m be the number of resource types.
+        - Data structures:
+            - Available: A vector of length m indicates the number of available resources of each type. If Available[j] equals k, then k instances of resource type Rj are available.
+            - Max: An n × m matrix defines the maximum demand of each thread. If Max[i][j] equals k, then thread Ti may request at most k instances of resource type Rj.
+            - Allocation: An n × m matrix defines the number of resources of each type currently allocated to each thread. If Allocation[i][j] equals k, then thread Ti is currently allocated k instances of resource type Rj.
+            - Need: An n × m matrix indicates the remaining resource need of each thread. If Need[i][j] equals k, then thread Ti may need k more instances of resource type Rj to complete its task. Note that Need[i][j] = Max[i][j] − Allocation[i][j].
+        - Algorithms:
+            - ![safety_algorithm.png](safety_algorithm.png)
+            - Algorithm for determining whether requests can be safely granted.
+                - Let Requesti be the request vector for thread Ti. If Requesti[j] == k, then thread Ti wants k instances of resource type Rj.
+                - When a request for resources is made by thread Ti, the following actions are taken:
+                    - ![resource request algo](Resource_request_algorithm.png)
+        
+- Deadlock detection:
+    - Deadlock detection is a process in computing where the system checks if there are any sets of processes that are stuck waiting for each other indefinitely, preventing them from moving forward.
+    - Algorithms:
+
 -------
 - In multi-threaded computer programming, a function is **thread-safe** when it can be invoked or accessed concurrently by multiple threads without causing unexpected behavior, race conditions, or data corruption.
     - For example: If two threads are only reading shared data without modifying it, the execution order does not matter, and there's no race condition. Similarly, if the order of operations on shared data leads to the equivalent result regardless of execution timing, it's also safe. 
@@ -741,8 +901,9 @@ Using **locks**, we ensure one thread completes before the other starts.
             - Here, W is the waiting time of the process so far and S is the Burst time of the process.
         - HRRN is considered as the modification of the Shortest Job First to reduce the problem of starvation.
         - The on ground implementation of HRRN scheduling is not possible as it is not possible know the burst time of every job in advance.
-
-    
+- Priority inversion:
+    - [GFG article](https://www.geeksforgeeks.org/priority-inversion-what-the-heck/)
+    - Solution to priority inversion problem is: [priority inheritence](https://www.geeksforgeeks.org/difference-between-priority-inversion-and-priority-inheritance/)
 ## File system management:
 - The inode table is a critical data structure in a Unix/Linux filesystem that holds all the inodes for a particular filesystem.
     - The inode table is essentially a collection of inodes, each corresponding to a file or directory within the filesystem. It provides a mapping between file names and their associated metadata.
