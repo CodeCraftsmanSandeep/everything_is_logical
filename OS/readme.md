@@ -811,7 +811,7 @@ Using **locks**, we ensure one thread completes before the other starts.
     - Ensure the system never enters an unsafe state where a deadlock might occur.
     - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
     - Efficiency: This method provides better resource utilization compared to prevention because it makes real-time decisions based on the system's state.
-    - Banker's algorithm:
+    - **Banker's algorithm**:
         - The name was chosen because the algorithm could be used in a banking system to ensure that the bank never allocated its available cash in such a way that it could no
         longer satisfy the needs of all its customers
         - When a new thread enters the system, it must declare the maximum number of instances of each resource type that it may need.
@@ -822,8 +822,8 @@ Using **locks**, we ensure one thread completes before the other starts.
             - Allocation: An n × m matrix defines the number of resources of each type currently allocated to each thread. If Allocation[i][j] equals k, then thread Ti is currently allocated k instances of resource type Rj.
             - Need: An n × m matrix indicates the remaining resource need of each thread. If Need[i][j] equals k, then thread Ti may need k more instances of resource type Rj to complete its task. Note that Need[i][j] = Max[i][j] − Allocation[i][j].
         - Algorithms:
-            - ![safety_algorithm.png](safety_algorithm.png)
-            - Algorithm for determining whether requests can be safely granted.
+            - **Safety algorithm** <br/> ![safety_algorithm.png](safety_algorithm.png)
+            - Algorithm for determining whether requests can be safely granted. (**Resource-request algorithm**)
                 - Let Requesti be the request vector for thread Ti. If Requesti[j] == k, then thread Ti wants k instances of resource type Rj.
                 - When a request for resources is made by thread Ti, the following actions are taken:
                     - ![resource request algo](Resource_request_algorithm.png)

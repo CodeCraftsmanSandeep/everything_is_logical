@@ -53,11 +53,12 @@
 11.1) Macros
 12) extern 
 13) [register](https://www.geeksforgeeks.org/understanding-register-keyword/)
-14) 
-
-
-    
+14) Operators in C:
+    - ![alt text](operators_in_c.png)
 
 ## Strings
 - [strings_1.c](strings_1.c)
 - strcpy
+
+# Some questions
+- [question_1.png](question_1.png)
