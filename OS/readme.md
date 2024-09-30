@@ -805,7 +805,7 @@ Using **locks**, we ensure one thread completes before the other starts.
         - The undetected (or) unprevented deadlock will cause the system’s performance to deteriorate, because resources are being held by threads that cannot run and because more and more threads, as they make requests for resources, will enter a deadlocked state. Eventually, the system will stop functioning and will need to be restarted manually.
     2) We can use a protocol to prevent or avoid deadlocks, ensuring that the system will never enter a deadlocked state.
     3) We can allow the system to enter a deadlocked state, detect it, and recover.
-- Deadlock prevention (or) avoidance:
+- Deadlock prevention:
     - Ensure that at least one of the necessary conditions for deadlock (mutual exclusion, hold and wait, no preemption, circular wait) never holds.
     - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
 - Deadlock avoidance:
