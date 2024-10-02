@@ -1,9 +1,25 @@
+# Classes in programming languages
+- Declarative programming languages:
+  - In computer science, declarative programming is a programming paradigm—a style of building the structure and elements of computer programs—that expresses the logic of a computation without describing its control flow.
+  - Many languages that apply this style attempt to minimize or eliminate side effects by describing what the program must accomplish in terms of the problem domain, rather than describing how to accomplish it as a sequence of the programming language primitives (the how being left up to the language's implementation)
+  - Examples:
+    1) database query languages (e.g., SQL, XQuery)
+    2) regular expressions
+    3) logic programming (e.g. Prolog, Datalog, answer set programming)
+    4) functional programming (Lambda calculus forms the basis of all functional programming languages. )
+- Imperative programming
+  - In computer science, imperative programming is a programming paradigm of software that uses statements that change a program's state.
+  - Imperative programming focuses on describing how a program operates step by step,[1] rather than on high-level descriptions of its expected results.
+  - Procedural and Object Oriented Programming langauges are two famous types of imperative programming model.
+  - Examples
+    1) C
+    2) C++
+    3) FORTRAN
+
 # libraries
 - STL (Standard Template Library): The STL specifically refers to components that use templates to provide generic algorithms and data structures, such as containers (std::vector, std::map), iterators, and algorithms.
 - Standard Library: This is a broader term that includes STL components as well as other components such as std::string, input/output facilities (like iostream), and other utilities.
-- std::initializer_list 
-  - [article](https://www.geeksforgeeks.org/std-initializer_list-in-cpp-11/)
-  - Important for implementing STL classes like vector, set etc..
+
 
 # Enums in C++
 - [GFG Article on Enums](https://www.geeksforgeeks.org/enumeration-in-cpp/)
@@ -15,6 +31,7 @@
   
 - **How the Compiler Handles Enums:**
   - Enums are stored as integers by default. Internally, an enum variable holds the corresponding integer value of the defined constant.
+  -  Like other const expressions, values of enumeration constants are evaluated at compile time. 
 
 - **Restrictions:**
   - C++ enums can only hold integral values (`int`, `char`, `bool`). Non-integral values like floating-point numbers are not allowed.
@@ -157,9 +174,19 @@
 # Generic programming
 - https://www.geeksforgeeks.org/generics-in-c/
 - templates in c++
-- template spcialization
+- templates and static variables
+  - [GFG article](https://www.geeksforgeeks.org/templates-and-static-variables-in-c/)
+  - Each instance of a template contains its own static variable. 
+- template specialization
+  - [GFG article](https://www.geeksforgeeks.org/template-specialization-c/)
+  - Types of template specialization:
+    1) partial specialization
+    2) full specialization
 - template argument deduction
 - template metaprogramming (computation at compile time)
+  - decreases run-time execution and memory foot print
+    - Memory footprint refers to the amount of main memory that a program uses or references while running.
+  - [template_meta_programming.cpp](template_meta_programming.cpp)
 
 # Type inference in C++
 - [Rules of inference](https://www.geeksforgeeks.org/rules-of-inference)
@@ -174,4 +201,3 @@
   - see this code: [mem_leak.cpp](mem_leak.cpp)
 - Emplace vs insert in C++ containers
   - [GFG](https://www.geeksforgeeks.org/emplace-vs-insert-c-stl/)
-

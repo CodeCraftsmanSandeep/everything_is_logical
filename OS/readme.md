@@ -2,6 +2,20 @@
 
 - Real time OS
     - A real-time operating system (RTOS) is a special kind of operating system designed to handle tasks that need to be completed quickly and on time. Unlike general-purpose operating systems (GPOS), which are good at multitasking and user interaction, RTOS focuses on doing things in real time.
+- Embedded systems vs Standalone (or) general purpose systems:
+    - Embedded systems:
+        - A computer system designed to perform a specific task within a larger system. It's often small, low-power, and has limited functionality.
+        - Examples:
+            1) Home appliances (microwave ovens, washing machines)
+            2) automotive systems (anti-lock braking systems, engine control units)
+            3) medical devices (pacemakers)
+            4) consumer electronics (smart TVs, cameras)
+    - Standalone (or) general purpose systems:
+        -  A computer that operates independently and can be used for various tasks.
+        - Examples:
+            1) PC (laptops (or) desktops)
+            2) Servers
+
 - OS is a software that manages system hardware.
 - Some important features of OS
     1) Resouce management
@@ -83,6 +97,11 @@
                         - This matches lines which has pattern one or more "a"s followed by one or more "b"s.
                     - grep -E "ab*" filename
                         - This matches line which has pattern one 'a' followed by one (or) more 'b's
+        - kill
+            - the kill command is used to send signals to processes. Typically, it's used to terminate a process, but it can send various signals that instruct processes to behave in specific ways. The most common signal sent is SIGTERM (terminate), which asks a process to stop gracefully, and SIGKILL (kill), which forces a process to stop immediately.
+            - Commands:
+                - killall Safari
+                    - closses all open safari tabs
         - mount
             - "Mounting" refers to the process of making a storage device (such as a hard drive, SSD, USB drive, or network storage) accessible to the system by associating it with a directory (mount point).
             - When you mount a file system, the operating system can read and write data on the storage device. Without mounting, the OS doesn't have access to the device.
@@ -129,6 +148,35 @@
                     - lists the inode indices of all files and directories in current directory
                     - stat file_name
                         - to get more details in inode entry of the file.
+        - head and tail commands
+            - Commands using head:
+                - head file_name
+                    - displays 10 lines from the first.
+                - head -n N file_name
+                    - displays first N lines.
+                - head -c N file_name
+                    - displays first N bytes.
+            - Commands using tail:
+                - tail file_name
+                    - displays last 10 lines.
+                - tail -n N file_name
+                    - displays last N lines.
+                - tail -c N file_name
+                    - displays last N bytes.
+        - Pipes in linux:
+            - Pipes (|) in Linux are used to connect the output of one command to the input of another. They allow you to chain commands together to perform complex tasks efficiently.
+            - Examples using pipes:
+                - ls | wc -l
+                    - ls lists files and directories in a directory.
+                    - wc -l counts the number of lines.
+                    - The pipe (|) passes the output of ls as input to wc -l, counting the number of files and directories in the directory.
+                - cat filename | grep "pattern"
+                    - cat filename displays all the file content in the file.
+                    - grep "pattern" searches for lines containing the specified pattern.
+                    - The pipe passes the file content to grep, filtering the lines.
+                - head -n N filename | tail -n M filename
+                    - displays lines from N-M+1 to N inclusive.
+                    - Basically head -n N filename outputs first N lines from file and this output is passed to tail -n M filename which gives last M lines in the output passed.
         - Remove
             - rm
                 - rm file_name
@@ -305,6 +353,7 @@ There are two types of booting:
 - A **page fault** occurs when a process attempts to access data or code that is in its address space but is not currently located in the system RAM. This triggers a sequence of events where the operating system must manage the fault by loading the required data from secondary storage into RAM.
     - Page replacement becomes necessary when a page fault occurs and no free page frames are in memory.
     - Paging
+- [WIKI on virtual memory.](https://en.wikipedia.org/wiki/Virtual_memory)
 -------
 ## Detection of page fault
 A page fault is detected by the operating system (OS) when a process tries to access a page of memory that is not currently mapped in its address space. Here's how the detection process typically works:
@@ -437,7 +486,7 @@ Paging is a memory management technique that helps mitigate fragmentation issues
     7) Program counter
     8) frame pointer:
         - Points to the base of the stack frame: The frame pointer contains the memory address of the base of the current stack frame, which is used as a reference point for accessing local variables and parameters.
-
+- Sample PCB: ![sample_PCB](sample_PCB.png)
 - Process table is an array of PCB's of all process.
 - Context Switching: The process of switching from one process to another is called context switching. The PCB plays a crucial role in context switching by saving the state of the current process and restoring the state of the next process.
 - Process: Program under execution. Thread: Part of a process.
@@ -771,6 +820,10 @@ Using **locks**, we ensure one thread completes before the other starts.
 ## Monitors
 
 -------
+# Livelocks
+
+
+-------
 ## Deadlocks
 - A deadlock is a situation where a set of processes is blocked because each process is holding a resource and waiting for another resource acquired by some other process.
 - Necessary conditions for deadlock in OS:
@@ -807,13 +860,21 @@ Using **locks**, we ensure one thread completes before the other starts.
     3) We can allow the system to enter a deadlocked state, detect it, and recover.
 - Deadlock prevention:
     - Ensure that at least one of the necessary conditions for deadlock (mutual exclusion, hold and wait, no preemption, circular wait) never holds.
+    -  Possible side effects of preventing deadlocks by these methods, however, are low device utilization and reduced system throughput.
 - Deadlock avoidance:
     - Ensure the system never enters an unsafe state where a deadlock might occur.
     - Deadlock avoidance requires that the operating system be given additional information in advance concerning which resources a thread will request and use during its lifetime.
     - Efficiency: This method provides better resource utilization compared to prevention because it makes real-time decisions based on the system's state.
+    - safe state:
+        - A state is safe if the system can allocate resources to each thread (up to its maximum) in some order and still avoid a deadlock.
+        - More formally, a system is in a safe state only if there exists a safe sequence. A sequence of threads <T1, T2, ..., Tn> is a safe sequence for the current allocation state if, for each Ti, the resource requests that Ti can still make can be satisfied by the currently available resources plus the resources held by all Tj, with j < i.
+        - A deadlocked state is an unsafe state. Not all unsafe states are deadlocks, however.
+    - **Resource allocation graph algorithm**
+        - 
     - **Banker's algorithm**:
         - The name was chosen because the algorithm could be used in a banking system to ensure that the bank never allocated its available cash in such a way that it could no
-        longer satisfy the needs of all its customers
+        longer satisfy the needs of all its customers.
+        - The Banker’s Algorithm is a resource allocation and deadlock avoidance algorithm.
         - When a new thread enters the system, it must declare the maximum number of instances of each resource type that it may need.
         - Let n be the number of threads in the system and m be the number of resource types.
         - Data structures:
@@ -831,10 +892,14 @@ Using **locks**, we ensure one thread completes before the other starts.
 - Deadlock detection:
     - Deadlock detection is a process in computing where the system checks if there are any sets of processes that are stuck waiting for each other indefinitely, preventing them from moving forward.
     - Algorithms:
+        - Wait-for graph algorithm
+- Deadlock recovery:
+    - Killing The Process: Killing all the processes involved in the deadlock. Killing process one by one. After killing each process check for deadlock again and keep repeating the process till the system recovers from deadlock. Killing all the processes one by one helps a system to break circular wait conditions.
 
 -------
 - In multi-threaded computer programming, a function is **thread-safe** when it can be invoked or accessed concurrently by multiple threads without causing unexpected behavior, race conditions, or data corruption.
     - For example: If two threads are only reading shared data without modifying it, the execution order does not matter, and there's no race condition. Similarly, if the order of operations on shared data leads to the equivalent result regardless of execution timing, it's also safe. 
+    - Resource Preemption: Resources are preempted from the processes involved in the deadlock, and preempted resources are allocated to other processes so that there is a possibility of recovering the system from the deadlock. In this case, the system goes into starvation.
 
 # Some code on system calls using C
 - file descriptor: A unique id to identify a open file.

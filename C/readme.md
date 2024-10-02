@@ -21,6 +21,9 @@
         - Machine code
 - auto keyword is present in C but is redundant. 
     - auto in C and C++ are completely different.
+- qsort() in C
+    - ```cpp void qsort(void *base, size_t num, size_t size, int (*compare)(const void *, const void *)); ```
+
 # Contents
 1) static libraries and dynamic libraries
     - [Article](https://www.geeksforgeeks.org/static-vs-dynamic-libraries/)
@@ -60,5 +63,41 @@
 - [strings_1.c](strings_1.c)
 - strcpy
 
+## Pointers
+- A pointer is defined as a derived data type that can store the address of other C variables or a memory location. We can access and manipulate the data stored in that memory location using pointers.
+- Types of pointers
+    - NULL pointer:
+        - [Article on uses of null pointers.](https://www.geeksforgeeks.org/null-pointer-in-c/)
+        - Definition of NULL:
+            - NULL is defined as <br/> ```cpp #define NULL ((void*)0) ```
+            - It represents a pointer that does not point to any valid object or function. The ((void*)0) means a pointer to the memory address 0, which is reserved by most operating systems to indicate an invalid address.
+    - Wild pointers:
+        - Pointers which are not yet initilized.
+        - Playing with wild pointers may lead to crashes and unexpected behaviour.
+        - [Article on: What are wild pointers and how we can avoid them](https://www.geeksforgeeks.org/what-are-wild-pointers-how-can-we-avoid/)
+    - Void pointers:
+        - A void pointer is a pointer that has no associated data type with it. A void pointer can hold an address of any type and can be typecasted to any type.
+        - advantages of void*
+            - malloc() and calloc() return void * type and this allows these functions to be used to allocate memory of any data type (just because of void *)
+- function overloading in C
+- pointer arithmetic
+    - Pointer Arithmetic is the set of valid arithmetic operations that can be performed on pointers.
+- Pointers can be outputted using %p, since, most of the computers store the address value in hexadecimal form using %p gives the value in that form. But for simplicity and understanding we can also use %u to get the value in Unsigned int form.
+- Array decay, which happens in C and C++.
+    - [GFG article](https://www.geeksforgeeks.org/what-is-array-decay-in-c-how-can-it-be-prevented/)
+
+
+
+
+
 # Some questions
 - [question_1.png](question_1.png)
+
+
+<!-- 
+- TO DO:
+- error handling in C
+- operator overloading in C
+- variable arguments to functions in C
+- pointer arthimetic
+-->
