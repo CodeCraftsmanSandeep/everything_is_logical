@@ -42,6 +42,8 @@
     - Unlike traditional enums, they are strongly typed and scoped. Enum classes do not allow implicit conversion to `int`, and comparisons between different enums are not permitted.
   - Example code: [enums/enum_classes.cpp](enums/enum_classes.cpp)
 
+- constexpr vs const in C++
+  - [Stack overflow](https://stackoverflow.com/questions/13346879/const-vs-constexpr-on-variables)
 ## pointers and references
 - In C++, once a reference is initialized to a variable, it cannot be changed to refer to another variable. A reference must always refer to the variable it was initialized with. This is in contrast to pointers, which can be reassigned to point to different variables.
 - Dangling references

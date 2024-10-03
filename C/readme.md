@@ -57,15 +57,38 @@
 12) extern 
 13) [register](https://www.geeksforgeeks.org/understanding-register-keyword/)
 14) Operators in C:
+    - 
+
+# Operators
+- Classification of operators:
     - ![alt text](operators_in_c.png)
+- Operator precedence and associativity: [GFG article](https://www.geeksforgeeks.org/operator-precedence-and-associativity-in-c/)
+- Associativity is only used when there are two or more operators of the same precedence.  
+    - Only when equal level precedence operators appear in an expression, the associativity comes into picture. For example, f1() + f2() + f3() will be considered as (f1() + f2()) + f3(). But among first pair, which function (the operand) evaluated first is not defined by the standard. 
+    - Example: [link](https://www.geeksforgeeks.org/evaluation-order-of-operands/)
+- We can use parenthesis to change the order of evaluation.
+- All operators with the same precedence have the same associativity.
+- Comma as an operator and seperator: [link](https://www.geeksforgeeks.org/comma-in-c/)
+- [operators_practise.cpp](operators_practise.cpp)
 
 ## Strings
 - [strings_1.c](strings_1.c)
+- [strings_2.c](strings_2.c)
+- [Related question](https://www.geeksforgeeks.org/questions/c-pointer-basics-question-15/)
 - strcpy
+- swapping strings in C: [Article](https://www.geeksforgeeks.org/swap-strings-in-c/)
 
 ## Pointers
 - A pointer is defined as a derived data type that can store the address of other C variables or a memory location. We can access and manipulate the data stored in that memory location using pointers.
+- Nice soruce: [GFG article](https://www.geeksforgeeks.org/c-pointers/)
 - Types of pointers
+    - integer pointers
+    - array pointers:
+        - [GFG article](https://www.geeksforgeeks.org/pointer-array-array-pointer/)
+    - structure pointers
+    - Function pointers
+    - Double pointers (or) pointer-to-pointer
+        - chain of pointers
     - NULL pointer:
         - [Article on uses of null pointers.](https://www.geeksforgeeks.org/null-pointer-in-c/)
         - Definition of NULL:
@@ -79,13 +102,141 @@
         - A void pointer is a pointer that has no associated data type with it. A void pointer can hold an address of any type and can be typecasted to any type.
         - advantages of void*
             - malloc() and calloc() return void * type and this allows these functions to be used to allocate memory of any data type (just because of void *)
+    - const pointers
+        - [pointers/pointers_9.c](pointers/pointers_9.c)
+    - pointers to a constant variable
+        - [pointers/pointers_10.c](pointers/pointers_10.c)
+- Dangling pointers:
+    - [GFG article](https://www.geeksforgeeks.org/dangling-void-null-wild-pointers/)
+- size of popinters:
+    - The size of the pointers in C is equal for every pointer type. The size of the pointer does not depend on the type it is pointing to. It only depends on the operating system and CPU architecture. The size of pointers in C is 
+
+8 bytes for a 64-bit System
+4 bytes for a 32-bit System
+The reason for the same size is that the pointers store the memory addresses, no matter what type they are. As the space required to store the addresses of the different memory locations is the same, the memory required by one pointer type will be equal to the memory required by other pointer types.
 - function overloading in C
 - pointer arithmetic
     - Pointer Arithmetic is the set of valid arithmetic operations that can be performed on pointers.
 - Pointers can be outputted using %p, since, most of the computers store the address value in hexadecimal form using %p gives the value in that form. But for simplicity and understanding we can also use %u to get the value in Unsigned int form.
 - Array decay, which happens in C and C++.
     - [GFG article](https://www.geeksforgeeks.org/what-is-array-decay-in-c-how-can-it-be-prevented/)
+- Usefull stuff:
+    - [Question](https://www.geeksforgeeks.org/questions/c-pointers-question-4/)
+    - [Question](https://www.geeksforgeeks.org/questions/c-pointers-question-7/)
+    - [bug_program_1.c](bug_program_1.c)
+    - [stackoverflow](https://stackoverflow.com/questions/47170740/c-negative-array-index), [pointers/pointers_8.c](pointers/pointers_8.c)
+        - looking like negative indexing of pointers.
+        - it is crazy have a look!!
+    - [Question](https://www.geeksforgeeks.org/questions/c-advanced-pointer-question-4/)
+    - [Question](https://www.geeksforgeeks.org/questions/gate-gate-cs-2015-set-1-question-45/)
+    - [Question](https://www.geeksforgeeks.org/questions/gate-gate-cs-2015-set-3-question-36/)
+    - [Question](https://www.geeksforgeeks.org/questions/isro-isro-cs-2017-question-80/)
+- Dyamic memory allocation using C
+    - [GFG Article](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
+    - malloc, calloc and realloc
+# Key words
+- Keywords in C: [GFG Article](https://www.geeksforgeeks.org/keywords-in-c/)
+- typedef
+    - The typedef is a keyword that is used to provide existing data types with a new name. The C typedef keyword is used to redefine the name of already existing data types.
+    - pressing question:
+        - typedef vs #defines: [GFG article](https://www.geeksforgeeks.org/typedef-versus-define-c/)
+    - [typedefs.cpp](typedefs.cpp)
 
+# Value category
+- [WIKI](https://en.wikipedia.org/wiki/Value_(computer_science))
+- In computer science and software programming, a value is the representation of some entity that can be manipulated by a program. The members of a type are the values of that type.
+- Despite its name, in the C++ language standards this terminology is used to categorize expressions, not values.
+- Assignment: l-values and r-values
+    - An l-value refers to an object that persists beyond a single expression. An r-value is a temporary value that does not persist beyond the expression that uses it.
+    - In many languages, notably the C family, l-values have storage addresses that are programmatically accessible to the running program (e.g., via some address-of operator like "&" in C/C++), meaning that they are variables or de-referenced references to a certain memory location.
+- Function returning l-value:
+    - ```cpp 
+        int& func() {
+            static int value = 10;
+            return value;  // This returns an l-value reference.
+        }
+        func() = 20;  // The returned reference is an l-value and can be assigned a new value.
+       ```
+
+# Side effects
+In programming, **side effects** refer to any observable changes in the state of the program or its environment that occur during the execution of a function or expression, beyond returning a value. These changes can affect the global state, modify variables, output to I/O streams, or interact with external systems.
+
+Side effects are typically considered when discussing **pure** versus **impure** functions:
+- A **pure function** is one that has no side effects and always produces the same output for the same input.
+- An **impure function** may have side effects and thus might behave differently even with the same input.
+
+### Common Side Effects:
+
+1. **Modifying a global or static variable:**
+   ```cpp
+   int counter = 0;  // Global variable
+
+   void increment() {
+       counter++;  // Modifies global state (side effect)
+   }
+   ```
+
+2. **Modifying the value of a parameter (when passed by reference):**
+   ```cpp
+   void changeValue(int &x) {
+       x = 42;  // Changes the value of the parameter (side effect)
+   }
+   ```
+
+3. **Performing I/O operations (e.g., printing to the console):**
+   ```cpp
+   void printMessage() {
+       std::cout << "Hello, World!" << std::endl;  // Produces output (side effect)
+   }
+   ```
+
+4. **Modifying memory via pointers or dynamic allocation:**
+   ```cpp
+   void allocateMemory() {
+       int *p = new int(10);  // Allocates memory (side effect)
+       delete p;              // Frees memory (side effect)
+   }
+   ```
+
+5. **Calling a function that itself has side effects:**
+   ```cpp
+   void updateGlobal() {
+       increment();  // Calls a function that modifies global state (side effect)
+   }
+   ```
+
+6. **Throwing an exception:**
+   ```cpp
+   void riskyFunction() {
+       throw std::runtime_error("Error occurred");  // Throws an exception (side effect)
+   }
+   ```
+
+### Example of Pure and Impure Functions:
+- **Pure function**:
+   ```cpp
+   int add(int a, int b) {
+       return a + b;  // No side effects, only returns a value
+   }
+   ```
+
+- **Impure function**:
+   ```cpp
+   int globalVar = 10;
+
+   int addAndModifyGlobal(int a, int b) {
+       globalVar++;  // Side effect: modifies a global variable
+       return a + b;
+   }
+   ```
+
+### Key Side Effects in C++:
+- **Modifying non-local variables** (e.g., global variables, static variables).
+- **Performing I/O** (e.g., writing to files, printing to the console).
+- **Memory management** (e.g., dynamic memory allocation and deallocation).
+- **Interaction with hardware** (e.g., reading from sensors, network communication).
+
+Side effects are essential in many programs but can make reasoning about code more difficult since they introduce hidden dependencies and alter the state in ways that aren't always immediately obvious.
 
 
 

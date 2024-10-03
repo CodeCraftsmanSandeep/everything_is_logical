@@ -10,6 +10,7 @@
             2) automotive systems (anti-lock braking systems, engine control units)
             3) medical devices (pacemakers)
             4) consumer electronics (smart TVs, cameras)
+        - Embedded systems are specialized computing systems designed to perform dedicated functions or tasks within a larger system. Unlike general-purpose computers, which can run a variety of applications, embedded systems are typically optimized for specific applications and have constraints on resources such as power, memory, and processing speed.
     - Standalone (or) general purpose systems:
         -  A computer that operates independently and can be used for various tasks.
         - Examples:
@@ -243,9 +244,24 @@
         - A website that is easy to use, meets the user's needs, and provides a satisfying experience is a good UX.
         - UI is a subset of UX.
         - UI focuses on aesthetics and usability, while UX focuses on the entire user journey.
-- Embedded systems are specialized computing systems designed to perform dedicated functions or tasks within a larger system. Unlike general-purpose computers, which can run a variety of applications, embedded systems are typically optimized for specific applications and have constraints on resources such as power, memory, and processing speed.
 - In computing, the term "spawns" refers to the process of creating a new child process from an existing parent process. The parent process uses a system call (like fork() in Unix/Linux) to create a duplicate of itself, which becomes the child process. The child process can then execute a different program (using system calls like exec()), such as a shell or a login prompt.
-
+- Backward compatibility vs Forward compatibility vs Extensibility
+    - Backward compatibility:
+        - In telecommunications and computing, backward compatibility (or backwards compatibility) is a property of an operating system, software, real-world product, or technology that allows for interoperability with an older legacy system, or with input designed for such a system.
+        - Modifying a system in a way that does not allow backward compatibility is sometimes called "breaking" backward compatibility.[1] Such breaking usually incurs various types of costs, such as switching cost.
+        - Example:
+            - In compilers, backward compatibility may refer to the ability of a compiler for a newer version of the language to accept source code of programs or data that worked under the previous version.
+    - Forward compatibility:
+        - Forward compatibility or upward compatibility is a design characteristic that allows a system to accept input intended for a later version of itself.
+    - Extensibility:
+        - Extensibility is a software engineering and systems design principle that provides for future growth. Extensibility is a measure of the ability to extend a system and the level of effort required to implement the extension. Extensions can be through the addition of new functionality or through modification of existing functionality
+- endianness
+    - [WIKI](https://en.wikipedia.org/wiki/Endianness)
+    - In computing, endianness is the order in which bytes within a word of digital data are transmitted over a data communication medium or addressed (by rising addresses) in computer memory, counting only byte significance compared to earliness. 
+    - A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest.
+    - A little-endian system, in contrast, stores the least-significant byte at the smallest address.
+    - Big-endianness is the dominant ordering in networking protocols, such as in the Internet protocol suite, where it is referred to as network order, transmitting the most significant byte first. Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations, base RISC-V implementations) and their associated memory.
+    - [Question](https://www.geeksforgeeks.org/questions/isro-isro-cs-2016-question-22/)
 
 ## CPU scheduling algorithms
 - Non-Preemptive Scheduling Algorithm
