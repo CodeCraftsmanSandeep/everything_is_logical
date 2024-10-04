@@ -1,0 +1,34 @@
+- list
+    - li.append()
+    - li.sort()
+    - li.reverse()
+    - length_of_li = len(li)
+    - last_ele = li.pop()
+    - list_from_start_to_end_inclusive = li[start: end + 1]
+    - min_ele_in_arr = min(li)
+    - max_ele_in_arr = max(li)
+- set
+    - my_set.add(x) # add a single element to setm
+    - my_set.discard(10)  # No error even if 10 is not present
+    - union_set = set1.union(set2) 
+    - intersection_set = set1.intersection(set2)
+    - difference_set = set1.difference(set2) 
+- dict
+    - age = my_dict.get(x)  # returns None is there is no key with x
+    - my_dict.pop(x) # deletes key, value pair in dict if exists else raises key error
+    - list_of_keys = list(my_dict.keys())
+    - list_of_values = list(my_dict.values())
+- stack
+    - can be implemented using list in python
+- queue
+    - use deque to get queue functionality
+- dequeu
+    - from collections import deque
+    - q = deque()
+    - q.append(x)      # appends x to the right of q
+    - q.appendleft(x)  # appends x to the left of q
+    - q.pop() # Removes and returns the element from the right end of the deque.
+    - q.popleft() # Removes and returns the first element from the left end of the deque.
+    - q[0] # returns the first element in the q
+    - q[-1] # returns the last element in the q
+- priority_queue

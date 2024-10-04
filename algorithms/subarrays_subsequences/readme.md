@@ -23,7 +23,7 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [kadanes_algo.cpp](kadanes_algo.cpp)
 - find the maximum for each sub-array of size k
   - [question](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
-  - [max_sub_array.cpp](max_sub_array.cpp)
+  - [max_subarray.cpp](max_subarray.cpp)
 - Longest palindromic substring
   - Find the length of longest palidromic substring
   - [Find the longest palindromic substring](https://www.geeksforgeeks.org/problems/longest-palindrome-in-a-string3411/1)
