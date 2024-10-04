@@ -39,7 +39,7 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [question](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
   - My code: [longest_k_unique_characters.cpp](longest_k_unique_characters.cpp)
 - [Find the longest substring which is valid parenthesis.](https://www.geeksforgeeks.org/problems/longest-valid-parentheses5657/1)
-  - [My code](longest_k_unique_characters.cpp)
+  - [My code](longest_valid_parenthesis_substring.cpp)
   - O(N) time
   - O(N) auxillary space
 - [Find the smallest substring in s which contains all characters in string p](https://www.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string-1587115621/1)
@@ -49,3 +49,7 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [smallest_substring_2.cpp](smallest_substring_2.cpp), optimized code
     - Time: |s| + 26 = O(|s|)
     - Auxillary space: O(26*2) = O(1)
+- [Given an integer array arr[] of size N, find the maximum of the minimums for every window size in the given array.Note: The window size varies from 1 to N.](https://www.geeksforgeeks.org/problems/maximum-of-minimum-for-every-window-size3453/1)
+  - [maximum_of_minimum.cpp](maximum_of_minimum.cpp)
+    - Time: O(n)
+    - Auxillary space: O(n)
