@@ -39,9 +39,22 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [question](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1)
   - My code: [longest_k_unique_characters.cpp](longest_k_unique_characters.cpp)
 - [Find the longest substring which is valid parenthesis.](https://www.geeksforgeeks.org/problems/longest-valid-parentheses5657/1)
-  - [My code](longest_valid_parenthesis_substring.cpp)
-  - O(N) time
-  - O(N) auxillary space
+  - [Using stack](longest_valid_parenthesis_substring.cpp)
+    - O(N) time
+    - O(N) auxillary space
+  - [Nice approach](longest_valid_parenthesis_substring_optimized.cpp) from [this article.](https://www.geeksforgeeks.org/length-of-the-longest-valid-substring/)
+    - O(N) time
+    - O(1) auxillary space
+- [Find the longest subseq which is valid parenthesis.]
+  - This is easy
+- [Range based queries for the longest balanced subsseq. Given a string s of length n, given q queries each of the form l r, for each query find the longest balanced subseq in s from l to r(inclusive)](https://www.geeksforgeeks.org/range-queries-longest-correct-bracket-subsequence-set-2/)
+  - Using segment trees: 
+    - [longest_balanced_subseq_2.cpp](longest_balanced_subseq_2.cpp)
+    - Preprocessing time: O(nlogn)
+    - Per query time: O(log2(r - l + 1))
+    - Auxillary space: O(n) for segment tree 
+  - there is O(1) time algo which I did not understand !!
+    - [longest_balanced_subseq_3.cpp](longest_balanced_subseq_3.cpp)
 - [Find the smallest substring in s which contains all characters in string p](https://www.geeksforgeeks.org/problems/smallest-window-in-a-string-containing-all-the-characters-of-another-string-1587115621/1)
   - [smallest_substring_1.cpp](smallest_substring_1.cpp)
     - Time: 26*|s| = O(|s|)
