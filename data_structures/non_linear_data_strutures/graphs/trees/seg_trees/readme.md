@@ -2,7 +2,7 @@
 - General characteristics of segment tree:
   - A segment tree is a binary tree with a leaf node for each element in the array.
   - Each internal node represents a segment or a range of elements in the array.
-- For a given array of size \( n \), the maximum number of nodes in the segment tree is \( 2 \times 2^{\lceil \log_2 n \rceil} - 1 \), which is often approximated as \( 4n \).
+- For a given array of size n, the maximum number of nodes in the segment tree is 2 * (2 ^ ceil(log2(n))) - 1, which is often approximated as 4n.
 
 - Operations supported by segment trees:
   - ![operations_supported_by_seg_tree.png](operations_supported_by_seg_tree.png)
