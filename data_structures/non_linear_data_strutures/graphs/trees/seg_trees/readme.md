@@ -14,8 +14,14 @@
 
 
 # questions
+- For each query (l, r) find the maxiumum prefix sum in arr[l:r+1]
+  - [question link](https://www.geeksforgeeks.org/problems/maximum-prefix-sum-for-a-given-range0227/1)
+  - Note: the question's way of taking input is wrong as on oct 8th 2024.
+  - Solutions:
+    - [max_pref.cpp](max_pref.cpp) based on normal segment tree.
 - For each query (l, r, k) find number of i such l <= i <= k and a[i] > k
   - [question link](https://www.spoj.com/problems/KQUERY/)
-  - [effecient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the queries, inspired from comments from [blog](https://codeforces.com/blog/entry/10183#comment-156355)
-  - [using merge sort tree](kqueryMergeSortTree.cpp), O(log^2(n)) on average per query on average, online queries
-  - [using persistent seg tree](kqueryPersistent.cpp) , O(logn) time per query on average, online quries
+  - Solutions:
+    - [effecient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the queries, inspired from comments from [blog](https://codeforces.com/blog/entry/10183#comment-156355)
+    - [using merge sort tree](kqueryMergeSortTree.cpp), O(log^2(n)) on average per query on average, online queries.
+    - [using persistent seg tree](kqueryPersistent.cpp) , O(logn) time per query on average, online queries.
