@@ -164,6 +164,19 @@
                     - displays last N lines.
                 - tail -c N file_name
                     - displays last N bytes.
+        - word count in linux:
+            - wc stand for word count
+            - Commands:
+                - wc file_name
+                    - outputs <number-of-lines> <number-of-words> <number-of-characters>
+                - wc -l file_name
+                    - outputs only <number-of-lines>
+                - wc -w file_name
+                    - outputs only <number-of-words>
+                - wc -c file_name
+                    - outputes number of bytes(characters).
+                - wc -L file_name
+                    - outputs the length of the longest line in file.
         - Pipes in linux:
             - Pipes (|) in Linux are used to connect the output of one command to the input of another. They allow you to chain commands together to perform complex tasks efficiently.
             - Examples using pipes:
