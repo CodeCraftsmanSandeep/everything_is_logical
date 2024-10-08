@@ -1,0 +1,6 @@
+- [Range based quries question.](https://www.geeksforgeeks.org/array-range-queries-range-queries/)
+    - [My code](arrays_with_range.cpp)
+        - My code is better than the ones present in article!!
+        - Auxillary space: O(n + m)
+        - Total time: O(n + m)
+    - 
