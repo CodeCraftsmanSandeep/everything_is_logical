@@ -134,31 +134,60 @@
 - Polymorphism
   - ability to take many forms
   - types
-    - compile time polymorphism
-      - function overloading
-        - functions can be overloaded, if the signatures are not the same
-        - do not forget to note the const keyword in function overloading. see this [article](https://www.geeksforgeeks.org/function-overloading-and-const-functions/)
-      - operator overloading
-    - run time polymorphism (Late binding and dynamic polymorphism are other names for runtime polymorphism)
-      - function overriding
-      - virtual functions
+    1) compile time polymorphism
+      i) Function overloading
+        - Functions can be overloaded, if the signatures are not the same
+        - Do not forget to note the const keyword in function overloading. see this [article](https://www.geeksforgeeks.org/function-overloading-and-const-functions/)
+          - C++ allows functions to be overloaded on the basis of the const-ness of parameters only if the const parameter is a reference or a pointer. 
+        - Rules to overload a function in C++: [GFG article.](https://www.geeksforgeeks.org/function-overloading-c/)
+      ii) Operator overloading
+        - [Article.](https://www.geeksforgeeks.org/operator-overloading-cpp/)
+        - Operator functions are the same as normal functions. The only differences are, that the name of an operator function is always the operator keyword followed by the symbol of the operator, and operator functions are called when the corresponding operator is used. 
+        - All operators cannot be overloaded in C++.
+    2) Run time polymorphism (Late binding and dynamic polymorphism are other names for runtime polymorphism)
+      - Function overriding can be acheived at compile-time and run-time.
+      - [virtual_function_use.cpp](virtual_function_use.cpp)
+      - Virtual functions in C++ are used to acheive run-time polymorphism.
+      - The function call is resolved at run-time during run-time polymorphism.
+      - Runtime Polymorphism cannot be achieved by data members in C++.
 
 ### oops notes
 - getters and setters
-- friend classes and functions in c++
+  - These terms are generally used in cases when one wants to define a member function in class to get the value of memeber variable then the function is called getter, similarly a setter can be defined.
+
+- Friend classes and functions in c++
+  - Friends can access private memebers in c++. (In real life as well :-))
   - [Article](https://www.geeksforgeeks.org/friend-class-function-cpp/)
   - Friendship is not inherited. [Article](https://www.geeksforgeeks.org/inheritance-and-friendship-in-cpp/)
+
 - diamond problem (src: [link](https://www.geeksforgeeks.org/multiple-inheritance-in-c/), [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-12/))
 	- solution: use ```virtual keyword```
+
 - The base class members cannot be directly assigned using initializer list in derived class member function. (src: [question_link](https://www.geeksforgeeks.org/questions/c-inheritance-question-11/))
 - A Base class pointer/reference can point/refer to a derived class object, but the other way is not possible. (src: [related_question](https://www.geeksforgeeks.org/questions/c-inheritance-question-6/))
-- virtual functions
+
+- Virtual functions
+  - A virtual function (also known as virtual methods) is a member function that is declared within a base class and is re-defined (overridden) by a derived class.
+  - Virtual functions are mainly used to acheive **run-time polymorphism**.
   - virtual functions are resolved late, at runtime.
-  - pure virtual functions
-    - [some more code](pure_virtual.cpp)
+  - Pure virtual function
+    - A pure virtual function is declared by assigning 0 in the declaration.
+    - [Some code on inheritence and pure virtual functions.](pure_virtual.cpp)
   - vtable and vptr are used to get corresponding function definition at run-time.
+    - Working of virtual functions: [GFG article.](https://www.geeksforgeeks.org/virtual-function-cpp/)
   - virtual destructors ([article](https://www.geeksforgeeks.org/virtual-destructor/))
-- Interfaces/pure abstract classes in C++
+
+- Interfaces in C++
+  - - [Article.](https://www.geeksforgeeks.org/implement-interfaces-using-abstract-class-in-c/)
+  - Any class which contains at least one pure virtual function is considered as an abstract class.
+    - When a class inherits from an abstract base class in C++, it must override all the pure virtual functions present in the class, or else it becomes abstract itself.
+    - An abstract class cannot be used for object instantitaion directly.
+    - We can have pointers and references of abstract classes.
+  - An interface describes the behavior or capabilities of a C++ class without committing to a particular implementation of that class.
+    - The C++ interfaces are implemented using abstract classes and these abstract classes should not be confused with data abstraction which is a concept of keeping implementation details separate from associated data.
+  - Classes that can be used to instantiate objects are called concrete classes.
+  
+
 - Object slicing [article](https://www.geeksforgeeks.org/object-slicing-in-c/)
 	- object slicing is not possible when base class has at least one **pure virtual method**
 

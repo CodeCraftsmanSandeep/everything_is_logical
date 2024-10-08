@@ -1,6 +1,8 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 
+// abstract class
 class features{
 public:
     virtual string processor() = 0;
