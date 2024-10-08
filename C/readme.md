@@ -71,7 +71,34 @@
 - Comma as an operator and seperator: [link](https://www.geeksforgeeks.org/comma-in-c/)
 - [operators_practise.cpp](operators_practise.cpp)
 
-## Strings
+## Some useful terms:
+(NOTE: THE OPERATOR SYMBOLS ARE NOT C OPERATORS, THEY ARE OPERATORS IN MATH TO EXPLAIN CONCEPTS)
+- Few properties of operators
+    1) Commutativity;
+        - An operator is commutative if changing the order of its operands does not change the result.
+        - Examples: + and *
+            - i.e 2 + 3 = 3 + 2 and  2 * 3 = 3 * 2
+        - Non-examples: - and /
+            - i.e 2 - 3 not equal to 3-2
+            - similarly 2/3  is not equal to 3/2
+    2) Associativity
+        - An operator is associative if changing the grouping of its operands does not change the result.
+        - Examples: + and *
+            - i.e (a + b) + c = a + (b + c)
+            - similarly (a * b) * c = a * (b * c)
+        - Non-examples: - and /
+            - i.e (a-b)-c is not same as a-(b-c)
+            - similarly (a/b)/c is not same as a/(b/c)
+    3) Distributivity
+        - An operator is distributive if it can be distributed over another operation.
+        - Example: Multiplication is distributive over addition.
+            - a×(b+c)=(a×b)+(a×c)
+- Identity element
+- Inverse element
+- Precedence
+- Short circuiting
+
+# Strings
 - [strings_1.c](strings_1.c)
 - [strings_2.c](strings_2.c)
 - [Related question](https://www.geeksforgeeks.org/questions/c-pointer-basics-question-15/)
@@ -134,6 +161,7 @@ The reason for the same size is that the pointers store the memory addresses, no
 - Dyamic memory allocation using C
     - [GFG Article](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
     - malloc, calloc and realloc
+
 # Key words
 - Keywords in C: [GFG Article](https://www.geeksforgeeks.org/keywords-in-c/)
 - typedef
