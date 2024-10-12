@@ -93,7 +93,7 @@
                     - Searches for "pattern" in all files within a directory and its subdirectories.
                 - grep -E "regular_expressions" file_name
                     - grep -E "a.b" filename
-                        - Matches lines containing "a" followed by "b".
+                        - Matches lines containing "a" followed by a single character and that is followed by "b".
                     - grep -E "a+b+" filename
                         - This matches lines which has pattern one or more "a"s followed by one or more "b"s.
                     - grep -E "ab*" filename
@@ -168,11 +168,11 @@
             - wc stand for word count
             - Commands:
                 - wc file_name
-                    - outputs <number-of-lines> <number-of-words> <number-of-characters>
+                    - outputs number-of-lines, number-of-words, and  number-of-characters.
                 - wc -l file_name
-                    - outputs only <number-of-lines>
+                    - outputs only number-of-lines.
                 - wc -w file_name
-                    - outputs only <number-of-words>
+                    - outputs only number-of-words.
                 - wc -c file_name
                     - outputes number of bytes(characters).
                 - wc -L file_name
