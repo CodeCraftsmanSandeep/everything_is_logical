@@ -32,4 +32,14 @@
   
 - Prime number theorem:
   - Number of primes less than (or) equal to n is =  π(N) ~ n/log(n)
+- Euclid's theorem: (wiki)
+    - There are infinitely many primes. (Infinitude of primes)
+- Betrand’s postulate:
+    - For all n >= 1, there exists at least one prime in (n, 2*n]
 
+- Harmonic number:
+    - [Wiki](https://en.wikipedia.org/wiki/Harmonic_number)
+    - H(n) = Sum of reciprocals of first n natural numbers = 1 + 1/2 + 1/3 + … + 1/n 
+    - H(n) ~ O (lg(n) + γ) 
+    - γ = [Wiki](https://en.wikipedia.org/wiki/Euler%27s_constant)
+    - See plot of lg(n) + γ vs H(n): [here](harmonic_number.ipynb)
