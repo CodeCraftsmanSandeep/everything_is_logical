@@ -12,7 +12,7 @@ Welcome to my repository! This is where I wrote down my notes and practice mater
 | [🔧 C++](C++) | My personal notes on C++ along with my implementations of the Standard Template Library (STL). |
 | [📚 data_structures](data_structures/) | Dive into various data structures, related problems, and my custom implementations. |
 | [😎 problems](problems) | A collection of interesting problems. Check out the list of problems in [problems/readme.md](problems/readme.md). |
-| [♻️ reuse](reuse) | Frequently reused concepts in problem solving. |
+| [math](math) | Math concepts frequently used for problem solving. |
 
 ## 📝 Notes
 

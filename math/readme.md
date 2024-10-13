@@ -1,7 +1,5 @@
 ## ✨ Frequently Used Codes
 
-Below is a list of code snippets that I find frequently useful in solving problems:
-
 | S.No | Concept | Code | Quick Notes | 
 |:--|:--|:---|:---|
 | 1️⃣ | Finding the length of a binary format string of a number | [code1.cpp](code1.cpp) | |
@@ -11,12 +9,12 @@ Below is a list of code snippets that I find frequently useful in solving proble
 | 5️⃣ | Modular Multiplicative Inverse | [modular_multiplicative_inverse.cpp](modular_multiplicative_inverse.cpp) | |
 | 6️⃣ | Lucas Theorem | N/A | Useful for finding `(n choose k) % m` when `m` is small and `n` and `k` are large |
 
+
 ## Notes
 - **Stirling's Approximation**: 
     - n! ~= sqrt(2 * pi * n) * (n/e)^n
-Feel free to explore these snippets and see how they can aid in problem-solving! 🚀
------
-#### Sequence and series
-- 1 + 2 + 3 + .. + n = n(n+1)/2
-- 1^2 + 2^2 + 3^2 + ... + n^2 = n*(n+1)(2n+1)/6
-- ![formulae.jpg](formulae.jpg)
+- Sequence and series
+    - nth odd number = 2*n - 1
+    - Sum of first n positive integers = 1 + 2 + ... + n = n*(n+1)/2
+    - Sum of first n squares = 1^2 + 2^2 + 3^2 + ... + n^2 = n*(n+1)(2n+1)/6
+    - ![formulae.jpg](formulae.jpg)

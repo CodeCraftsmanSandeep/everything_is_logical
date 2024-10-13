@@ -188,9 +188,11 @@
                     - cat filename displays all the file content in the file.
                     - grep "pattern" searches for lines containing the specified pattern.
                     - The pipe passes the file content to grep, filtering the lines.
-                - head -n N filename | tail -n M filename
+                - head -n N filename | tail -n M 
                     - displays lines from N-M+1 to N inclusive.
                     - Basically head -n N filename outputs first N lines from file and this output is passed to tail -n M filename which gives last M lines in the output passed.
+                - ls -R | grep -E "\.cu$"
+                    - Lists all cuda files present in . and its sub-directories recursively
         - Remove
             - rm
                 - rm file_name
@@ -212,7 +214,18 @@
             - The top command provides a real-time, dynamic view of the system's processes. It updates the display continuously, allowing you to see process activity as it happens.
         - Root Filesystem (/)
             - The root filesystem is the primary filesystem that contains the top-level directories like /bin, /etc, /home, /usr, etc., which are essential for the system's functionality.
-
+        - tty
+            - TTY stands for Teletypewriter. In modern computing, it refers to terminal interfaces that allow communication between the user and the operating system. Originally, TTYs were physical devices (like typewriters) connected to computers, but today, they represent virtual terminals (command lines) in Unix-like systems.
+            - **TTY in Modern Systems**
+                1. **Virtual Terminal**:
+                    - When you open a terminal (like `bash`, `zsh`, or `gnome-terminal`), you're using a **virtual TTY**.
+                    - The **terminal emulators** simulate the behavior of those old teletypewriters.
+                2. **Physical and Virtual TTYs**:
+                    - On Unix-like systems, there are **multiple virtual TTYs** available (e.g., `/dev/tty1`, `/dev/tty2`, etc.).
+                    - You can switch between them using `Ctrl + Alt + F1...F6` on Linux (each of these represents a different TTY session).
+                3. **Pseudo-Terminals (PTYs)**:
+                    - When you open a terminal inside a graphical interface (like GNOME Terminal or iTerm on macOS), it's called a **pseudo-terminal** (PTY).
+                    - These PTYs provide the same functionality as TTYs but within a graphical environment.
 - Types of OS
     1) Batch OS (Batch processing systems)
         - A Batch Operating System is an early type of operating system where tasks (jobs) are collected (batched) and processed together without any user interaction. Programs or jobs are submitted to the system in batches, and the operating system processes them sequentially, one after the other.
@@ -275,7 +288,7 @@
     - A little-endian system, in contrast, stores the least-significant byte at the smallest address.
     - Big-endianness is the dominant ordering in networking protocols, such as in the Internet protocol suite, where it is referred to as network order, transmitting the most significant byte first. Conversely, little-endianness is the dominant ordering for processor architectures (x86, most ARM implementations, base RISC-V implementations) and their associated memory.
     - [Question](https://www.geeksforgeeks.org/questions/isro-isro-cs-2016-question-22/)
-
+    - modern memory is byte-addressable, meaning each individual byte of memory has its own unique address. This allows programs and the operating system to access and manipulate data at the granularity of a single byte (8 bits).
 ## CPU scheduling algorithms
 - Non-Preemptive Scheduling Algorithm
     - In non-preemptive scheduling, once a process is given the CPU, it runs to completion or until it voluntarily releases the CPU (e.g., by completing execution or waiting for I/O).
