@@ -15,14 +15,16 @@
 
 # questions
 - Range minimum queries
-  - Given an array A of size N. Given Q queries, where each query is of the form {l, r} where 0 <= l <= r <= N-1. Output the minimum element in sub-array l to r (inclusive).
-  - [Question link](https://www.geeksforgeeks.org/problems/range-minimum-query/1)
-  - [range_minimum_query.cpp](range_minimum_query.cpp)
-  - Time complexity:
-    - O(nlogn) for preprocessing
-    - O(log(r - l + 1)) pre query
-  - Space complexity:
-    - O(n)
+  - [Question link](https://www.hackerearth.com/practice/data-structures/advanced-data-structures/segment-trees/practice-problems/algorithm/range-minimum-query/)
+  - Given an array A of size N. Given Q quries. Query {'q', l, r} where 1 <= l <= r <= N, asks the minimum in sub-array from l to r (inclusive). Query {'u', i, x}, where the query is to update A[i] = x. 
+  - Using segment Tree:
+    - [range_minimum_query.cpp](range_minimum_query.cpp)
+    - Time complexity:
+      - O(n) for preprocessing
+      - O(log(r - l + 1)) per query
+      - O(logn) per update
+    - Space complexity:
+      - O(n) for segTree
 
 - For each query (l, r) find the maxiumum prefix sum in arr[l:r+1]
   - [question link](https://www.geeksforgeeks.org/problems/maximum-prefix-sum-for-a-given-range0227/1)
