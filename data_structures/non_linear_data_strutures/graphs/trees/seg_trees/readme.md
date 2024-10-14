@@ -14,14 +14,25 @@
 
 
 # questions
+- Range minimum queries
+  - Given an array A of size N. Given Q queries, where each query is of the form {l, r} where 0 <= l <= r <= N-1. Output the minimum element in sub-array l to r (inclusive).
+  - [Question link](https://www.geeksforgeeks.org/problems/range-minimum-query/1)
+  - [range_minimum_query.cpp](range_minimum_query.cpp)
+  - Time complexity:
+    - O(nlogn) for preprocessing
+    - O(log(r - l + 1)) pre query
+  - Space complexity:
+    - O(n)
+
 - For each query (l, r) find the maxiumum prefix sum in arr[l:r+1]
   - [question link](https://www.geeksforgeeks.org/problems/maximum-prefix-sum-for-a-given-range0227/1)
   - Note: the question's way of taking input is wrong as on oct 8th 2024.
   - Solutions:
     - [max_pref.cpp](max_pref.cpp) based on normal segment tree.
+
 - For each query (l, r, k) find number of i such l <= i <= k and a[i] > k
   - [question link](https://www.spoj.com/problems/KQUERY/)
   - Solutions:
-    - [effecient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the queries, inspired from comments from [blog](https://codeforces.com/blog/entry/10183#comment-156355)
+    - [efficient code](kqueryEfficient.cpp), O(logn) per query on avarage, offline queries, pre-processing the queries, inspired from comments from [blog](https://codeforces.com/blog/entry/10183#comment-156355)
     - [using merge sort tree](kqueryMergeSortTree.cpp), O(log^2(n)) on average per query on average, online queries.
     - [using persistent seg tree](kqueryPersistent.cpp) , O(logn) time per query on average, online queries.
