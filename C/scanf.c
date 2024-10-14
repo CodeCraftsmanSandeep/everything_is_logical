@@ -11,6 +11,19 @@ int main(){
 
 /*
 Input:
+1 10
+
+Output:
+2
+num = 10
+
+*/
+
+
+
+
+/*
+Input:
 123djdfdf  1
 
 Output:
