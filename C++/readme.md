@@ -1,3 +1,6 @@
+# C++ useful concepts
+- [ceil](https://cplusplus.com/reference/cmath/ceil/)
+
 # Classes in programming languages
 - Declarative programming languages:
   - In computer science, declarative programming is a programming paradigm—a style of building the structure and elements of computer programs—that expresses the logic of a computation without describing its control flow.
@@ -44,6 +47,7 @@
 
 - constexpr vs const in C++
   - [Stack overflow](https://stackoverflow.com/questions/13346879/const-vs-constexpr-on-variables)
+
 ## pointers and references
 - In C++, once a reference is initialized to a variable, it cannot be changed to refer to another variable. A reference must always refer to the variable it was initialized with. This is in contrast to pointers, which can be reassigned to point to different variables.
 - Dangling references
@@ -232,3 +236,94 @@
   - see this code: [mem_leak.cpp](mem_leak.cpp)
 - Emplace vs insert in C++ containers
   - [GFG](https://www.geeksforgeeks.org/emplace-vs-insert-c-stl/)
+
+# Using cin 
+
+### **Using `cin >>` with Conditional Checking**
+
+#### **Example: Simple Input Validation**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter an integer: ";
+    
+    // Check if input was successful
+    if (cin >> n) {
+        cout << "You entered: " << n << endl;
+    } else {
+        cout << "Invalid input!" << endl;
+    }
+
+    return 0;
+}
+```
+
+#### **Explanation:**
+1. **`cin >> n`**: 
+   - It attempts to read an integer from the standard input.
+   - If the input is valid (i.e., an integer was successfully parsed), the result will be `true` when used in a conditional statement.
+
+2. **Handling invalid input**: 
+   - If the user enters something that can’t be converted to an integer (like a string), `cin` will go into a **failed state**. This causes the `if` condition to evaluate to `false`.
+
+---
+
+### **Using `while(cin >> n)` Similar to `scanf`**
+
+In the same way `scanf` returns the number of successfully read inputs, you can use `cin` in a loop to read multiple inputs.
+
+#### **Example: Continuous Input Reading**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter integers (non-integer to stop): ";
+
+    // Read integers until invalid input is encountered
+    while (cin >> n) {
+        cout << "You entered: " << n << endl;
+    }
+
+    cout << "Invalid input detected. Exiting..." << endl;
+
+    return 0;
+}
+```
+
+#### **Explanation:**
+- **`while(cin >> n)`**: This loop keeps reading integers until invalid input is encountered.
+- If the user inputs something non-integer (like `"abc"`), `cin` enters a **failed state** and the loop terminates.
+
+---
+
+### **Handling `cin` Failures with `cin.clear()` and `cin.ignore()`**
+Once `cin` enters a failed state (e.g., invalid input), further input operations will fail unless the state is cleared.
+
+#### **Example: Clearing `cin` State**
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "Enter an integer: ";
+
+    while (!(cin >> n)) {  // Loop until valid input
+        cout << "Invalid input! Try again: ";
+        cin.clear();            // Clear the error state
+        cin.ignore(1000, '\n');  // Ignore the rest of the input line
+    }
+
+    cout << "You entered: " << n << endl;
+
+    return 0;
+}
+```
