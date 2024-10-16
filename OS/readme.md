@@ -375,6 +375,12 @@ There are two types of booting:
 - **Performance Overheads**: Introduced by context switching and system calls.
 - **Security**: Preventing unauthorized access to shared resources is critical.
 
+
+#### MPI programming
+- MPI stands for Message Passing Interface.
+- Processes communicate using MPI.
+- [mpi.c](mpi.c)
+
 # Memory
 - An **Address Bus** is a crucial component in a computer system that carries the memory addresses from the processor (CPU) to other components, such as RAM or I/O devices. It is used by the CPU to specify the location of data or instructions that need to be read from or written to in memory.
 - Types of memory
