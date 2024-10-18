@@ -11,8 +11,14 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [article](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
   - cool approaches:
     - [LIS_dp.cpp](LIS_dp.cpp)
-    - [LIS_binary_search.cpp](LIS_binary_search.cpp)
+      - Time: O(n^2)
+      - Auxillary space: O(n)
+    - [LIS_binary_search.cpp](LIS_binary_search.cpp)  
+      - Time: O(nlogn)
+      - Auxillary space: O(n)
     - [LIS_segment_tree.cpp](LIS_segment_tree.cpp)
+      - Time: O(nlogn)
+      - Auxillary space: O(n)
     - LIS_BIT.cpp yet to come!!
 
 - Longest consecutive sub-sequence

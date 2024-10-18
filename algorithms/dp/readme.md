@@ -13,18 +13,23 @@
   - [rod_cutting.cpp](rod_cutting.cpp)
   - O(n^2) time
   - O(n) space
+
 - Number of times string s2 appears as sub-seqeunce in string s1
   - [question](https://www.geeksforgeeks.org/problems/find-number-of-times-a-string-occurs-as-a-subsequence3020/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
+
 - Number of times string 2 apperas as sub-string in string s1
   - [article](https://www.sanfoundry.com/c-program-count-occurrence-substring/)
   - not sure whether this is the optimized
+
 - **Edit distance**
   - [Minimum number of operations (insert/delete/update) should be perfomed inorder to make two strings equal](https://www.geeksforgeeks.org/problems/edit-distance3702/1)
   - [edit_distance.cpp](edit_distance.cpp)
+
 - **[Coin change](https://www.geeksforgeeks.org/problems/number-of-coins1824/1)**
   - My code: [coin_change.cpp](coin_change.cpp)
     - Time: O(sum*n)
     - Space: O(sum)
+
 - **Knapsack variants** [article](https://www.geeksforgeeks.org/introduction-to-knapsack-problem-its-types-and-how-to-solve-them/)
   - 0-1 knapsack
     - [0-1 Knapsack with duplicates](https://www.geeksforgeeks.org/problems/knapsack-with-duplicate-items4201/1)
@@ -89,4 +94,5 @@
             |:-----|:------|:-----|:-----|:------|
             | 1 | Directly using knapsack, without using much brain | [zero_one_bounded_knapsack_4.cpp](zero_one_bounded_knapsack_4.cpp) | O(W * N * M) | O(W*N), can be optimized to O(W) but not done to maintain clarity |
             | 2 | Using knapsack and little 🧠, Try to prove as the proof is hot. | [zero_one_bounded_knapsack_5.cpp](zero_one_bounded_knapsack_5.cpp) | O(W * N * logM) | O(W * N * logM), can be optimized to O(W) but not done to maintain clarity | 
-            | 3 | using knapsack and 🧠 | [zero_one_bounded_knapsack_6.cpp](zero_one_bounded_knapsack_6.cpp) NEED TO CODE | O(W * N) | O(W * N) can be optimzed to O(W) but not done to maintain clarity |
+            | 3 | using knapsack and 🧠 | [zero_one_bounded_knapsack_6.cpp](zero_one_bounded_knapsack_6.cpp) NEED TO CODE | O(W * N) | O(W * N) can be optimzed to O(W) but not done |
+
