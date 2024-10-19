@@ -165,7 +165,8 @@
 - **Hamiltonian**
 - Number of hamiltonian cycles O((n-1)! / 2)
 -------
-
+# Bipartite graphs
+- A graph is bipartite if and only if graph does not contain odd-length cycle.
 
 ## Questions
 
