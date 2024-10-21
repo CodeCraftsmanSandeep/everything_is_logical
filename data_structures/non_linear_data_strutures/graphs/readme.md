@@ -168,6 +168,12 @@
 # Bipartite graphs
 - A graph is bipartite if and only if graph does not contain odd-length cycle.
 
+-------
+- Sum of degree of all vertices in a simple undirected graph = 2 * | E |
+  - One key point to note: Even if degree of all vertices is even, the total number of edges may not be even. A odd length cycle is an example, but there are other graphs!!
+  - Thus, in a connected graph with all vertices of even degree and an odd number of edges, the number of vertices n must also be odd.
+- There are even number of odd degree vertices in any undirected simple graph.
+
 ## Questions
 
 1) [Find the number of paths from u to v in a DAG?](https://www.geeksforgeeks.org/count-possible-paths-two-vertices/)

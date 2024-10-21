@@ -20,10 +20,13 @@
 - OS is a software that manages system hardware.
 - Some important features of OS
     1) Resouce management
+        a) Processor
+        b) Memeory management
+        c) Storage mangement (File mangement on disk)
+        d) I/O
+        e) Network resources
     2) Process management
-    3) Storage management (File management on disk)
-    4) Memory management
-    5) Security management
+    3) Security management
 - Two basic components of OS
     1) Shell
         - A program which provides a communication platform for users to use hardware.
