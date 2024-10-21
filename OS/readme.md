@@ -78,9 +78,12 @@
                 - Examples:
                     1) Bash (In linux (or) unix)
                     2) Zsh (In macOS)
+                    3) PowerShell – Used in Windows environments
             - terminal:
                 -  A terminal is a physical or virtual interface that allows users to interact with the shell. It serves as a window where users can input commands and view output.
                 - Allows users to enter commands and displays text output from the shell.
+                - Modern Use: In modern systems, the terminal is usually software that emulates the functions of the old hardware terminals (e.g., Terminal.app on macOS, GNOME Terminal on Linux, Command Prompt on Windows).
+
         - grep:
             - A command used to search for specific patterns or text within files or output.
             - grep commands:
