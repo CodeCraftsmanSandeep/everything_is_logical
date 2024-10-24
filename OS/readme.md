@@ -1,5 +1,7 @@
 # OS
-
+- DMA 
+    - Direct Memory Acess
+    - https://en.wikipedia.org/wiki/Direct_memory_access
 - Real time OS
     - A real-time operating system (RTOS) is a special kind of operating system designed to handle tasks that need to be completed quickly and on time. Unlike general-purpose operating systems (GPOS), which are good at multitasking and user interaction, RTOS focuses on doing things in real time.
 - Embedded systems vs Standalone (or) general purpose systems:

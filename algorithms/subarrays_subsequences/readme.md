@@ -8,7 +8,7 @@ This is one of the hottest topics among competetive programming and dsa problems
     - O(1) space
 
 - Find the Longest Increasing Subseqeunce
-  - [article](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
+  - [Question](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
   - cool approaches:
     - [LIS_dp.cpp](LIS_dp.cpp)
       - Time: O(n^2)
