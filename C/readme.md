@@ -47,6 +47,7 @@
 8) sprintf
     - [sprintf.c](sprintf.c)
     - sprintf stand for string print.
+    - sprintf is depericated and only supported for compatibility reasons, [sprintf_vs_snprintf.md](sprintf_vs_snprintf.md)
 9) scanf
     - scanf stands for scan fromatted string.
 10) format specifiers in C
