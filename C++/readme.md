@@ -72,6 +72,9 @@
 |:--|:--|
 | to_string(), to_ulong(), to_ullong() | | 
 
+- Count number of set bits:
+  - [countSetBits.md](countSetBits.md)
+
 ## operators
 
 | operator | notes |

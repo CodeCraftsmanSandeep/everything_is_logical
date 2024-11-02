@@ -43,3 +43,9 @@
     - H(n) ~ O (lg(n) + γ) 
     - γ = [Wiki](https://en.wikipedia.org/wiki/Euler%27s_constant)
     - See plot of lg(n) + γ vs H(n): [here](harmonic_number.ipynb)
+
+
+- Pegion hole principle
+- Erodos seekers theorem:
+  - [WIKI](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem)
+  - In mathematics, the Erdős–Szekeres theorem asserts that, given r, s, any sequence of distinct real numbers with length at least (r − 1)(s − 1) + 1 contains a monotonically increasing subsequence of length r or a monotonically decreasing subsequence of length s. 

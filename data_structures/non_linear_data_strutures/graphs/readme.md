@@ -22,7 +22,7 @@
   - directed (or) undirected
 
 -------
-#### Traversal techniques
+## Traversal techniques
 - **DFS**
   - DFS tree:
     - A rooted directed tree which is constructed by doing DFS on a graph
@@ -32,7 +32,7 @@
   - Tree edge:
     - Edge that is part of DFS tree, i.e edge which is used while performing DFS traversal.
   - Back Edge: 
-    - An edge that connects a vertex to one of its ancestors in the DFS tree. Back edges indicate cycles and are used to help find strongly connected components.
+    - An edge that connects a vertex to one of its ancestors in the DFS tree. Back edges indicate cycles.
   - Forward Edge: 
     - An edge that connects a vertex to one of its descendants, but is not part of the DFS tree.
   - Cross Edge: 
@@ -40,7 +40,7 @@
   - Cross edges do not affect the identification of SCCs since they don't form part of cycles. Therefore, while identifying SCCs, you only care about tree edges and back edges because they help identify cycles and strongly connected components.
 
 -------
-#### Topological sorting
+## Topological sorting
 - Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge u-v, vertex u comes before v in the ordering.
 - Topological order is defined for directed graph, because a undirected edge is itself a cycle!!
 - Topological order exists iff G is DAG
@@ -59,7 +59,7 @@
     - Kahn's algo can also be used for cycle detection.
     - More than a algorithm, khan's algorithm is food for thought.
 -------
-#### Cycle detection
+## Cycle detection
 - Directed graphs:
   - DFS (or) BFS can be used to detect cycle.
     - Time: O(n)
@@ -85,7 +85,7 @@
     - [cycle_detection_topo_sort.cpp](cycle_detection_topo_sort.cpp)
 
 -------
-#### Disjoint set union (dsu)
+## Disjoint set union (dsu)
 - This is a spicy data structure.
 - [GFG article](https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/)
 - Union by rank 
@@ -95,7 +95,7 @@
   - nearly constant time 
   -  the final amortized time complexity is O(α(n)), where α(n) is the inverse Ackermann function, which grows very steadily (it does not even exceed for n<10600  approximately).
 -------
-#### Connectivity
+## Connectivity
 - Undirected graphs
   - A undireted graph G is connnected graph if the number of connected components in G = 1
 - Directed graphs
@@ -117,7 +117,7 @@
         - Auxillary space: O(n) 
 
 -------
-#### Bridges (cut-edge) in a graph
+## Bridges (cut-edge) in a graph
 - A edge e is called a bridge if by erasing the edge e, the number of connected components in graph increases by one.
 - If you remove an edge from a graph, the maximum difference in the number of connected components is 1.
 - [Check whether a edge is bridge edge (or) not?](https://www.geeksforgeeks.org/problems/bridge-edge-in-graph/1)
@@ -130,7 +130,7 @@
     - O(n) auxillary space for storing time, O(n) auxillary space for stack
 
 -------
-#### Articulation point (or) cut vertex:
+## Articulation point (or) cut vertex:
 - A vertex v is an articulation point (also called cut vertex) if removing v increases the number of connected components.
 - [Find all articulation points](https://www.geeksforgeeks.org/problems/articulation-point2616/1)
   - [My code](articulation_points.cpp) (code using tarjans algo technique)
@@ -164,15 +164,33 @@
 -------
 - **Hamiltonian**
 - Number of hamiltonian cycles O((n-1)! / 2)
+
 -------
-# Bipartite graphs
-- A graph is bipartite if and only if graph does not contain odd-length cycle.
+## Single source shortest path
+- For un-weighted graphs:
+  - A simple BFS is sufficient.
+- For non-negative weighted graphs:
+  - Dijkstra's algorithm:
+    - Dijkstra's algorithm will find shortest path from source vertex (s) to all vertices in any non-negative weighted directed (or) undirected graph.
+    - 
+- For weighted directed acyclic graphs (DAG):
+  - Using topological sort
+  - Using Bellman-ford algorithm
+---------
+## Longest path problems
+- It is a hard problem, and there is no known polynomail time algorithm.
+
 
 -------
 - Sum of degree of all vertices in a simple undirected graph = 2 * | E |
   - One key point to note: Even if degree of all vertices is even, the total number of edges may not be even. A odd length cycle is an example, but there are other graphs!!
   - Thus, in a connected graph with all vertices of even degree and an odd number of edges, the number of vertices n must also be odd.
 - There are even number of odd degree vertices in any undirected simple graph.
+- **Bipartite graphs**:
+  - A graph is bipartite if and only if graph does not contain odd-length cycle.
+- Travelling salesman problem:
+  - [WIKI](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
+  - TSP is hard problem.
 
 ## Questions
 
