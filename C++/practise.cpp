@@ -1,20 +1,13 @@
-        #include <iostream>
-        using namespace std;
+#include <iostream>
+using namespace std;
 
-        template <typename T>
-        int countSetBits(T n){
-            // works for long long, unsigned datatypes as well
-            int setBits = 0;
-            while(n){
-                setBits += (n&1);
-                n >>= 1;
-            }
-            return setBits;
-        }
+template <typename T>
+int countSetBits(T n){
+    return __builtin_popcount(n);
+}
 
-        int main(){
-            int n;
-            cin >> n;
-
-            cout << countSetBits <int> (n) << "\n";
-        }
+int main(){
+    unsigned long long int a;
+    cin >> a;
+    cout << countSetBits <unsigned long long int> (a) << "\n";
+}
