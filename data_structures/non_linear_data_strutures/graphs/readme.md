@@ -191,6 +191,7 @@
 - Travelling salesman problem:
   - [WIKI](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
   - TSP is hard problem.
+- [Find the shotest walk which covers all vertices.](https://leetcode.com/problems/shortest-path-visiting-all-nodes/description/)
 
 ## Questions
 
