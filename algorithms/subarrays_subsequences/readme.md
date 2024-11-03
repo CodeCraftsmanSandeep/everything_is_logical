@@ -7,6 +7,9 @@ This is one of the hottest topics among competetive programming and dsa problems
     - O(n) time
     - O(1) space
 
+- [Find the number of arrays with sum k.](https://leetcode.com/problems/subarray-sum-equals-k/description/)
+
+
 - Find the Longest Increasing Subseqeunce
   - [Question](https://leetcode.com/problems/longest-increasing-subsequence/solutions/1326308/c-python-dp-binary-search-bit-segment-tree-solutions-picture-explain-o-nlogn/)
   - cool approaches:
@@ -24,6 +27,8 @@ This is one of the hottest topics among competetive programming and dsa problems
 - Longest consecutive sub-sequence
   - see blind 75 solutions for solution
 
+- [Find the longest sub-array whoose sum is k](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)
+
 - [Maximum product subarray](https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
   - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp) 
 
@@ -33,7 +38,10 @@ This is one of the hottest topics among competetive programming and dsa problems
   - O(1) space
   - [kadanes_algo.cpp](kadanes_algo.cpp)
 
-- find the maximum for each sub-array of size k
+- Find maximum sub-array sum <= k
+  - [maxSubArraySum<=k.cpp](maxSubArraySum<=k.cpp)
+
+- Find the maximum for each sub-array of size k
   - [question](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
   - [max_subarray.cpp](max_subarray.cpp)
 
@@ -107,3 +115,7 @@ This is one of the hottest topics among competetive programming and dsa problems
         - Time: O(N^2 + Q)
     - Approach II:
         - Use segment tree
+
+# Related questions:
+- [Question1](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/)
+- 

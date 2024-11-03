@@ -172,7 +172,12 @@
 - For non-negative weighted graphs:
   - Dijkstra's algorithm:
     - Dijkstra's algorithm will find shortest path from source vertex (s) to all vertices in any non-negative weighted directed (or) undirected graph.
-    - 
+    - [dijkstra_STL.cpp](dijkstra_STL.cpp)
+      - Time: O(|E| * log(|E|))
+      - Auxillary space: O(|E| + |V|) 
+    - [dijkstra.cpp](dijkstra.cpp)
+      - Time: O(|E| * log(|V|))
+      - Auxillary space: O(|V|)
 - For weighted directed acyclic graphs (DAG):
   - Using topological sort
   - Using Bellman-ford algorithm
