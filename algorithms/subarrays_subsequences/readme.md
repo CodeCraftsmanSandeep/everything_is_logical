@@ -30,7 +30,12 @@ This is one of the hottest topics among competetive programming and dsa problems
 - [Find the longest sub-array whoose sum is k](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)
 
 - [Maximum product subarray](https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
-  - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp) 
+  - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp)
+
+- [Count the nunber of sub-arrays with product < k](https://leetcode.com/problems/subarray-product-less-than-k/description/)
+  - [countSubArraysWithProduct<k.cpp](countSubArraysWithProduct<k.cpp)
+  - Time complexity: O(n)
+  - Auxillary space: O(1)
 
 - Maximum sub-array sum
   - [kadanes algo](https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1)

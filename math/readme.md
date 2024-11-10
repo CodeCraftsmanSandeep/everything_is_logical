@@ -37,6 +37,10 @@
 - Betrand’s postulate:
     - For all n >= 1, there exists at least one prime in (n, 2*n]
 
+- Upper bound on number of factors
+  - Blog: [link](https://math.stackexchange.com/questions/1699330/upper-bound-on-number-of-factors)
+  - Useful bound: Number of factors <= sqrt(3 * x). See the plot of this [here](https://i.sstatic.net/0bWW9.png)
+
 - Harmonic number:
     - [Wiki](https://en.wikipedia.org/wiki/Harmonic_number)
     - H(n) = Sum of reciprocals of first n natural numbers = 1 + 1/2 + 1/3 + … + 1/n 

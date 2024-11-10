@@ -106,6 +106,8 @@
                         - This matches lines which has pattern one or more "a"s followed by one or more "b"s.
                     - grep -E "ab*" filename
                         - This matches line which has pattern one 'a' followed by one (or) more 'b's
+        - find:
+            - Command useful to find for specific files and directories
         - kill
             - the kill command is used to send signals to processes. Typically, it's used to terminate a process, but it can send various signals that instruct processes to behave in specific ways. The most common signal sent is SIGTERM (terminate), which asks a process to stop gracefully, and SIGKILL (kill), which forces a process to stop immediately.
             - Commands:
