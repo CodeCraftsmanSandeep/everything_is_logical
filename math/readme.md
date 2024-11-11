@@ -53,3 +53,12 @@
 - Erodos seekers theorem:
   - [WIKI](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem)
   - In mathematics, the Erdős–Szekeres theorem asserts that, given r, s, any sequence of distinct real numbers with length at least (r − 1)(s − 1) + 1 contains a monotonically increasing subsequence of length r or a monotonically decreasing subsequence of length s. 
+
+## Probability
+- Expected value:
+  - [Wiki](https://en.wikipedia.org/wiki/Expected_value)
+
+# Math related CP questions
+- [Question 1](https://www.codechef.com/problems/LUCMAT)
+- [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
+
