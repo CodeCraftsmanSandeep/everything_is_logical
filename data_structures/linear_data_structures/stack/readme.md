@@ -1,7 +1,5 @@
 # 📚 Stack Concepts and Problems
 
-Welcome to the Stack repository! This repository contains a collection of notes and practice problems centered around the stack data structure, its applications, and related algorithms.
-
 ## 📝 Key Concepts
 
 - **Computers Evaluate Using Postfix Expressions**:  
