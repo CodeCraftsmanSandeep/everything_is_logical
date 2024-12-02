@@ -62,3 +62,8 @@
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
 - [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
 
+-----
+## GENERAL MATH USED WHILE CP
+- Palindrome checking
+  - s[i] = s[(n-1) - i] for 0 base indexing
+  - s[i] = s[(n+1) - i] for 1 base indexing
