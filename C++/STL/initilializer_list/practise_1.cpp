@@ -10,7 +10,7 @@ private:
     int size;
 public:
     my_data(initializer_list <T> list){
-        arr = new T[size];
+        arr = new T[list.size()];
         size = 0;
         for(auto it = list.begin(); it != list.end(); it++){
             arr[size++] = *it;
@@ -27,6 +27,13 @@ public:
 };
 
 int main(){
+    // initilializing the object
+
     my_data <float> obj({4, 2, 2, 10});
     obj.print_data();
+
+    cout << "\n";
+
+    my_data <float> second_obj = {4, 3, 2};
+    second_obj.print_data();
 }

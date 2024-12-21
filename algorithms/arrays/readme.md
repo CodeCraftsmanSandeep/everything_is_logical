@@ -9,3 +9,4 @@
 | 7 | [Minimize the maximum difference between the heights](https://www.geeksforgeeks.org/problems/minimize-the-heights3351/1) | Time: O(nlogn) <br/> Space: O(1) |
 | 8 | [Find the closest pair from two arrays](https://www.geeksforgeeks.org/problems/find-the-closest-pair-from-two-arrays4215/1) | Time: O(n + m), Space: O(1) | [find_the_closest_pair_from_two_arrays.cpp](find_the_closest_pair_from_two_arrays.cpp) |
 | 9 | [Trapping rain water problem](https://leetcode.com/problems/trapping-rain-water/) | Time: O(n), Space: O(1) for most optimized version | [trapping_rain_water_solution_1.cpp](trapping_rain_water_solution_1.cpp), [trapping_rain_water_solution_2.cpp](trapping_rain_water_solution_2.cpp) |
+| 10 | [Next permutation](https://leetcode.com/problems/next-permutation/description/) | O(n + logn) time, O(1) space | [next_permutation.cpp](next_permutation.cpp)|

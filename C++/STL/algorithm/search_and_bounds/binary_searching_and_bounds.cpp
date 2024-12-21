@@ -53,7 +53,7 @@ void customComparator(){
         return (nd1->val > nd2->val) || ((nd1->val == nd2->val) && (nd1->index > nd2->index));
     };
     Node* search_key = new Node(40, 79);
-    bool isPresent = binary_search(arr, arr+n, search_key, (customComp));
+    bool isPresent = binary_search(arr, arr+n, search_key, customComp);
 
     cout << "isPresent(" << search_key->val << "," << search_key->index << ") = " << isPresent << "\n";
 
