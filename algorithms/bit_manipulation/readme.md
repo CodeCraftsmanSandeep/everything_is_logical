@@ -25,3 +25,13 @@
   - x is the right most 1 in n
   - n&(n-1) = n - (n&(-n))
 - a & b + a ^ b = a | b
+
+- XOR of first n natural numbers:
+  - (n mod 4) = 0:
+    - XOR(n) = n
+  - (n mod 4) = 1
+    - XOR(n) = 1
+  - (n mod 4) = 2
+    - XOR(n) = n + 1
+  - (n mod 4) = 3
+    - XOR(n) = 0

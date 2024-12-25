@@ -31,6 +31,7 @@ This is one of the hottest topics among competetive programming and dsa problems
 
 - [Maximum product subarray](https://www.geeksforgeeks.org/problems/maximum-product-subarray3604/1)
   - O(n) time, O(1) solution: [maximumProductSubarray.cpp](maximumProductSubarray.cpp)
+  - O(n) time, O(1) space solution : [maximumProductSubarray_2.cpp](maximumProductSubarray_2.cpp)
 
 - [Count the nunber of sub-arrays with product < k](https://leetcode.com/problems/subarray-product-less-than-k/description/)
   - [countSubArraysWithProduct<k.cpp](countSubArraysWithProduct<k.cpp)
@@ -98,6 +99,11 @@ This is one of the hottest topics among competetive programming and dsa problems
   - [maximum_of_minimum.cpp](maximum_of_minimum.cpp)
     - Time: O(n)
     - Auxillary space: O(n)
+
+- [Given an integer array nums and an integer k, split nums into k non-empty subarrays such that the largest sum of any subarray is minimized.](https://leetcode.com/problems/split-array-largest-sum/description/)
+
+- [Find the sum of minimums of all sub-arrays](https://leetcode.com/problems/sum-of-subarray-minimums/description/)
+  - [sum_of_all_mins_using_nse.cpp](sum_of_all_mins_using_nse.cpp)
 
 
 ## Range based queries questions

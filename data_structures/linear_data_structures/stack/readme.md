@@ -6,6 +6,12 @@
   - Computers naturally evaluate expressions in postfix notation.
   - **Stacks** can be effectively used to convert between different expression notations: postfix, infix, and prefix. This is a fundamental application of stacks in computer science.
 
+- Expressions:
+   - Infix expressions, Prefix expression (polish notation) and Postfix expression (reverse polish notation)
+   - [Infix to Postfix](https://www.geeksforgeeks.org/problems/infix-to-postfix-1587115620/1)
+      - [infix_to_postfix.cpp](infix_to_postfix.cpp)
+
+
 ## 🧩 Practice Problems
 
 Explore these problems to deepen your understanding of stacks and their applications:
@@ -30,7 +36,8 @@ Explore these problems to deepen your understanding of stacks and their applicat
    - Problem Link: [GeeksforGeeks - Valid Substring](https://www.geeksforgeeks.org/problems/valid-substring0624/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
 
 4. **Special Stack**:
-   - Design and implement a special stack that supports additional operations.
-   - Problem Link: [GeeksforGeeks - Special Stack](https://www.geeksforgeeks.org/design-and-implement-special-stack-data-structure/)
+   - Design and implement a special stack that supports additional operations. 
+   - Problem Link: [GeeksforGeeks - Special Stack](https://www.geeksforgeeks.org/design-and-implement-special-stack-data-structure/), MinStack
 
-Feel free to explore these concepts and problems to strengthen your grasp on stacks! 🚀
+5. [Find the smallest number possible after removing k digits from a number](https://leetcode.com/problems/remove-k-digits/submissions/1487612346/)
+   - [My solution](smallest_possible_num.cpp)

@@ -1,17 +1,15 @@
-
+// O(n) time
+// O(1) space
 class Solution {
 public:
     int trap(vector<int>& arr) {
-        int n = arr.size();
-        if(n <= 2) return 0;
+        int low = 0;
+        int high = arr.size() - 1;
 
+        int water = 0;
         int left_max = 0;
         int right_max = 0;
 
-        int low = 0;
-        int high = n - 1;
-
-        int water = 0;
         while(low <= high){
             if(left_max <= right_max){
                 water += max(0, left_max - arr[low]);
@@ -24,3 +22,5 @@ public:
         return water;
     }
 };
+
+// This is the best code for trapping rain water problem
