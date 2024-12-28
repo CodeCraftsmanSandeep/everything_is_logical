@@ -164,6 +164,20 @@ There are several different **processor architectures**, each designed to optimi
         - Optimizes access to main memory in systems with non-uniform memory access (NUMA).
     - Database Cache
         - Caching results of frequently asked queries.
+
+- Cache placement policies:
+    - Cache placement policies are policies that determine where a particular memory block can be placed when it goes into a CPU cache. A block of memory cannot necessarily be placed at an arbitrary location in the cache; it may be restricted to a particular cache line or a set of cache lines by the cache's placement policy.
+    - There are three different policies available for placement of a memory block in the cache: direct-mapped, fully associative, and set-associative. Originally this space of cache organizations was described using the term "congruence mapping".
+    - [Wiki](https://en.wikipedia.org/wiki/Cache_placement_policies)
+    - Two way set associative cache placemenet policy.
+
+- Non uniform memory acces:
+    - Non-uniform memory access (NUMA) is a computer memory design used in multiprocessing, where the memory access time depends on the memory location relative to the processor. Under NUMA, a processor can access its own local memory faster than non-local memory (memory local to another processor or memory shared between processors). NUMA is beneficial for workloads with high memory locality of reference and low lock contention, because a processor may operate on a subset of memory mostly or entirely within its own cache node, reducing traffic on the memory bus.
+
+- CPU Stalls
+    - The time taken to fetch one cache line from memory (read latency due to a cache miss) matters because the CPU will run out of work while waiting for the cache line. When a CPU reaches this state, it is called a stall. As CPUs become faster compared to main memory, stalls due to cache misses displace more potential computation; modern CPUs can execute hundreds of instructions in the time taken to fetch a single cache line from main memory.
+    - Various techniques have been employed to keep the CPU busy during this time, including out-of-order execution in which the CPU attempts to execute independent instructions after the instruction that is waiting for the cache miss data. Another technology, used by many processors, is simultaneous multithreading (SMT), which allows an alternate thread to use the CPU core while the first thread waits for required CPU resources to become available.
+
 ### Cache reaplacement policies:
 - [Wiki](https://en.wikipedia.org/wiki/Cache_replacement_policies)
 - During a cache miss, some other previously existing cache entry is typically removed in order to make room for the newly retrieved data. The heuristic used to select the entry to replace is known as the replacement policy.
@@ -176,4 +190,36 @@ There are several different **processor architectures**, each designed to optimi
     4) Least Recently Used (LRU)
     5) Most Recently Used (MRU)
     6) Least frequently used (LFU)
+
+### Cache Write policies
+- If data is written to the cache, at some point it must also be written to main memory; the timing of this write is known as the write policy.
+- Two types:
+    1) Write through
+        -  In a write-through cache, every write to the cache causes a write to main memory. 
+    2) Write back
+        - Alternatively, in a write-back or copy-back cache, writes are not immediately mirrored to the main memory, and the cache instead tracks which locations have been written over, marking them as dirty. The data in these locations is written back to the main memory only when that data is evicted from the cache. For this reason, a read miss in a write-back cache may sometimes require two memory accesses to service: one to first write the dirty location to main memory, and then another to read the new location from memory. Also, a write to a main memory location that is not yet mapped in a write-back cache may evict an already dirty location, thereby freeing that cache space for the new memory location.
+
+### Cache coherence
+- In computer architecture, cache coherence is the uniformity of shared resource data that is stored in multiple local caches. In a cache coherent system, if multiple clients have a cached copy of the same region of a shared memory resource, all copies are the same. Without cache coherence, a change made to the region by one client may not be seen by others, and errors can result when the data used by different clients is mismatched.
+- cache coherency protocols:
+    - [wiki](https://en.wikipedia.org/wiki/Cache_coherency_protocols_(examples))
+    - Snoopy coherency protocol (Bus snooping), [Wiki](https://en.wikipedia.org/wiki/Bus_snooping)
+        - Bus snooping or bus sniffing is a scheme by which a coherency controller (snooper) in a cache (a snoopy cache) monitors or snoops the bus transactions, and its goal is to maintain a cache coherency in distributed shared memory systems. 
+        - There are two kinds of snooping protocols depending on the way to manage a local copy of a write operation:
+            - Write-invalidate
+                - When a processor writes on a shared cache block, all the shared copies in the other caches are invalidated through bus snooping. This method ensures that only one copy of a datum can be exclusively read and written by a processor. All the other copies in other caches are invalidated. This is the most commonly used snooping protocol. MSI, MESI, MOSI, MOESI, and MESIF protocols belong to this category.
+            - Write-update
+                - When a processor writes on a shared cache block, all the shared copies of the other caches are updated through bus snooping. This method broadcasts a write data to all caches throughout a bus. It incurs larger bus traffic than write-invalidate protocol. That is why this method is uncommon. Dragon and firefly protocols belong to this category.
+- Cache invalidation is a process in a computer system whereby entries in a cache are replaced or removed.
+
+------------
+
+## Architectures
+- von Neumann architecture
+    - The term "von Neumann architecture" has evolved to refer to any stored-program computer in which an instruction fetch and a data operation cannot occur at the same time (since they share a common bus). This is referred to as the von Neumann bottleneck, which often limits the performance of the corresponding system.
+    - [Architecture](https://en.wikipedia.org/wiki/File:Von_Neumann_Architecture.svg)
+- Harvard architecture
+    - The Harvard architecture is a computer architecture with separate storage and signal pathways for instructions and data. It is often contrasted with the von Neumann architecture, where program instructions and data share the same memory and pathways. This architecture is often used in real-time processing or low-power applications.
+    - [Harward architecture](https://en.wikipedia.org/wiki/File:Harvard_architecture.svg)
+
 
