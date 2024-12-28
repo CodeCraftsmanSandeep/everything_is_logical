@@ -335,10 +335,6 @@ There are two types of booting:
     - Login: The Getty process spawns the login process, which authenticates users. When you enter your credentials at the login prompt, the login process handles the validation.
     - User Shell: After successful authentication, the login process spawns the user's shell (such as bash, zsh, etc.), and the user can begin their session.
 
-### Cold Boot vs. Warm Boot:
-- **Cold Boot:** Starting the computer from a powered-off state.
-- **Warm Boot:** Restarting the system without turning off the power (like pressing the restart button or using software commands).
-
 # Inter process communication
 **Inter-Process Communication (IPC)** allows processes to communicate and synchronize their actions in a multitasking environment. Here’s a brief overview:
 
