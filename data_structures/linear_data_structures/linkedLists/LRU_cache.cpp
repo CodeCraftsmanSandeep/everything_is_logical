@@ -1,4 +1,3 @@
-// this code is made simple by using dummies 😮‍💨😮‍💨😮‍💨
 class cacheNode;
 
 class LRUCache{
@@ -29,7 +28,7 @@ public:
     friend void LRUCache::latestAccess(cacheNode* );
 };
 
-LRUCache::LRUCache(int capacity): capacity(capacity), head(nullptr), tail(nullptr), curr_ele(0){
+LRUCache::LRUCache(int capacity): capacity(capacity), curr_ele(0){
     arr.resize((int)1e5 + 1, nullptr);
     head = new cacheNode(-1, -1);
     tail = new cacheNode(-1, -1);
@@ -76,3 +75,10 @@ void LRUCache::put(int key, int value){
 
     latestAccess(arr[key]);
 }
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * LRUCache* obj = new LRUCache(capacity);
+ * int param_1 = obj->get(key);
+ * obj->put(key,value);
+ */

@@ -22,3 +22,6 @@ Based on storage of node:
 - [Flattening a linked list](https://www.geeksforgeeks.org/flattening-a-linked-list/)
 - [Partition the linked list](https://www.geeksforgeeks.org/partitioning-a-linked-list-around-a-given-value-and-keeping-the-original-order/)
 - [Cloning a linked list](https://www.geeksforgeeks.org/a-linked-list-with-next-and-arbit-pointer/)
+- [LRU cache implementation](https://leetcode.com/problems/lru-cache/)
+	- [Solution](LRU_cache.cpp)
+

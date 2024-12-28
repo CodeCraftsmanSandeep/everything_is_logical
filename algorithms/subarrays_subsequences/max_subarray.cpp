@@ -1,23 +1,23 @@
-// using deque
-// O(n) time
-// O(k) space
-class Solution
-{
-  public:
-    //Function to find maximum of each subarray of size k.
-    vector <int> max_of_subarrays(int *arr, int n, int k){
-        deque <int> q;
-        for(int i = 0; i < k; ++i){
-            while(!q.empty() && arr[q.back()] <= arr[i]) q.pop_back();
-            q.push_back(i);
+// using deque 
+// Time : O(n)
+// Space: O(n)
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& arr, int k) {
+        int n = arr.size();
+        deque <int> dq;
+        vector <int> maxEleOfWindow(n - k + 1);
+
+        for(int i = n-1; i >= n-k+1; i--){
+            while(!dq.empty() && arr[dq.back()] <= arr[i]) dq.pop_back();
+            dq.push_back(i);
         }
-        vector <int> ans = {arr[q.front()]};
-        for(int i = k; i < n; i++){
-            while(!q.empty() && q.front() <= i-k) q.pop_front();
-            while(!q.empty() && arr[q.back()] <= arr[i]) q.pop_back();
-            q.push_back(i);
-            ans.push_back(arr[q.front()]);
+        for(int i = n-k; i >= 0; i--){
+            while(!dq.empty() && arr[dq.back()] <= arr[i]) dq.pop_back();
+            dq.push_back(i);
+            maxEleOfWindow[i] = arr[dq.front()];
+            if(dq.front() - i + 1 == k) dq.pop_front();
         }
-        return ans;
+        return maxEleOfWindow;
     }
 };

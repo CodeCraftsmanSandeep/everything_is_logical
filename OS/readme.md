@@ -1,29 +1,17 @@
 # OS
-- DMA 
-    - Direct Memory Acess
-    - https://en.wikipedia.org/wiki/Direct_memory_access
+- OS is a software that manages system hardware.
+- DMA (Direct Memory Acess)
+    - [Wiki](https://en.wikipedia.org/wiki/Direct_memory_access)
+    - With DMA, the CPU first initiates the transfer, then it does other operations while the transfer is in progress, and it finally receives an interrupt from the DMA controller (DMAC) when the operation is done
+    - DMA can lead to cache coherency problems.
 - Real time OS
     - A real-time operating system (RTOS) is a special kind of operating system designed to handle tasks that need to be completed quickly and on time. Unlike general-purpose operating systems (GPOS), which are good at multitasking and user interaction, RTOS focuses on doing things in real time.
-- Embedded systems vs Standalone (or) general purpose systems:
-    - Embedded systems:
-        - A computer system designed to perform a specific task within a larger system. It's often small, low-power, and has limited functionality.
-        - Examples:
-            1) Home appliances (microwave ovens, washing machines)
-            2) automotive systems (anti-lock braking systems, engine control units)
-            3) medical devices (pacemakers)
-            4) consumer electronics (smart TVs, cameras)
-        - Embedded systems are specialized computing systems designed to perform dedicated functions or tasks within a larger system. Unlike general-purpose computers, which can run a variety of applications, embedded systems are typically optimized for specific applications and have constraints on resources such as power, memory, and processing speed.
-    - Standalone (or) general purpose systems:
-        -  A computer that operates independently and can be used for various tasks.
-        - Examples:
-            1) PC (laptops (or) desktops)
-            2) Servers
 
-- OS is a software that manages system hardware.
+
 - Some important features of OS
     1) Resouce management
         a) Processor
-        b) Memeory management
+        b) Memory management
         c) Storage mangement (File mangement on disk)
         d) I/O
         e) Network resources
@@ -451,10 +439,7 @@ Page faults are detected when a process tries to access a page not currently in 
     - LRU
         - LRU is also used as cache replacement algorithm
         - [Question](https://leetcode.com/problems/lru-cache/submissions/1404037372/)
-        - [LRU_without_dummies.cpp](LRU_without_dummies.cpp) is complex as no dummies are used.
-            - Time: O(1) per operation
-            - Auxillary space: capacity * 2 
-        - [LRU_simple.cpp](LRU_simple.cpp) is simplified by using dummies
+        - [LRU_simple.cpp](LRU_simple.cpp)
             - Time: O(1) per operation
             - Auxillary space: capacity * 2 
     - MRU
@@ -531,6 +516,10 @@ Paging is a memory management technique that helps mitigate fragmentation issues
 2. EPROM (Erasable Programmable read-only memory): It can be reprogrammed. To erase data from it, expose it to ultraviolet light. To reprogram it, erase all the previous data. 
 
 3. EEPROM (Electrically erasable programmable read-only memory): The data can be erased by applying an electric field, with no need for ultraviolet light. We can erase only portions of the chip.
+
+-----
+
+
 
 # Process and threads
 

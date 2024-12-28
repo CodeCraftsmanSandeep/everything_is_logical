@@ -95,4 +95,6 @@
             | 1 | Directly using knapsack, without using much brain | [zero_one_bounded_knapsack_4.cpp](zero_one_bounded_knapsack_4.cpp) | O(W * N * M) | O(W*N), can be optimized to O(W) but not done to maintain clarity |
             | 2 | Using knapsack and little 🧠, Try to prove as the proof is hot. | [zero_one_bounded_knapsack_5.cpp](zero_one_bounded_knapsack_5.cpp) | O(W * N * logM) | O(W * N * logM), can be optimized to O(W) but not done to maintain clarity | 
             | 3 | using knapsack and 🧠 | [zero_one_bounded_knapsack_6.cpp](zero_one_bounded_knapsack_6.cpp) NEED TO CODE | O(W * N) | O(W * N) can be optimzed to O(W) but not done |
+  - [fractional knapsack](https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1)
+    - [fractional_knapsack.cpp](fractional_knapsack.cpp), greedy one
 

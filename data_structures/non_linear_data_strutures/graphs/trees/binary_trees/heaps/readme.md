@@ -27,6 +27,8 @@
 | [make_heap_and_heap_sort.cpp](make_heap_and_heap_sort.cpp) | Time complexity is O(n), space O(1), see proof: [proof_page1.jpg](proof_page1.jpg), [proof_page2.jpg](proof_page2.jpg) |
 | [make_heap_and_heap_sort.cpp](make_heap_and_heap_sort.cpp) | heap sort, time: O(nlogn), space: O(1) |
 | [Find k largest elements](https://www.geeksforgeeks.org/problems/k-largest-elements4206/1) | Standard question which is solved using heaps. My code: [find_k_largest_elements.cpp](find_k_largest_elements.cpp) |
+| [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) | [median.cpp](median.cpp), nice code |
+
  
 
 

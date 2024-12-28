@@ -47,8 +47,7 @@ This is one of the hottest topics among competetive programming and dsa problems
 - Find maximum sub-array sum <= k
   - [maxSubArraySum<=k.cpp](maxSubArraySum<=k.cpp)
 
-- Find the maximum for each sub-array of size k
-  - [question](https://www.geeksforgeeks.org/problems/maximum-of-all-subarrays-of-size-k3101/1)
+- [Find the maximum for each sub-array of size k : Sliding Window Maximum Problem](https://leetcode.com/problems/sliding-window-maximum/description/)
   - [max_subarray.cpp](max_subarray.cpp)
 
 - Longest palindromic substring
@@ -105,6 +104,20 @@ This is one of the hottest topics among competetive programming and dsa problems
 - [Find the sum of minimums of all sub-arrays](https://leetcode.com/problems/sum-of-subarray-minimums/description/)
   - [sum_of_all_mins_using_nse.cpp](sum_of_all_mins_using_nse.cpp)
 
+- [Find the number of sub-arrays of binary array which sum to goal](https://leetcode.com/problems/binary-subarrays-with-sum/description/)
+  - [solution_1](binary_sub_array_1.cpp)
+  - [solution_2](binary_sub_array_2.cpp)
+
+- [Find the number of sub-arrays with k distinct integers](https://leetcode.com/problems/subarrays-with-k-different-integers/description/)
+  - [sub_arrays_with_k_distinct_integers.cpp](sub_arrays_with_k_distinct_integers.cpp)
+    - Time : O(n)
+    - Space : O(n) for hashmap
+
+- [Minimum window sub-sequence](https://www.naukri.com/code360/problems/minimum-window-subsequence_2181133)
+  - [DP solution](minimum_window_sub_sequence.cpp)
+
+- [In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards. Given the integer array cardPoints and the integer k, return the maximum score you can obtain.](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
+  - [solution_1](max_sum_from_cards.cpp), Time : O(n), Space : O(1)
 
 ## Range based queries questions
 - [Range based quries question.](https://www.geeksforgeeks.org/array-range-queries-range-queries/)
