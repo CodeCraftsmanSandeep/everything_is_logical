@@ -438,12 +438,14 @@ A page fault is detected by the operating system (OS) when a process tries to ac
 6. **Page Fault Handler**:
    - The operating system's page fault handler is invoked to handle the page fault. The handler typically:
      - Determines the cause of the page fault (e.g., whether it was a valid access or an invalid access).
-     - If it's a valid access, the handler will find the needed page (from disk or other storage) and load it into memory.
+     - If it's a valid access, the handler will find the needed page (from disk or other storage) and load it into memory. If there is no free space in memeory to load the page, then page_replacement_algo is run to make free space in memory.
      - Updates the page table with the new mapping.
      - Restarts the instruction that caused the page fault.
 
 ### Summary:
+
 Page faults are detected when a process tries to access a page not currently in physical memory. The detection process involves checking the TLB and the page table, leading to the invocation of a page fault handler if the page is not present in memory.
+
 -----------
 - [Page replacement algo](https://www.geeksforgeeks.org/page-replacement-algorithms-in-operating-systems/)
     - FIFO
@@ -455,6 +457,7 @@ Page faults are detected when a process tries to access a page not currently in 
             - Time: O(1) per operation
             - Auxillary space: capacity * 2 
     - MRU
+    - LFU
 - Demand paging
 
 - Virtual memory is a combination of RAM and disk space that running processes can use. Swap space is the portion of virtual memory that is on the hard disk, used when RAM is full. 
@@ -534,10 +537,7 @@ Paging is a memory management technique that helps mitigate fragmentation issues
 
 3. EEPROM (Electrically erasable programmable read-only memory): The data can be erased by applying an electric field, with no need for ultraviolet light. We can erase only portions of the chip.
 
------
-
-
-
+----
 # Process and threads
 
 - [Source](https://www.geeksforgeeks.org/process-table-and-process-control-block-pcb/). A process control block (PCB) stores various  information about a process so that the operating system can manage it properly. Like:
