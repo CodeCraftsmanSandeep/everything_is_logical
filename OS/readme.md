@@ -349,9 +349,7 @@ There are two types of booting:
 
 3. **Shared Memory**: 
    - A common memory segment accessed by multiple processes for fast communication, requiring synchronization (e.g., with semaphores).
-
-4. **Semaphores**: 
-   - Synchronization tools to control access to shared resources, preventing race conditions.
+   - **Semaphores**: Synchronization tools to control access to shared resources, preventing race conditions.
 
 5. **Sockets**: 
    - Communication over a network, suitable for processes on the same or different machines, supporting TCP (stream-oriented) and UDP (datagram-oriented).
@@ -1049,3 +1047,56 @@ Using **locks**, we ensure one thread completes before the other starts.
 - Way to handle system crashes:
     - Journaling
     - Source: [Wiki](https://en.wikipedia.org/wiki/Journaling_file_system)
+
+-------------
+## Thread vs process
+Threads and processes are fundamental concepts in computer science, particularly in operating systems and parallel programming. Here's a breakdown of each:
+
+---
+
+### **Process**
+- A **process** is an independent program in execution. It is the primary unit of resource allocation and execution in an operating system.
+- Each process has its **own memory space** (code, data, and stack segments) and resources like file handles, network connections, etc.
+- Processes are **isolated** from one another, meaning one process cannot directly access another process's memory or resources.
+- **Context switching** between processes involves saving and loading the entire process state, which is relatively expensive.
+
+#### Characteristics of Processes:
+1. **Independent execution**.
+2. **Memory isolation**.
+3. Can contain multiple threads.
+
+#### Example:
+Running two separate programs like a text editor and a web browser are two different processes.
+
+
+### **Thread**
+- A **thread** is the smallest unit of execution within a process. It is also referred to as a "lightweight process."
+- Threads within the same process share the same memory space but have separate execution contexts, including their own **program counter**, **registers**, and **stack**.
+- Threads in a single process can **communicate with each other more easily** since they share memory and resources, but this also makes them prone to issues like race conditions.
+- **Context switching** between threads of the same process is less expensive than between processes.
+
+#### Characteristics of Threads:
+1. **Shares memory and resources** with other threads in the same process.
+2. **Faster creation and management** compared to processes.
+3. Requires synchronization mechanisms (e.g., mutexes, semaphores) to avoid race conditions.
+
+#### Example:
+A web browser process may have multiple threads:
+- One thread for rendering the webpage.
+- Another for handling user inputs.
+- A third for network requests.
+
+---
+
+### **Key Differences Between Processes and Threads**
+
+| Feature                 | Process                          | Thread                       |
+|-------------------------|-----------------------------------|------------------------------|
+| **Definition**          | Independent program in execution.| Smallest unit of execution in a process. |
+| **Memory**              | Has its own memory space.         | Shares memory with other threads in the process. |
+| **Overhead**            | High (context switching is expensive). | Low (context switching is lightweight). |
+| **Communication**       | Inter-process communication (IPC) mechanisms are needed (e.g., pipes, sockets). | Direct communication through shared memory. |
+| **Fault Tolerance**     | One process crash does not affect others. | A thread crash can potentially affect the entire process. |
+| **Use Case**            | Running independent programs.     | Concurrent tasks within the same program. |
+
+-----------
