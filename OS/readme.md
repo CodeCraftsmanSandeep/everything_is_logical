@@ -421,6 +421,9 @@ A page fault is detected by the operating system (OS) when a process tries to ac
 1. **Accessing Memory**:
    - When a program accesses memory (e.g., reading from or writing to a variable), the CPU generates a memory address.
 
+1.2. **Memory Management Unit**:
+    - Converts virtual address to physical address. MMU communicates with TLB.
+
 2. **Translation Lookaside Buffer (TLB)**:
    - The CPU first checks the **TLB**, a cache that stores recently used virtual-to-physical address mappings. If the translation is found in the TLB, the corresponding physical address is used, and the access continues without any issue.
 
