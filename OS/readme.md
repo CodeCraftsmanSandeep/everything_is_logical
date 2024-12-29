@@ -336,6 +336,24 @@ There are two types of booting:
     - User Shell: After successful authentication, the login process spawns the user's shell (such as bash, zsh, etc.), and the user can begin their session.
 
 # Inter process communication
+
+Processes need to communicate when they work together to achieve a common goal but run in separate memory spaces. **Inter-Process Communication (IPC)** enables them to exchange data or coordinate actions.
+
+### Examples:
+1. **Web Server and Database:**
+   - A web server process queries a database process for user data using IPC mechanisms like sockets.
+
+2. **Shell and Commands:**
+   - A shell process communicates with child processes (e.g., `ls`, `grep`) via pipes to pass input/output.
+
+3. **Distributed Systems:**
+   - Processes running on different machines share data using IPC mechanisms like message queues or RPC.
+
+### Why IPC:
+- **Isolation**: Processes have separate memory, so they need IPC to share information.
+- **Synchronization**: Ensures tasks are coordinated without conflicts.
+
+## IPC
 **Inter-Process Communication (IPC)** allows processes to communicate and synchronize their actions in a multitasking environment. Here’s a brief overview:
 
 ### Key IPC Mechanisms
@@ -443,9 +461,14 @@ Page faults are detected when a process tries to access a page not currently in 
 
 - Two main types of virtual memory managment
     1) paging
+        - Memory is divided into fixed-sized pages (in logical memory) and fixed-sized frames (in physical memory).
+        - Eliminates external fragmentation but can cause internal fragmentation.
     2) Segmentation
         - Segmentation is a memory management technique that divides a program into segments, improving performance and reducing internal fragmentation.
         - Segments are not of equal size and are loaded into memory at runtime
+        - Memory is divided into variable-sized segments based on logical divisions like functions, data, stack, etc.
+        - Allows better program structure and supports modularity but can lead to external fragmentation.
+
 - Virtual memeory
     - Virtual memory is a memory management technique that creates an "abstraction" of the physical memory available in a system. It allows a computer to use hard disk space as if it were additional RAM, enabling larger applications to run on systems with limited physical memory.
 - Physical memory refers to the actual RAM (Random Access Memory) installed in a computer system. It is the hardware that stores data and instructions currently in use.
