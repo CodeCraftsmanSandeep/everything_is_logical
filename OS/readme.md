@@ -464,6 +464,8 @@ Page faults are detected when a process tries to access a page not currently in 
 - Demand paging
 
 - Virtual memory is a combination of RAM and disk space that running processes can use. Swap space is the portion of virtual memory that is on the hard disk, used when RAM is full. 
+- Swap sapce: [GFG](https://www.geeksforgeeks.org/swap-space-in-operating-system/)
+- Thrashing: [Wiki](https://en.wikipedia.org/wiki/Thrashing_(computer_science))
 
 - Two main types of virtual memory managment
     1) paging
@@ -485,7 +487,7 @@ Page faults are detected when a process tries to access a page not currently in 
     - During context switching, the OS updates the page table base register PTBR (in the CPU) with the address of the new process's page table from its PCB.
 
 - PTE:
-    - A Page Table Entry (PTE) is an entry in the Page Table that stores information about a particular page of memory. Each PTE contains information such as the physical address of the page in memory, whether the page is present in memory or not, whether it is writable or not, and other access permissions.
+    - A Page Table Entry (PTE) is an entry in the Page Table that stores information about a particular page of memory. Each PTE contains information such as the physical address of the page in memory, whether the page is present in memory or not, whether it is writable or not, dirty or not, and other access permissions.
 - TLB
     - Translation Lookaside buffer
     - Is a fast cache used to store page table entries.
