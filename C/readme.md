@@ -22,7 +22,9 @@
 - auto keyword is present in C but is redundant. 
     - auto in C and C++ are completely different.
 - qsort() in C
-    - ```cpp void qsort(void *base, size_t num, size_t size, int (*compare)(const void *, const void *)); ```
+    - ```c
+        void qsort(void *base, size_t num, size_t size, int (*compare)(const void *, const void *)); 
+        ```
 
 # Contents
 1) static libraries and dynamic libraries
