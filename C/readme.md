@@ -9,7 +9,7 @@
     - This means that the data type of each variable is known at compile time. You must declare the type of every variable (e.g., int, float, char) before you use it, and the type cannot change at runtime.
 - In contrast, dynamically typed languages determine the data types of variables at runtime, and variables can change their type during execution (e.g., Python, JavaScript).
 - C and C++ are fast because statically typed languages are faster than dynamically typed languages.
-- C/C++ are general purpose languages.
+- C, C++, Python, Java are general purpose languages.
     - SQL, HTML, Verilog are not general purpose programming languages.
 - Mid, Low, High level languages
     - High level languages
