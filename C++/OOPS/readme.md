@@ -21,3 +21,35 @@
 ## Shallow copy vs deep copy in C++
 - [article](https://www.geeksforgeeks.org/shallow-copy-and-deep-copy-in-c/)
 - [my code](shallow_vs_deep.cpp)
+
+
+
+
+## links
+1) Static data member in class : [GFG article](https://www.geeksforgeeks.org/cpp-static-data-members/)
+  - question: Count the number of objects are present 
+      ```cpp
+      #include <iostream>
+      using namespace std;
+
+      class someClass{
+      public:
+          static int numObjects;
+
+          someClass(){
+            numObjects++;
+          }
+          ~someClass(){
+            numObjects--;
+          }
+      };
+      int someClass::numObjects = 0; // initialization
+
+      int main(){
+          someClass obj1;
+          someClass obj2;
+
+          cout << obj2.numObjects << "\n";
+      }
+      ```
+2) Static keyword in C++ : [GFG article](https://www.geeksforgeeks.org/static-keyword-cpp/)

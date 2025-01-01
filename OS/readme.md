@@ -1008,7 +1008,49 @@ Using **locks**, we ensure one thread completes before the other starts.
     - Output:
         - Upon successful creation the contents from input.txt are copied to output.txt
 4) Program to read from a file and then execute another process which will write the contents read from the file.
- 
+5) Some interseting codes:
+    - ```c
+        #include <stdio.h>
+        #include <unistd.h>
+        #include <sys/wait.h>
+
+        int main() {
+            pid_t pid = fork();
+
+            if (pid == 0) {
+                char *args[] = {"/bin/cat", "code.c", NULL};
+                execve("/bin/cat", args, NULL);
+                perror("execve failed");
+            } else if (pid > 0) {
+                wait(NULL);
+            } else {
+                perror("fork failed");
+            }
+            return 0;
+        }
+        ```
+    - ```c
+        #include <stdio.h>
+        #include <unistd.h>
+        #include <sys/wait.h>  // Include this header for wait()
+
+        int main() {
+            pid_t pid = fork();
+
+            if (pid == 0) {
+                // Child process: Replace with 'ls -l'
+                char *args[] = {"/bin/ls", "-l", NULL};
+                execve("/bin/ls", args, NULL);
+                perror("execve failed");
+            } else if (pid > 0) {
+                // Parent process: Wait for the child to finish
+                wait(NULL);  // Wait for child to terminate
+            } else {
+                perror("fork failed");
+            }
+            return 0;
+        }
+    ```
 
 # CPU scheduling 
 - Arrival Time: Time at which the process arrives in the ready queue.

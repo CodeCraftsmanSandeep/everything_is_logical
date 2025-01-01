@@ -1,10 +1,7 @@
 # Introudction
 - C is a procedural language.
 - C++ is primarily an object-oriented programming (OOP) language, but it also supports procedural programming. This means that C++ is a multi-paradigm language, combining both procedural and object-oriented features, along with other paradigms like generic and functional programming.
-- Main differences in C and C++
-    - C++ supports OOPs paradigm while C only has the procedural concept of programming.
-    - C++ has exception handling capabilities. In C, we have to resolve exceptions manually.
-    - There are no references in C.
+- Differences in C and C++: [difference_between_C_and_C++.md](difference_between_C_and_C++.md)
 - C/C++ are **statically typed languages**.
     - This means that the data type of each variable is known at compile time. You must declare the type of every variable (e.g., int, float, char) before you use it, and the type cannot change at runtime.
 - In contrast, dynamically typed languages determine the data types of variables at runtime, and variables can change their type during execution (e.g., Python, JavaScript).
@@ -23,8 +20,47 @@
     - auto in C and C++ are completely different.
 - qsort() in C
     - ```c
-        void qsort(void *base, size_t num, size_t size, int (*compare)(const void *, const void *)); 
+        void qsort(void *base, size_t num_elements, size_t size_of_element, int (*compar)(const void *, const void *));
         ```
+    - Examples:
+        ```c
+        #include <stdio.h>
+        
+        // Comparator function for integers
+        int compare(const void *a, const void *b) {
+            return (*(int*)a - *(int*)b);  // Ascending order
+        }
+        
+        int main(){
+            int arr[] = {32, 1, 111};
+            int n = sizeof(arr)/sizeof(int);
+            qsort(arr, 3, sizeof(int), compare);
+    
+            for(int i = 0; i < n; i++) printf("%d ", arr[i]);
+            printf("\n");
+        }
+        ```
+- [classes_using_struct.c](classes_using_struct.c)
+
+## Environement variabels:
+Environment variables are variables outside of a program that provide configuration information to software. They are used by the operating system and applications to determine system settings and customize the behavior of processes. These variables can store various pieces of information, such as file paths, system configurations, or user-specific settings.
+
+Some common uses of environment variables include:
+- **Path**: Specifies the directories where executable files are located, allowing the operating system to find and run programs.
+- **User-specific settings**: For example, `HOME` on Unix-like systems or `USERPROFILE` on Windows, which points to a user's home directory.
+- **System configurations**: Such as `JAVA_HOME` to specify the directory where the Java Runtime Environment is installed.
+
+In most operating systems, environment variables can be accessed by programs, scripts, or commands, and they can be set or modified within shell sessions, batch files, or programmatically in code.
+
+For example, in a Unix-like system (like Linux or macOS), you can use the following command to check an environment variable:
+```bash
+echo $PATH
+```
+
+And in Windows, you can use:
+```cmd
+echo %PATH%
+```
 
 # Contents
 1) static libraries and dynamic libraries
@@ -37,12 +73,33 @@
 4) [Memory layout of C program](https://www.geeksforgeeks.org/memory-layout-of-c-program/)
 5) [Printing environment variables in C](https://www.geeksforgeeks.org/c-program-print-environment-variables/)
     - Environment variables are dynamic values that affect the behavior of processes running on an operating system. They provide a way to store configuration information that can be used by both system processes and user applications. These variables are usually used to define system-wide settings, such as file paths, language preferences, and system-specific options, without hardcoding them into scripts or applications.
+    - some useful code:
+        - ```c
+            #include <stdio.h>
+            #include <string.h>
+            #include <stdlib.h>
+
+            int main(int argc, char* argv[], char* envp[]){
+                printf("Command line arguments\n");
+                for(int i = 0; i < argc; i++){
+                    printf("%s ", argv[i]);
+                }
+                printf("\n\n");
+
+                printf("Environemnt variables:\n");
+                for(int i = 0; envp[i] != NULL; i++){
+                    printf("%s ", envp[i]);
+                }
+                printf("\n");
+            }
+        ```
 6) Conversions
     - string to integer
         - atoi and strtol, strtoll: [atoi_strtol.c](atoi_strtol.c)
         - strtol is safer to use.
     - integer to string conversion
         - can be done by using sprintf.
+        - to_string() can be used in C++
 7) printf 
     - [printf.c](printf.c)
     - [GFG Article](https://www.geeksforgeeks.org/printf-in-c/)
@@ -52,6 +109,7 @@
     - sprintf is depericated and only supported for compatibility reasons, [sprintf_vs_snprintf.md](sprintf_vs_snprintf.md)
 9) scanf
     - scanf stands for scan fromatted string.
+    - [scanf.c](scanf.c)
 10) format specifiers in C
     - [GFG Article](https://www.geeksforgeeks.org/format-specifiers-in-c/)
 11) [enums](https://www.geeksforgeeks.org/enumeration-enum-c/)
@@ -59,8 +117,6 @@
 11.1) Macros
 12) extern 
 13) [register](https://www.geeksforgeeks.org/understanding-register-keyword/)
-14) Operators in C:
-    - 
 
 # Operators
 - Classification of operators:
@@ -106,6 +162,7 @@
 - [strings_2.c](strings_2.c)
 - [Related question](https://www.geeksforgeeks.org/questions/c-pointer-basics-question-15/)
 - strcpy
+- strcmp
 - swapping strings in C: [Article](https://www.geeksforgeeks.org/swap-strings-in-c/)
 
 ## Pointers
@@ -139,12 +196,10 @@
 - Dangling pointers:
     - [GFG article](https://www.geeksforgeeks.org/dangling-void-null-wild-pointers/)
 - size of popinters:
-    - The size of the pointers in C is equal for every pointer type. The size of the pointer does not depend on the type it is pointing to. It only depends on the operating system and CPU architecture. The size of pointers in C is 
-
-8 bytes for a 64-bit System
-4 bytes for a 32-bit System
-The reason for the same size is that the pointers store the memory addresses, no matter what type they are. As the space required to store the addresses of the different memory locations is the same, the memory required by one pointer type will be equal to the memory required by other pointer types.
-- function overloading in C
+    - The size of the pointers in C is equal for every pointer type. The size of the pointer does not depend on the type it is pointing to. It only depends on the operating system and CPU architecture. The size of pointers in C is 8 bytes for a 64-bit System 4 bytes for a 32-bit System. The reason for the same size is that the pointers store the memory addresses, no matter what type they are. As the space required to store the addresses of the different memory locations is the same, the memory required by one pointer type will be equal to the memory required by other pointer types.
+- Function overloading in C
+    - In C functions cannot be overloaded as directly done in C++.
+    - 
 - pointer arithmetic
     - Pointer Arithmetic is the set of valid arithmetic operations that can be performed on pointers.
 - Pointers can be outputted using %p, since, most of the computers store the address value in hexadecimal form using %p gives the value in that form. But for simplicity and understanding we can also use %u to get the value in Unsigned int form.
@@ -161,9 +216,11 @@ The reason for the same size is that the pointers store the memory addresses, no
     - [Question](https://www.geeksforgeeks.org/questions/gate-gate-cs-2015-set-1-question-45/)
     - [Question](https://www.geeksforgeeks.org/questions/gate-gate-cs-2015-set-3-question-36/)
     - [Question](https://www.geeksforgeeks.org/questions/isro-isro-cs-2017-question-80/)
-- Dyamic memory allocation using C
-    - [GFG Article](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
-    - malloc, calloc and realloc
+
+## Dynamic memory allocation in C
+- [GFG Article](https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/)
+- malloc, calloc, realloc and free
+- [dynamic_memory_allocation.c](dynamic_memory_allocation.c)
 
 # Key words
 - Keywords in C: [GFG Article](https://www.geeksforgeeks.org/keywords-in-c/)
