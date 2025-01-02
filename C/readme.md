@@ -199,7 +199,8 @@ echo %PATH%
     - The size of the pointers in C is equal for every pointer type. The size of the pointer does not depend on the type it is pointing to. It only depends on the operating system and CPU architecture. The size of pointers in C is 8 bytes for a 64-bit System 4 bytes for a 32-bit System. The reason for the same size is that the pointers store the memory addresses, no matter what type they are. As the space required to store the addresses of the different memory locations is the same, the memory required by one pointer type will be equal to the memory required by other pointer types.
 - Function overloading in C
     - In C functions cannot be overloaded as directly done in C++.
-    - 
+    - _Generic is helpful to some extent.
+        - Example code: [generic_code.c](generic_code.c)
 - pointer arithmetic
     - Pointer Arithmetic is the set of valid arithmetic operations that can be performed on pointers.
 - Pointers can be outputted using %p, since, most of the computers store the address value in hexadecimal form using %p gives the value in that form. But for simplicity and understanding we can also use %u to get the value in Unsigned int form.

@@ -1,10 +1,32 @@
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
-int main(){
-    string s = "101";
+class A
+{
+  int x;
+public:
+  A(int i) { x = i; }
+  void print() { cout << x; }
+};
 
-    cout << stol(s, nullptr, 10) << "\n";  // outputs 101
-    cout << stol(s, nullptr, 2) << "\n";   // outputs 5
-    cout << stol(s, nullptr, 3) << "\n";   // outputs 10
+class B: virtual public A
+{
+public:
+  B():A(10) {  }
+};
+
+class C:  virtual public A 
+{
+public:
+  C():A(10) {  }
+};
+
+class D: public B, public C {
+};
+
+int main()
+{
+    D d;
+    d.print();
+    return 0;
 }
