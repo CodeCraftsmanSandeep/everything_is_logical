@@ -119,6 +119,21 @@ This is one of the hottest topics among competetive programming and dsa problems
 - [In one step, you can take one card from the beginning or from the end of the row. You have to take exactly k cards. Given the integer array cardPoints and the integer k, return the maximum score you can obtain.](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/)
   - [solution_1](max_sum_from_cards.cpp), Time : O(n), Space : O(1)
 
+
+-----------------------------------------------------------------
+
+- [Count number of distinct substrings (it can be sub-arrays as well)](https://www.geeksforgeeks.org/problems/count-of-distinct-substrings/1)
+  - Approach 1: using z function
+    - [My code](solution_1_distinct_substrings.cpp)
+    - O(n ^ 2) time
+    - O(n) auxillary space
+  - Approach 2: using Trie data structure
+    - [My code](solution_2_distinct_substrings.cpp)
+    - O(n ^ 2) time
+    - O(n ^ 2) auxillary space
+
+-----------------------------------------------------------------
+
 ## Range based queries questions
 - [Range based quries question.](https://www.geeksforgeeks.org/array-range-queries-range-queries/)
     - Question:

@@ -223,6 +223,13 @@ echo %PATH%
 - malloc, calloc, realloc and free
 - [dynamic_memory_allocation.c](dynamic_memory_allocation.c)
 
+------
+# Union in C
+- Union in C: [GFG article](https://www.geeksforgeeks.org/c-unions/)
+
+------
+
+
 # Key words
 - Keywords in C: [GFG Article](https://www.geeksforgeeks.org/keywords-in-c/)
 - typedef

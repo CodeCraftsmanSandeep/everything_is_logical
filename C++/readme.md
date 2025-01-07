@@ -121,12 +121,8 @@
 - structs can be defined inside functions, which are called as local structs.
 - classes can be defined inside functions, which are called as local classes.
 - functions cannot be defined inside functions, but the similar functionality can be obtained by defining lambda functions inside functions.
-- 
-
 
 ### lambda functions
-
-
 # structures in c++
 
 # union in c++
@@ -275,3 +271,29 @@ int main() {
       cout << stol(s, nullptr, 3) << "\n";   // outputs 10
     }
     ```
+
+
+----------------
+## Exception handling in C++
+- C++ code doing excpetion handling
+```cpp
+#include <iostream>
+
+int main(){
+  int den = 10;
+
+  try{
+    int num = 10;  
+    if(den == 0){
+      throw std::runtime_error("Denominator cannot be zero");
+    }
+    throw den;
+    int divide = num / den;
+    std::cout << "Hi, from try block!\n" << "\n";
+  }catch(const std::exception& e){
+    std::cerr << e.what() << "\n";
+  }catch(...){
+    std::cerr << "Caught an unknown exception" << "\n";
+  }
+}
+```
