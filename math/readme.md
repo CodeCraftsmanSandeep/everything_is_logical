@@ -35,7 +35,7 @@
 - Euclid's theorem: (wiki)
     - There are infinitely many primes. (Infinitude of primes)
 - Betrand’s postulate:
-    - For all n >= 1, there exists at least one prime in (n, 2*n]
+    - For all n > 1, there exists at least one prime in (n, 2*n)
 
 - Upper bound on number of factors
   - Blog: [link](https://math.stackexchange.com/questions/1699330/upper-bound-on-number-of-factors)
