@@ -9,10 +9,12 @@
 - [Find the maximum of two numbers without using comprision operator](https://www.geeksforgeeks.org/compute-maximum-of-two-integers-in-c-c-using-bitwise-operators/)
   - [My code](finding_max.cpp) 
   - related question: [Find the smallest number in 3 numbers.](https://www.geeksforgeeks.org/smallest-of-three-integers-without-comparison-operators/)
+
 - [Find two repeated numbers](https://www.geeksforgeeks.org/problems/two-repeated-elements-1587115621/1)
   - [find_two_repeated_numbers.cpp](find_two_repeated_numbers.cpp)
     - Time: O(n)
     - Auxillary space: O(1)
+
 - [Given an unsorted array arr of of positive integers. One number 'A' from set {1, 2,....,n} is missing and one number 'B' occurs twice in array. Find numbers A and B.](https://www.geeksforgeeks.org/problems/find-missing-and-repeating2512/1)
   - [My code](find_duplicates.cpp)
     - Time: O(n)
@@ -35,3 +37,6 @@
     - XOR(n) = n + 1
   - (n mod 4) = 3
     - XOR(n) = 0
+  
+- a xor (b + c) != a xor (b) + a xor (c)
+  - Example: Take a = 5, b = 3, c = 2. 

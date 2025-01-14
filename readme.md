@@ -35,4 +35,53 @@ Welcome to my repository! This is where I wrote down my notes and practice mater
 
 -------
 
+## WHY prime numbers in CP??
+
+Using a prime number for modulo operations in competitive programming (CP) is a well-established practice, and it serves several purposes:
+
+### **1. Prevent Integer Overflow**
+In many problems, intermediate results can exceed the limits of standard data types like `int` or `long long` (e.g., \(10^{18}\) in C++). Taking results modulo a number helps keep computations within manageable bounds. For example:
+
+\[
+\text{result} = (\text{a} \cdot \text{b}) \% \text{MOD}
+\]
+
+
+### **2. Properties of Modular Arithmetic**
+Modulo with a prime number \( P \) enables the use of advanced mathematical properties, such as **modular multiplicative inverses** and **Fermat's Little Theorem**, which make computations easier and faster:
+
+#### **a. Modular Multiplicative Inverse**
+For a prime \( P \), the inverse of \( a \mod P \) can be calculated using:
+
+\[
+a^{-1} \equiv a^{P-2} \mod P
+\]
+
+This avoids division in modular arithmetic, which is typically not straightforward.
+
+#### **b. Fermat's Little Theorem**
+\[
+a^{P} \equiv a \mod P
+\]
+
+This property simplifies large exponentiations, which is especially useful in CP problems involving repeated squaring.
+
+
+### **3. Uniform Distribution**
+Prime numbers avoid certain artifacts in modular arithmetic that arise with composite numbers. For example, when \( P \) is composite, some remainders might appear more frequently, leading to skewed distributions. Primes ensure better behavior in modular arithmetic.
+
+### **4. Commonly Used Large Primes**
+In CP, specific primes are chosen because:
+- They are large enough to reduce the likelihood of collisions in hash functions.
+- Their properties are well-suited to modular arithmetic.
+
+Examples include:
+- \( 10^9 + 7 \) (a prime near \( 10^9 \))
+- \( 998244353 \) (a prime that is also a power of 2 plus 1, useful in FFT problems)
+
+### **5. Practical Benefits**
+- Primes ensure that modular arithmetic forms a **finite field**, which has well-defined rules and eliminates edge cases.
+- Modular operations with primes are efficient to compute and fit within standard CP constraints.
+-------
+
 Feel free to explore and contribute! 😊
