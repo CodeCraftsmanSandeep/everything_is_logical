@@ -54,6 +54,11 @@
   - [WIKI](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93Szekeres_theorem)
   - In mathematics, the Erdős–Szekeres theorem asserts that, given r, s, any sequence of distinct real numbers with length at least (r − 1)(s − 1) + 1 contains a monotonically increasing subsequence of length r or a monotonically decreasing subsequence of length s. 
 
+
+- (a + b) ^ 2 = a ^ 2 + b ^ 2 + 2 * a * b
+- (a + b) ^ 2 + (a - b) ^ 2 = 2(a ^ 2 + b ^ 2)
+
+
 ## Probability
 - Expected value:
   - [Wiki](https://en.wikipedia.org/wiki/Expected_value)
@@ -61,9 +66,3 @@
 # Math related CP questions
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
 - [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
-
------
-## GENERAL MATH USED WHILE CP
-- Palindrome checking
-  - s[i] = s[(n-1) - i] for 0 base indexing
-  - s[i] = s[(n+1) - i] for 1 base indexing
