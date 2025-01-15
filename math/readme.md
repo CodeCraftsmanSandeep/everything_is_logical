@@ -74,8 +74,7 @@
 - a = b (mod n) if n divides (a-b)
 - (a + b) (mod n) = ((a mod n) + (b mod n)) mod n
 - (a * b) (mod n) = ((a mod n) * (b mod n)) mod n
-- a \equiv b \pmod{n} \implies a \cdot a \cdot \ldots \cdot a \equiv b \cdot b \cdot \ldots \cdot b \pmod{n} \quad (\text{i times})
-
+- a = b (mod n) => a ^ i = b ^ i (mod n)
 
 
 
