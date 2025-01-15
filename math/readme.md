@@ -55,8 +55,8 @@
   - In mathematics, the Erdős–Szekeres theorem asserts that, given r, s, any sequence of distinct real numbers with length at least (r − 1)(s − 1) + 1 contains a monotonically increasing subsequence of length r or a monotonically decreasing subsequence of length s. 
 
 
-- (a + b) ^ 2 = a ^ 2 + b ^ 2 + 2 * a * b
-- (a + b) ^ 2 + (a - b) ^ 2 = 2(a ^ 2 + b ^ 2)
+- \((a + b)² = a² + b² + 2ab\)
+- \((a + b)² + (a - b)² = 2(a² + b²)\)
 
 
 ## Probability
@@ -66,3 +66,18 @@
 # Math related CP questions
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
 - [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
+
+
+------------------------------------------------------------------------------------------------------------------------
+## MOD
+
+- a = b (mod n) if n divides (a-b)
+- (a + b) (mod n) = ((a mod n) + (b mod n)) mod n
+- (a * b) (mod n) = ((a mod n) * (b mod n)) mod n
+- a \equiv b \pmod{n} \implies a \cdot a \cdot \ldots \cdot a \equiv b \cdot b \cdot \ldots \cdot b \pmod{n} \quad (\text{i times})
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
