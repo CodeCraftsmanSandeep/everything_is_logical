@@ -76,7 +76,10 @@
 - (a * b) (mod n) = ((a mod n) * (b mod n)) mod n
 - a = b (mod n) => a ^ i = b ^ i (mod n)
 
+------------------------------------------------------------------------------------------------------------------------
 
-
+## Digital roots
+- [WIKI](https://en.m.wikipedia.org/wiki/Digital_root)
+- Properties of digital root : [link](https://en.m.wikipedia.org/wiki/Digital_root#Properties)
 
 ------------------------------------------------------------------------------------------------------------------------
