@@ -83,3 +83,6 @@
 - Properties of digital root : [link](https://en.m.wikipedia.org/wiki/Digital_root#Properties)
 
 ------------------------------------------------------------------------------------------------------------------------
+
+## Grey codes
+https://en.wikipedia.org/wiki/Gray_code
