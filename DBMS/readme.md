@@ -30,6 +30,8 @@ SQL
 12) OFFSET
 13) FETCH (https://neon.tech/postgresql/postgresql-tutorial/postgresql-fetch)
 
+
+
 -------
 content
 
