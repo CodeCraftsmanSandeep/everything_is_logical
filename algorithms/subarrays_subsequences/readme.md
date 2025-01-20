@@ -157,4 +157,4 @@ This is one of the hottest topics among competetive programming and dsa problems
 
 # Related questions:
 - [Question1](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/)
-- 
+- https://www.codechef.com/practice/course/4-star-difficulty-problems/DIFF2000/problems/KS1

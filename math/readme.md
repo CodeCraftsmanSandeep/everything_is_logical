@@ -89,3 +89,89 @@
 
 ## Grey codes
 https://en.wikipedia.org/wiki/Gray_code
+
+
+--------
+To solve a **quadratic equation**, which is in the standard form:
+
+\[
+ax^2 + bx + c = 0
+\]
+
+where \(a\), \(b\), and \(c\) are constants and \(a \neq 0\), you can use the **quadratic formula**. The quadratic formula provides the solutions for \(x\) as:
+
+\[
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]
+
+### Steps to Solve a Quadratic Equation:
+
+1. **Identify coefficients**: Identify \(a\), \(b\), and \(c\) from the quadratic equation.
+
+2. **Calculate the discriminant**: The discriminant is the expression inside the square root:
+   \[
+   \Delta = b^2 - 4ac
+   \]
+   - If \(\Delta > 0\), the equation has **two distinct real solutions**.
+   - If \(\Delta = 0\), the equation has **one real solution** (a repeated root).
+   - If \(\Delta < 0\), the equation has **two complex (imaginary) solutions**.
+
+3. **Apply the quadratic formula**: Use the quadratic formula to find the solutions for \(x\).
+
+### Example 1: Real solutions
+Solve the quadratic equation \(2x^2 - 4x - 6 = 0\).
+
+1. **Identify coefficients**: Here, \(a = 2\), \(b = -4\), and \(c = -6\).
+   
+2. **Calculate the discriminant**:
+   \[
+   \Delta = (-4)^2 - 4(2)(-6) = 16 + 48 = 64
+   \]
+   Since the discriminant is positive (\(\Delta = 64 > 0\)), there will be two distinct real solutions.
+
+3. **Apply the quadratic formula**:
+   \[
+   x = \frac{-(-4) \pm \sqrt{64}}{2(2)} = \frac{4 \pm 8}{4}
+   \]
+   Now, compute the two solutions:
+   \[
+   x_1 = \frac{4 + 8}{4} = \frac{12}{4} = 3
+   \]
+   \[
+   x_2 = \frac{4 - 8}{4} = \frac{-4}{4} = -1
+   \]
+   
+   So, the solutions are \(x = 3\) and \(x = -1\).
+
+### Example 2: Complex solutions
+Solve the quadratic equation \(x^2 + 4x + 8 = 0\).
+
+1. **Identify coefficients**: Here, \(a = 1\), \(b = 4\), and \(c = 8\).
+
+2. **Calculate the discriminant**:
+   \[
+   \Delta = 4^2 - 4(1)(8) = 16 - 32 = -16
+   \]
+   Since the discriminant is negative (\(\Delta = -16 < 0\)), there will be two complex solutions.
+
+3. **Apply the quadratic formula**:
+   \[
+   x = \frac{-4 \pm \sqrt{-16}}{2(1)} = \frac{-4 \pm 4i}{2}
+   \]
+   Now, compute the two solutions:
+   \[
+   x_1 = \frac{-4 + 4i}{2} = -2 + 2i
+   \]
+   \[
+   x_2 = \frac{-4 - 4i}{2} = -2 - 2i
+   \]
+   
+   So, the solutions are \(x = -2 + 2i\) and \(x = -2 - 2i\).
+
+---
+
+### Summary:
+- If the discriminant \(\Delta = b^2 - 4ac\) is positive, the quadratic equation has two real solutions.
+- If \(\Delta = 0\), the equation has exactly one real solution (repeated root).
+- If \(\Delta < 0\), the equation has two complex solutions.
+
