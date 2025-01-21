@@ -132,8 +132,28 @@ This is one of the hottest topics among competetive programming and dsa problems
     - O(n ^ 2) time
     - O(n ^ 2) auxillary space
 
+------------
+- [Closest subsequence sum](https://leetcode.com/problems/closest-subsequence-sum/)
+  - Meet in the middle stratergy
+    - Time : O((2 ^ (n/2)) * log((2 ^ (n/2))))
+    - Space : O(2 ^ (n/2))
+    - BEST accepted solution
+    
 -----------------------------------------------------------------
 
+- [Closest subarray sum]
+  - For arrays with numbers of any sign [closestSubArraySum.cpp](closestSubArraySum.cpp)
+    - Time : O(n logn)
+    - Space : O(n)
+  - For arrays with elements which are non-negative
+    - Time : O(n)
+    - Space : O(1)
+    - Two pointer techniqeu
+    - last approach in https://www.geeksforgeeks.org/subarray-whose-sum-is-closest-to-k/
+
+
+
+--------
 ## Range based queries questions
 - [Range based quries question.](https://www.geeksforgeeks.org/array-range-queries-range-queries/)
     - Question:
@@ -154,6 +174,10 @@ This is one of the hottest topics among competetive programming and dsa problems
         - Time: O(N^2 + Q)
     - Approach II:
         - Use segment tree
+
+
+
+
 
 # Related questions:
 - [Question1](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/)
