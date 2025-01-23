@@ -151,8 +151,6 @@ This is one of the hottest topics among competetive programming and dsa problems
     - Two pointer techniqeu
     - last approach in https://www.geeksforgeeks.org/subarray-whose-sum-is-closest-to-k/
 
-
-
 --------
 ## Range based queries questions
 - [Range based quries question.](https://www.geeksforgeeks.org/array-range-queries-range-queries/)
