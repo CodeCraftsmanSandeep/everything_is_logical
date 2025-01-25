@@ -23,6 +23,7 @@
 # notes
 - n = n&(n-1) 
   - removes the right most 1 from n
+  - notable thing: if n & (n-1) == 0 then n is power of two
 - x = n & (-n)
   - x is the right most 1 in n
   - n&(n-1) = n - (n&(-n))
@@ -40,3 +41,5 @@
   
 - a xor (b + c) != a xor (b) + a xor (c)
   - Example: Take a = 5, b = 3, c = 2. 
+
+- (num xor 1) is either num-1 (or) num+1
