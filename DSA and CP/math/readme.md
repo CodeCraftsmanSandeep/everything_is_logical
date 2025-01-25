@@ -70,6 +70,10 @@
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
 - [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
 
+------------------------------------------------------------------------------------------------------------------------
+## Fermat's little theorem
+
+- a power m = a mod m, when m is prime number
 
 ------------------------------------------------------------------------------------------------------------------------
 ## MOD
@@ -78,6 +82,15 @@
 - (a + b) (mod n) = ((a mod n) + (b mod n)) mod n
 - (a * b) (mod n) = ((a mod n) * (b mod n)) mod n
 - a = b (mod n) => a ^ i = b ^ i (mod n)
+
+- Important blog : https://codeforces.com/blog/entry/72527
+
+### MOD INVERSE
+
+- (a / b ) % MOD = (a * modInverse(b, MOD)) % MOD
+- ((a * b) / (c * d)) % MOD = ((a/c) % MOD) * ((b/d) % MOD) = (((a * b) % MOD) / ((c * d) % MOD)) % MOD
+- If m is prime, then inverse of a is (a power (m - 2)) % m
+  - this can be proved from fermat's little theorem
 
 ------------------------------------------------------------------------------------------------------------------------
 
