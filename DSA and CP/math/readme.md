@@ -32,6 +32,7 @@
   
 - Prime number theorem:
   - Number of primes less than (or) equal to n is =  π(N) ~ n/log(n)
+  - Prime counting functuon pi(n) : https://en.wikipedia.org/wiki/Prime-counting_function
 - Euclid's theorem: (wiki)
     - There are infinitely many primes. (Infinitude of primes)
 - Betrand’s postulate:
