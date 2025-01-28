@@ -19,7 +19,7 @@
     - Sum of first n squares = 1^2 + 2^2 + 3^2 + ... + n^2 = n*(n+1)(2n+1)/6
     - ![formulae.jpg](formulae.jpg)
 
-
+--------------------------------------------------------
 - Sieve of Eratosthenes
   - Given integer ‘n’, print all prime numbers <= n. (similar question: [link](https://leetcode.com/problems/count-primes/description/))
     - Algo 1 (GFG) Normal seive
@@ -29,7 +29,7 @@
     - Algo 2: Segmented seive
       - [code](segmented_seive.cpp)
       - Segmented sieve is used for better cache, i.e diving into segments, no difference in time complexity, but running time is possibly less than algo1 because algo1 is not cache favored.
-  
+
 - Prime number theorem:
   - Number of primes less than (or) equal to n is =  π(N) ~ n/log(n)
   - Prime counting functuon pi(n) : https://en.wikipedia.org/wiki/Prime-counting_function
@@ -38,9 +38,16 @@
 - Betrand’s postulate:
     - For all n > 1, there exists at least one prime in (n, 2*n)
 
-- Upper bound on number of factors
-  - Blog: [link](https://math.stackexchange.com/questions/1699330/upper-bound-on-number-of-factors)
-  - Useful bound: Number of factors <= sqrt(3 * x). See the plot of this [here](https://i.sstatic.net/0bWW9.png)
+- Upper bound on number of factors (This bound is useful for CP)
+  - Very useful blog: https://codeforces.com/blog/entry/14463
+  - For getting exact bound, see this: https://ideone.com/JNRMsQ
+  - n^1/3 is often used bound
+
+- Upper bound on number of prime factors of a number n
+  - blog: https://codeforces.com/blog/entry/92148
+  - loose upper bound: O(logn)
+  - Hardy and Ramanujan proved that "for most numbers" (in the probabilistic sense), the number of distinct prime factors of a number 𝑛 is 𝑙𝑜𝑔(𝑙𝑜𝑔(𝑛))
+----------------------------------------------------------------
 
 - Harmonic number:
     - [Wiki](https://en.wikipedia.org/wiki/Harmonic_number)
