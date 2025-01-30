@@ -47,6 +47,10 @@
   - blog: https://codeforces.com/blog/entry/92148
   - loose upper bound: O(logn)
   - Hardy and Ramanujan proved that "for most numbers" (in the probabilistic sense), the number of distinct prime factors of a number 𝑛 is 𝑙𝑜𝑔(𝑙𝑜𝑔(𝑛))
+
+- A well knwon Trial division for prime factorizing a number
+  - https://en.wikipedia.org/wiki/Trial_division
+  - Time : O(sqrt(n))
 ----------------------------------------------------------------
 
 - Harmonic number:
