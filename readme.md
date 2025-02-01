@@ -25,9 +25,6 @@ This repository is a collection of my concise and well-structured notes covering
 - Feel free to download or clone the repository for offline use.  
 - Contributions and suggestions are always welcome!  
 
-## 📜 License
-
-This repository is licensed under the MIT License. Feel free to use, modify, and share these notes.  
 
 ---
 
