@@ -16,7 +16,7 @@
 ## problems
 1) [Given inorder, preorder and postorder of a tree, check whether they are of same tree](https://www.geeksforgeeks.org/problems/check-tree-traversal--141628/1):
   - [my code](check_validity.cpp)
-2) [Find inordered, preorder and postorder traversals of binary tree in one go](https://www.naukri.com/code360/problems/tree-traversal_981269)
+2) [Find inorder, preorder and postorder traversals of binary tree in one go](https://www.naukri.com/code360/problems/tree-traversal_981269)
   - [my code](all_traversals_in_one_go.cpp)
 3) [Preorder traversal using stack](https://leetcode.com/problems/binary-tree-preorder-traversal/)
   - [Approach 1](iterative_pre_order_1.cpp)
@@ -34,3 +34,4 @@
   - [My solution](iterative_postorder_traversal.cpp)
     - O(H) auxillary space for stack, where H is the height of tree
     - O(n) time complexity
+6) https://www.geeksforgeeks.org/count-all-k-sum-paths-in-a-binary-tree/
