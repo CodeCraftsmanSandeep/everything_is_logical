@@ -11,3 +11,6 @@
     - [article](https://www.geeksforgeeks.org/merge-k-sorted-linked-lists/)
 - External merge sort
   - [article](https://www.geeksforgeeks.org/external-sorting/)
+- Pegion hole sorting
+  - [article](https://www.geeksforgeeks.org/pigeonhole-sort/)
+  
