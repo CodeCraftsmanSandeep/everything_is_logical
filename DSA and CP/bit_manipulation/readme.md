@@ -43,3 +43,7 @@
   - Example: Take a = 5, b = 3, c = 2. 
 
 - (num xor 1) is either num-1 (or) num+1
+
+--------
+- [https://www.codechef.com/practice/course/5-star-and-above-problems/DIFF2500/problems/SUBARRAYXOR?tab=statement](Good xor problem)
+  - [https://discuss.codechef.com/t/subarrayxor-editorial/98660/4?u=sandeep_iitpkd](post)

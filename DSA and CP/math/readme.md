@@ -134,3 +134,17 @@ ax^2 + bx + c = 0;
 - Related problem : https://www.codechef.com/problems/BNSONSTR
 
 
+-----------
+## Functions and 
+
+- Number of functions from A to B. (|A| = n, |B| = m) = m power n
+- Number of one-one functions = m * (m-1) * .. (m - n + 1)
+- Number of onto functions = m power n - (number of non-onto functions), See [Inclusion and exclusion principle](https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle).
+
+- [Inclusion and exclusion principle](https://en.wikipedia.org/wiki/Inclusion%E2%80%93exclusion_principle)
+- Number of elements x such that x belongs to atleast sets A1, A2, ..., An = | A1 U A2 .. U An|
+- Number of dearrangments
+
+- [question](https://www.codechef.com/problems/PERMUTATION2)
+
+-----------
