@@ -20,6 +20,8 @@
     - ![formulae.jpg](formulae.jpg)
 
 --------------------------------------------------------
+### All about primes
+
 - Sieve of Eratosthenes
   - Given integer ‘n’, print all prime numbers <= n. (similar question: [link](https://leetcode.com/problems/count-primes/description/))
     - Algo 1 (GFG) Normal seive
@@ -47,10 +49,20 @@
   - blog: https://codeforces.com/blog/entry/92148
   - loose upper bound: O(logn)
   - Hardy and Ramanujan proved that "for most numbers" (in the probabilistic sense), the number of distinct prime factors of a number 𝑛 is 𝑙𝑜𝑔(𝑙𝑜𝑔(𝑛))
+  - The maximum number of prime factors for a number n <= 1e9 is = 9
+  - The maximum number of prime factors for a number n <= 1e18 is = 15
 
 - A well knwon Trial division for prime factorizing a number
   - https://en.wikipedia.org/wiki/Trial_division
   - Time : O(sqrt(n))
+
+- Primegap = gap bertween two consecutive primes
+  - [Wiki](https://en.wikipedia.org/wiki/Prime_gap)
+  - Primgap gn = pn+1 - pn = O((log(pn)) ^ 2)
+  - Notable bound:
+    - For any number n <= 1e9, the maximum value of prime gap <= 220
+    - For any number n <= 1e18, the maximum value of prime gap <= 1220
+
 ----------------------------------------------------------------
 
 - Harmonic number:
@@ -133,7 +145,6 @@ ax^2 + bx + c = 0;
   - See this for bound: https://ideone.com/JNRMsQ
 - Related problem : https://www.codechef.com/problems/BNSONSTR
 
-
 -----------
 ## Functions and 
 
@@ -148,3 +159,9 @@ ax^2 + bx + c = 0;
 - [question](https://www.codechef.com/problems/PERMUTATION2)
 
 -----------
+
+## Bitwise operators
+
+- [Wiki](https://en.wikipedia.org/wiki/Bitwise_operation)
+- (a + b) = ((a & b) << 1) + (a ^ b)
+
