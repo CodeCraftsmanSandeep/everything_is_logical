@@ -1,6 +1,8 @@
 
 ## 📝 Notes
 
+- Very important: In C++, comparator should return false if its arguments are equal.
+
 - **Cyclomatic Complexity**:
   - Check out this [GFG article](https://www.geeksforgeeks.org/cyclomatic-complexity/) for a deep dive into understanding cyclomatic complexity.
   

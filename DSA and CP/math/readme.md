@@ -89,6 +89,15 @@
 ## Probability
 - Expected value:
   - [Wiki](https://en.wikipedia.org/wiki/Expected_value)
+  The expected value (or expectation) of a **discrete random variable** \( X \) is given by:
+  $$
+    E[X] = \sum_{x} x P(X = x)
+  $$
+  For a **continuous random variable** \( X \) with probability density function \( f(x) \), the expected value is:
+  $$
+    E[X] = \int_{-\infty}^{\infty} x f(x) \,dx
+  $$
+
 
 # Math related CP questions
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
