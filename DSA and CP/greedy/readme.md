@@ -18,6 +18,16 @@
     1. Boxes
         1) [Question](https://atcoder.jp/contests/cf17-final/tasks/cf17_final_d), [code](https://atcoder.jp/contests/cf17-final/submissions/62639384), BONUS NEED TO be done!!
         2) As there is no judge, May be correct solution for bonus part: [code](hero.cpp)
+            - good incorrect algo:
+                - For current hp, fight with the monster which can give maximum profit.
+                - Wrong test case:
+                    - ```
+                        2 4
+                        1 0
+                        4 2
+                    - By the above wrong algo, monster 1 will be faught first and the maximum number of monsters that could be killed by the wrong algo is 1.
+                    - But the optimal answer is 2! in order monster 2 first and then monster 1.
+
     2.
 ##
 
