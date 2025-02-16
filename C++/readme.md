@@ -1,5 +1,6 @@
 # C++ useful concepts
 - [ceil](https://cplusplus.com/reference/cmath/ceil/)
+- Do not forget about getline(cin, s) and cin.ignore(), see this: [submission](https://www.codechef.com/viewsolution/1133275577)
 
 # Classes in programming languages
 - Declarative programming languages:
