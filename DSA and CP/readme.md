@@ -68,3 +68,27 @@ Examples include:
 - Primes ensure that modular arithmetic forms a **finite field**, which has well-defined rules and eliminates edge cases.
 - Modular operations with primes are efficient to compute and fit within standard CP constraints.
 -------
+
+## Prefix sum-stuff:
+- https://codeforces.com/blog/entry/86420
+
+
+## Bitwise operators
+- https://codeforces.com/blog/entry/94470
+
+
+## CP things!!
+- TLE where ```long long int``` is used instead of ```int```
+  - https://codeforces.com/blog/entry/82238
+  - example:
+      - with int: https://codeforces.com/contest/1538/submission/306835139
+      - with long long int: https://codeforces.com/contest/1538/submission/306835426
+
+
+
+## Problems:
+1) https://codeforces.com/contest/1538/problem/F
+2) https://www.codechef.com/problems/SSO
+
+
+
