@@ -174,3 +174,14 @@ ax^2 + bx + c = 0;
 - [Wiki](https://en.wikipedia.org/wiki/Bitwise_operation)
 - (a + b) = ((a & b) << 1) + (a ^ b)
 
+
+### Ternary search
+- Binary Search is used to find the maxima/minima of monotonic functions where as Ternary Search is used to find the maxima/minima of unimodal functions.
+- https://cp-algorithms.com/num_methods/ternary_search.html
+- related problem: https://www.codechef.com/problems/ICM2003
+
+------------
+
+- Pascals triangle: https://en.wikipedia.org/wiki/Pascal's_triangle
+- Lucas theorem: https://en.wikipedia.org/wiki/Lucas%27s_theorem
+- Unimodal functions and bimodal funcions: https://www.geeksforgeeks.org/mathematics-unimodal-functions-bimodal-functions/

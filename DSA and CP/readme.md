@@ -83,12 +83,10 @@ Examples include:
   - example:
       - with int: https://codeforces.com/contest/1538/submission/306835139
       - with long long int: https://codeforces.com/contest/1538/submission/306835426
-
-
+- Mex:
+  - (Point updates) https://codeforces.com/blog/entry/81287?#comment-677837
 
 ## Problems:
 1) https://codeforces.com/contest/1538/problem/F
 2) https://www.codechef.com/problems/SSO
-
-
-
+3) https://www.codechef.com/DEC21B/problems-old/PYRAMIDMOVES
