@@ -95,13 +95,21 @@
             | 1 | Directly using knapsack, without using much brain | [zero_one_bounded_knapsack_4.cpp](zero_one_bounded_knapsack_4.cpp) | O(W * N * M) | O(W*N), can be optimized to O(W) but not done to maintain clarity |
             | 2 | Using knapsack and little 🧠, Try to prove as the proof is hot. | [zero_one_bounded_knapsack_5.cpp](zero_one_bounded_knapsack_5.cpp) | O(W * N * logM) | O(W * N * logM), can be optimized to O(W) but not done to maintain clarity | 
             | 3 | using knapsack and 🧠 | [zero_one_bounded_knapsack_6.cpp](zero_one_bounded_knapsack_6.cpp) NEED TO CODE | O(W * N) | O(W * N) can be optimzed to O(W) but not done |
-  - [fractional knapsack](https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1)
+  - [Fractional knapsack](https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1)
     - [fractional_knapsack.cpp](fractional_knapsack.cpp), greedy one
 
 - Matrix chain multiplication:
-  - [https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1](link)
+  - [Problem link](https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1)
   - My nice code:
     - [MCM_bottom_up](MCM_bottom_up.cpp)
       - Time: O(n ^ 3), Space: O(n ^ 2)
     - [MCM_top_down](MCM_top_down.cpp)
 
+
+- Minimum cost to cut a stick
+  - [Problem link](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/)
+  - Why greedy does not work: [link](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/editorial/comments/1874468)
+  - My nice codes:
+    - [Minimum_Cost_To_Cut_A_Stick: bottom_up approach](Minimum_Cost_To_Cut_A_Stick_bottom_up.cpp)
+      - Time: O(numCuts ^ 3), Space: O(numCuts ^ 2)
+    - [Minimum_Cost_To_Cut_A_Stick: top_down approach](Minimum_Cost_To_Cut_A_Stick_top_down.cpp)
