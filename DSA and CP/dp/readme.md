@@ -98,3 +98,10 @@
   - [fractional knapsack](https://www.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1)
     - [fractional_knapsack.cpp](fractional_knapsack.cpp), greedy one
 
+- Matrix chain multiplication:
+  - [https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1](link)
+  - My nice code:
+    - [MCM_bottom_up](MCM_bottom_up.cpp)
+      - Time: O(n ^ 3), Space: O(n ^ 2)
+    - [MCM_top_down](MCM_top_down.cpp)
+
