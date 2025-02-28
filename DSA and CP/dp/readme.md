@@ -105,7 +105,6 @@
       - Time: O(n ^ 3), Space: O(n ^ 2)
     - [MCM_top_down](MCM_top_down.cpp)
 
-
 - Minimum cost to cut a stick
   - [Problem link](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/)
   - Why greedy does not work: [link](https://leetcode.com/problems/minimum-cost-to-cut-a-stick/editorial/comments/1874468)
@@ -113,3 +112,6 @@
     - [Minimum_Cost_To_Cut_A_Stick: bottom_up approach](Minimum_Cost_To_Cut_A_Stick_bottom_up.cpp)
       - Time: O(numCuts ^ 3), Space: O(numCuts ^ 2)
     - [Minimum_Cost_To_Cut_A_Stick: top_down approach](Minimum_Cost_To_Cut_A_Stick_top_down.cpp)
+
+- [Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+  - My clean code: [solution](burst_ballons.cpp)
