@@ -90,3 +90,4 @@ Examples include:
 1) https://codeforces.com/contest/1538/problem/F
 2) https://www.codechef.com/problems/SSO
 3) https://www.codechef.com/DEC21B/problems-old/PYRAMIDMOVES
+4) https://www.codechef.com/problems/ANTSCHEF
