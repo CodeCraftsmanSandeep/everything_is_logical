@@ -85,9 +85,11 @@ Examples include:
       - with long long int: https://codeforces.com/contest/1538/submission/306835426
 - Mex:
   - (Point updates) https://codeforces.com/blog/entry/81287?#comment-677837
+- Important stuff regarding c++ set custom operator. To know what is the key in set. See this code:
 
 ## Problems:
 1) https://codeforces.com/contest/1538/problem/F
 2) https://www.codechef.com/problems/SSO
 3) https://www.codechef.com/DEC21B/problems-old/PYRAMIDMOVES
 4) https://www.codechef.com/problems/ANTSCHEF
+5) https://www.codechef.com/problems/STROPERS
