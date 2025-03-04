@@ -93,3 +93,4 @@ Examples include:
 3) https://www.codechef.com/DEC21B/problems-old/PYRAMIDMOVES
 4) https://www.codechef.com/problems/ANTSCHEF
 5) https://www.codechef.com/problems/STROPERS
+6) https://www.codechef.com/problems/ABCSTR
