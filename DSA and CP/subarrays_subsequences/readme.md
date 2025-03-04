@@ -172,11 +172,9 @@ This is one of the hottest topics among competetive programming and dsa problems
         - Time: O(N^2 + Q)
     - Approach II:
         - Use segment tree
-
-
-
-
-
+        
 # Related questions:
 - [Question1](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/description/)
 - https://www.codechef.com/practice/course/4-star-difficulty-problems/DIFF2000/problems/KS1
+- Question related find sum of all sub-arrays, sum of squares of all sub-arrays, sum of cube of all sub-arrays
+  - https://www.codechef.com/problems/SUMOFCUBE
