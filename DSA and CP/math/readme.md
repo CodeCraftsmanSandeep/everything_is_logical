@@ -185,3 +185,14 @@ ax^2 + bx + c = 0;
 - Pascals triangle: https://en.wikipedia.org/wiki/Pascal's_triangle
 - Lucas theorem: https://en.wikipedia.org/wiki/Lucas%27s_theorem
 - Unimodal functions and bimodal funcions: https://www.geeksforgeeks.org/mathematics-unimodal-functions-bimodal-functions/
+
+-----------
+### Multinomial theorem
+- https://en.wikipedia.org/wiki/Multinomial_theorem
+- Number of ways to interleave k sequeunces such that their relative order does not change is a multi nomial coeff
+  - https://math.stackexchange.com/questions/666288/number-of-ways-to-interleave-two-ordered-sequences
+
+#### Binomial thorem and coeff
+- https://en.wikipedia.org/wiki/Binomial_theorem
+
+-----------
