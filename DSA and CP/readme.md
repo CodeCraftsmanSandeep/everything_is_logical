@@ -94,3 +94,5 @@ Examples include:
 4) https://www.codechef.com/problems/ANTSCHEF
 5) https://www.codechef.com/problems/STROPERS
 6) https://www.codechef.com/problems/ABCSTR
+7) https://www.codechef.com/problems/ONEORALL
+8) https://www.codechef.com/problems/TWOCOUNTERS
