@@ -63,6 +63,38 @@
     - For any number n <= 1e9, the maximum value of prime gap <= 220
     - For any number n <= 1e18, the maximum value of prime gap <= 1220
 
+
+- Fast prime factorization for numbers <= 1e7 using sieve of Eratosthenes
+  - With seive of Eratosthenes you can pre-store the first prime factor of a number.
+  - Then for a number you can obtain the prime-factorization by repeatedly diving the number by its first-prime factor which is stored.
+    - Related question: https://www.codechef.com/problems/SQUAR and the submission: https://www.codechef.com/viewsolution/1143367908
+    ```cpp
+      int maxN = 1e7;
+      int first_pf[maxN + 1]; // global memeory initialized with 0
+
+      int main(){
+        for(ll i = 2; i <= maxN; i++){
+          if(first_pf[i] == 0){
+            first_pf[i] = i; // i is prime
+            for(ll j = i*i; j <= maxN; j+= i){
+              first_pf[j] = i;
+            }
+          }
+        }
+
+        {
+          int num = 10; // number for which you want to find prime-factorization
+          map <int, int> pf;
+          while(num != 1){
+            pf[first_pf[num]]++;
+            num /= first_pf[num];
+          }
+          // pf = contains the prime-factorization of num
+        }
+        return 0;
+      }
+    ```
+
 ----------------------------------------------------------------
 
 - Harmonic number:

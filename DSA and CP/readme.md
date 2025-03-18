@@ -96,3 +96,5 @@ Examples include:
 6) https://www.codechef.com/problems/ABCSTR
 7) https://www.codechef.com/problems/ONEORALL
 8) https://www.codechef.com/problems/TWOCOUNTERS
+9) https://www.codechef.com/problems/MAXCYCSHIFT
+10) https://www.codechef.com/problems/GSEQ
