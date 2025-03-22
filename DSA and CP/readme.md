@@ -98,3 +98,4 @@ Examples include:
 8) https://www.codechef.com/problems/TWOCOUNTERS
 9) https://www.codechef.com/problems/MAXCYCSHIFT
 10) https://www.codechef.com/problems/GSEQ
+11) https://www.codechef.com/problems/SMOOTHINC
