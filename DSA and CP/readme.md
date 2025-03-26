@@ -99,3 +99,4 @@ Examples include:
 9) https://www.codechef.com/problems/MAXCYCSHIFT
 10) https://www.codechef.com/problems/GSEQ
 11) https://www.codechef.com/problems/SMOOTHINC
+12) https://www.codechef.com/problems/MEXSUB

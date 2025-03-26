@@ -121,19 +121,14 @@
 ## Probability
 - Expected value:
   - [Wiki](https://en.wikipedia.org/wiki/Expected_value)
-  The expected value (or expectation) of a **discrete random variable** \( X \) is given by:
-  $$
-    E[X] = \sum_{x} x P(X = x)
-  $$
-  For a **continuous random variable** \( X \) with probability density function \( f(x) \), the expected value is:
-  $$
-    E[X] = \int_{-\infty}^{\infty} x f(x) \,dx
-  $$
+
+- Linearity of expectation: [MIT notes](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2005/6ad0342f836f80c219470870db432c18_ln14.pdf)
 
 
 # Math related CP questions
 - [Question 1](https://www.codechef.com/problems/LUCMAT)
 - [Random NIM problem](https://www.codechef.com/problems/RANDOM_NIM)
+- [Question 3](https://www.codechef.com/problems/EXPECTEDSUM)
 
 ------------------------------------------------------------------------------------------------------------------------
 ## Fermat's little theorem
@@ -228,3 +223,5 @@ ax^2 + bx + c = 0;
 - https://en.wikipedia.org/wiki/Binomial_theorem
 
 -----------
+
+

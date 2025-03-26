@@ -298,3 +298,9 @@ int main(){
   }
 }
 ```
+
+## memset 
+- Use memset only when setting values to 0 or -1, because:
+  - memset(dp, 0, sizeof(dp)); works since 0x00 00 00 00 00 00 00 00 == 0
+  - memset(dp, -1, sizeof(dp)); works since 0xFF FF FF FF FF FF FF FF == -1 in two’s complement.
+- memset works byte wise, but it is fastest.
