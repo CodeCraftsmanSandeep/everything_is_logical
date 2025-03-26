@@ -95,6 +95,12 @@
       }
     ```
 
+- Wilson's theorem:
+  - [Wiki](https://en.wikipedia.org/wiki/Wilson's_theorem)
+  - A number p is prime if and only if p divides ((p-1)! + 1) or in othre words (p-1)! = -1 (mod p)
+  - For composite number n = 4, (n-1)! = 3! = 6 which is 2 (mod) 4
+  - For every composite number n > 4, n divides (n-1)!, for proofs see wiki.
+
 ----------------------------------------------------------------
 
 - Harmonic number:

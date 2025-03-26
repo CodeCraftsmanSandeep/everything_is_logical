@@ -100,3 +100,6 @@ Examples include:
 10) https://www.codechef.com/problems/GSEQ
 11) https://www.codechef.com/problems/SMOOTHINC
 12) https://www.codechef.com/problems/MEXSUB
+13) https://www.codechef.com/problems/SWARM
+    - Straight forward Dp solution: https://www.codechef.com/viewsolution/1146258132, time: O(n * k), space: O(n * k) (space can be optimized to O(k))
+    - 
