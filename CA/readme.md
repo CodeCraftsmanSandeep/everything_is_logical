@@ -222,4 +222,58 @@ There are several different **processor architectures**, each designed to optimi
     - The Harvard architecture is a computer architecture with separate storage and signal pathways for instructions and data. It is often contrasted with the von Neumann architecture, where program instructions and data share the same memory and pathways. This architecture is often used in real-time processing or low-power applications.
     - [Harward architecture](https://en.wikipedia.org/wiki/File:Harvard_architecture.svg)
 
+----
+# How is Ardunio different from FPGA
 
+## 🧠 Core Difference:
+
+### ✅ **Arduino** = Microcontroller-based development platform  
+(Usually runs on an **AVR** microcontroller like ATmega328)
+
+### 🛠️ **FPGA** = Programmable hardware platform  
+(You design hardware logic from scratch)
+
+## 🔍 Side-by-Side Comparison:
+
+| Feature               | **Arduino**                         | **FPGA**                             |
+|-----------------------|--------------------------------------|--------------------------------------|
+| **Type**              | Microcontroller (Software-based)     | Reconfigurable Hardware (Logic gates)|
+| **Programming**       | C/C++ (Arduino IDE)                  | Verilog / VHDL                       |
+| **Execution**         | Sequential                           | Parallel                             |
+| **Hardware Control**  | Fixed hardware (timers, UART, etc.)  | You design hardware blocks yourself  |
+| **Speed**             | Lower (~16 MHz typical)              | Much higher (100s of MHz, parallel)  |
+| **Learning Curve**    | Easy for beginners                   | Steeper, more complex                |
+| **Example Use**       | Controlling LEDs, sensors, motors    | Custom CPU design, signal processing |
+| **Real-Time Performance** | Limited                        | Excellent for hard real-time tasks   |
+
+
+## 🧪 Example:
+
+### Arduino:
+You write:
+```cpp
+digitalWrite(LED_PIN, HIGH);
+```
+👉 It runs on the built-in CPU and turns on an LED.
+
+
+
+### FPGA:
+You define logic like:
+```verilog
+assign LED = button_input;
+```
+👉 No CPU here — just direct logic gates. The LED turns on *because* the hardware is wired that way.
+
+
+
+## ⚠️ Summary:
+
+- **Use Arduino** for rapid prototyping, DIY electronics, and simple automation.
+- **Use FPGA** when you need **custom hardware**, super-fast parallel processing, or to simulate chips.
+
+
+If you're just starting out in embedded systems, Arduino is perfect.  
+If you're diving into hardware design, digital logic, or high-performance embedded systems, then FPGA is your playground. 
+
+----

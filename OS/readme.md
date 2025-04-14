@@ -1170,3 +1170,4 @@ A web browser process may have multiple threads:
 | **Use Case**            | Running independent programs.     | Concurrent tasks within the same program. |
 
 -----------
+- Digital Signal Processor: [wiki](https://en.wikipedia.org/wiki/Digital_signal_processor)
