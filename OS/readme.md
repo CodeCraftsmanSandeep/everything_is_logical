@@ -462,10 +462,19 @@ Page faults are detected when a process tries to access a page not currently in 
     - MRU
     - LFU
 - Demand paging
+    - Demand paging is a memory management technique used in operating systems where pages of memory are loaded into RAM only when they are needed (on demand), rather than loading the entire process into memory at once.
+    -  Why use demand paging?
+        - Because:
+            1) Not all parts of a program are used immediately.
+            2) Saves RAM and improves performance.
+            3) Makes multitasking more efficient by letting more processes fit into memory.
+
+
 
 - Virtual memory is a combination of RAM and disk space that running processes can use. Swap space is the portion of virtual memory that is on the hard disk, used when RAM is full. 
 - Swap sapce: [GFG](https://www.geeksforgeeks.org/swap-space-in-operating-system/)
 - Thrashing: [Wiki](https://en.wikipedia.org/wiki/Thrashing_(computer_science))
+    - In computer science, thrashing occurs in a system with virtual memory when a computer's real storage resources are overcommitted, leading to a constant state of paging and page faults, slowing most application-level processing.
 
 - Two main types of virtual memory managment
     1) paging
@@ -1168,6 +1177,3 @@ A web browser process may have multiple threads:
 | **Communication**       | Inter-process communication (IPC) mechanisms are needed (e.g., pipes, sockets). | Direct communication through shared memory. |
 | **Fault Tolerance**     | One process crash does not affect others. | A thread crash can potentially affect the entire process. |
 | **Use Case**            | Running independent programs.     | Concurrent tasks within the same program. |
-
------------
-- Digital Signal Processor: [wiki](https://en.wikipedia.org/wiki/Digital_signal_processor)
