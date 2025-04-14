@@ -93,7 +93,7 @@
                     - grep -E "a+b+" filename
                         - This matches lines which has pattern one or more "a"s followed by one or more "b"s.
                     - grep -E "ab*" filename
-                        - This matches line which has pattern one 'a' followed by one (or) more 'b's
+                        - This matches line which has pattern one 'a' followed by zero (or) more 'b's
         - find:
             - Command useful to find for specific files and directories
         - kill
