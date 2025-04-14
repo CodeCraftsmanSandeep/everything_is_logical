@@ -20,7 +20,7 @@
     - A circuit in which all or some of the circuit elements are inseparably associated and electrically interconnected so that it is considered to be indivisible for the purposes of construction and commerce.
     - An integrated circuit (IC), also known as a microchip or simply chip, is a small electronic device made up of multiple interconnected electronic components such as transistors, resistors, and capacitors. These components are etched onto a small piece of semiconductor material, usually silicon.
     - At its core, an IC is designed to process, store, or transmit information by combining multiple electronic components (transistors, resistors, capacitors, etc.) into a small, compact chip.
-- Microprocessor and processor
+- Microprocessor and processor (https://en.wikipedia.org/wiki/Microprocessor)
     - A microprocessor is a type of processor that is implemented on a single integrated circuit (IC). It serves as the central processing unit (CPU) of a computer or embedded system.
         - Contains an arithmetic logic unit (ALU), control unit, and registers on a single chip.
         - Specialized for general-purpose computing tasks.
@@ -66,6 +66,13 @@
     - Difference between using scratchpad memory and L1 cache
         - In some systems[a] it can be considered similar to the L1 cache in that it is the next closest memory to the ALU after the processor registers, with explicit instructions to move data to and from main memory, often using DMA-based data transfer.[1] 
         - In contrast to a system that uses caches, a system with scratchpads is a system with non-uniform memory access (NUMA) latencies, because the memory access latencies to the different scratchpads and the main memory vary.  Another difference from a system that employs caches is that a scratchpad commonly does not contain a copy of data that is also stored in the main memory.
+
+- DSP (Digital Signal Processor)
+    - [Wiki](https://en.wikipedia.org/wiki/Digital_signal_processor)
+    - A digital signal processor (DSP) is a specialized microprocessor chip, with its architecture optimized for the operational needs of digital signal processing.
+
+- MAC (Multiply Accumulate Operation) and FMA (Fused Multiply ADD)
+    - [Wiki](https://en.wikipedia.org/wiki/Multiply%E2%80%93accumulate_operation)
 
 ## Different architectures
 There are several different **processor architectures**, each designed to optimize performance, power efficiency, or specific use cases. Architectures define how a processor interprets and executes instructions. 
@@ -281,3 +288,56 @@ If you're diving into hardware design, digital logic, or high-performance embedd
     - Moore's law is the observation that the number of transistors in an integrated circuit (IC) doubles about every two years. 
 - Moore's second law (or) Rock's law : [Wiki](https://en.wikipedia.org/wiki/Moore%27s_second_law)
     - Rock's law or Moore's second law, named for Arthur Rock or Gordon Moore, says that the cost of a semiconductor chip fabrication plant doubles every four years.
+-----
+
+- Amdahl's law : [wiki](https://en.wikipedia.org/wiki/Amdahl%27s_law)
+    - the overall performance improvement gained by optimizing a single part of a system is limited by the fraction of time that the improved part is actually used.
+
+-----
+
+- Latency:
+    - latency refers to the time delay between the initiation of an operation and its completion.
+    - Memory latency:
+        - Time taken to fetch data from RAM after a read request.
+        - E.g., 100ns latency means the CPU gets the data 100 nanoseconds after requesting it.
+    - Instruction Latency:
+        - A single instruction to go through the CPU pipeline.
+        - If an instruction takes 5 clock cycles from fetch to write-back, the latency = 5 cycles.
+    - 🆚 Latency vs Throughput:
+        - Latency = Time taken for one task to complete.
+        - Throughput = Number of tasks completed per unit time.
+    - reference: https://docs.nvidia.com/cuda/cuda-c-programming-guide/#the-benefits-of-using-gpus
+        - The Graphics Processing Unit (GPU)1 provides much higher instruction throughput and memory bandwidth than the CPU within a similar price and power envelope. 
+----
+
+- Bandwidth
+    - bandwidth refers to the amount of data that can be transferred in a given amount of time — basically, the data transfer rate.
+    - Bandwidth = Amount of data transferred / Time taken
+        - It’s usually measured in:
+            - Bytes per second (B/s),
+            - Megabytes per second (MB/s),
+            - Gigabytes per second (GB/s), etc.
+    - Examples:
+        1) Memory Bandwidth:
+            - If your RAM can transfer 8 GB/s, that’s the memory bandwidth. ( How much data can be transferred between CPU and RAM per second )
+            - It tells you how much data the CPU can read/write from/to RAM per second.
+        2) Bus Bandwidth:
+            - If a 64-bit bus operates at 100 MHz:
+                - 64 bits = 8 bytes
+                - Bandwidth = 100 × (10 ^ 6) × 8 = 800 MB/s
+        3) Network bandwidth → Internet data transfer speed (e.g. 100 Mbps).
+        4) Disk bandwidth → How fast you can read/write to SSD/HDD.
+    - Specification example in case of a CPU:
+        - Memory bandwidth: 25 GB/s
+        - PCIe bandwidth: 16 GB/s
+        - Network bandwidth: 1 Gbps
+
+- What is PCIe?
+    - PCIe (Peripheral Component Interconnect Express) is a high-speed interface used to connect components like:
+        - GPUs (Graphics cards)
+        - SSDs
+        - Network cards
+        - Wi-Fi adapters
+    -  What does "PCIe bandwidth: 16 GB/s" mean?
+        - It means the PCIe interface can transfer up to 16 gigabytes of data per second between the component (like GPU or SSD) and the CPU/memory.
+        - This 16 GB/s is the maximum data transfer rate supported by that specific PCIe connection.
