@@ -277,3 +277,7 @@ If you're just starting out in embedded systems, Arduino is perfect.
 If you're diving into hardware design, digital logic, or high-performance embedded systems, then FPGA is your playground. 
 
 ----
+- Moore's first law: [wiki](https://en.wikipedia.org/wiki/Moore%27s_law)
+    - Moore's law is the observation that the number of transistors in an integrated circuit (IC) doubles about every two years. 
+- Moore's second law (or) Rock's law : [Wiki](https://en.wikipedia.org/wiki/Moore%27s_second_law)
+    - Rock's law or Moore's second law, named for Arthur Rock or Gordon Moore, says that the cost of a semiconductor chip fabrication plant doubles every four years.
