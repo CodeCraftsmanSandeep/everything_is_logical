@@ -1177,3 +1177,51 @@ A web browser process may have multiple threads:
 | **Communication**       | Inter-process communication (IPC) mechanisms are needed (e.g., pipes, sockets). | Direct communication through shared memory. |
 | **Fault Tolerance**     | One process crash does not affect others. | A thread crash can potentially affect the entire process. |
 | **Use Case**            | Running independent programs.     | Concurrent tasks within the same program. |
+
+--------
+
+### ⚙️ **Types of Interrupts in OS**  
+There are mainly **three** categories:
+
+## 🧲 **1. Hardware Interrupts**
+Triggered by hardware devices when they need CPU attention.
+
+| 🔔 Interrupt Source | 💡 Description |
+|---------------------|----------------|
+| **Keyboard**        | When you press a key, the keyboard sends an interrupt to notify the OS to read the key code. |
+| **Mouse**           | Mouse movement or clicks trigger interrupts to update cursor or execute actions. |
+| **Disk I/O**        | Disk controllers interrupt the CPU when read/write operations are complete. |
+| **Network Card**    | Interrupts when a packet is received or sent. |
+| **Timer**           | Periodic interrupts used by the OS to switch tasks (context switching), track time, etc. |
+
+
+## 💻 **2. Software Interrupts**
+Triggered by programs or the OS itself, often using a special instruction (like `int` in x86).
+
+| 🔔 Interrupt Source | 💡 Description |
+|---------------------|----------------|
+| **System Calls**    | When a user program requests a service from the OS (e.g., `read()`, `write()`), it triggers a software interrupt to switch to kernel mode. |
+| **Traps**           | Intentional interrupts to handle exceptional conditions (e.g., divide-by-zero, invalid memory access). |
+| **Breakpoint Interrupts** | Used by debuggers to pause execution. |
+
+
+## 🚨 **3. Exceptions (Faults & Traps)**
+Interrupts triggered by errors during instruction execution.
+
+| 🔔 Interrupt Source | 💡 Description |
+|---------------------|----------------|
+| **Page Fault**      | Triggered when a program accesses a page not in physical memory (handled by the OS's virtual memory manager). |
+| **Divide-by-Zero**  | Exception when a program attempts to divide by zero. |
+| **Invalid Opcode**  | CPU tries to execute an illegal instruction. |
+| **General Protection Fault** | Accessing restricted memory or violating protection rules. |
+
+
+### 🧠 Summary Table
+
+| Type       | Example                    | Who Triggers It    |
+|------------|-----------------------------|--------------------|
+| Hardware   | Keyboard press, timer tick  | External devices   |
+| Software   | System calls, `int 0x80`    | User programs      |
+| Exception  | Divide by zero, page fault  | CPU (internal)     |
+
+---------
