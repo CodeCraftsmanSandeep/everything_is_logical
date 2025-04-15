@@ -1225,3 +1225,8 @@ Interrupts triggered by errors during instruction execution.
 | Exception  | Divide by zero, page fault  | CPU (internal)     |
 
 ---------
+
+- ISR stands for Interrupt Service Routine.
+    - An ISR is a special function in embedded systems or OS kernel space that gets executed automatically in response to an interrupt.
+
+
