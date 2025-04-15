@@ -745,7 +745,7 @@ Using **locks**, we ensure one thread completes before the other starts.
         - Conside the following example:
             - let P1 and P2 are executing test-and-set
             - Both P1 and P2 are completed till oldValue = *lockPtr;
-            - As initially lock value is 1, oldValue which is local to both P1 and P2 has value 0.
+            - As initially lock value is 0, oldValue which is local to both P1 and P2 has value 0.
             - then lockValue is set 1, and then 0 is returned to test-and-set call made by both P1 and P2.
             - which will lead to both P1 and P2 enter the critical section, which is not desired.
         - If test-and-set is atomic the above situation will not happen, because intermediates state of P1 cannot be occurred. By the definition of atomicity, there is nothing like P1 and P2 are completed till oldValue = *lockPtr. Because P1 and P2 can do the operation completely (or) not do the operation at all.
