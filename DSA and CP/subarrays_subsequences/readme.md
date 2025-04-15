@@ -24,8 +24,7 @@ This is one of the hottest topics among competetive programming and dsa problems
       - Auxillary space: O(n)
     - LIS_BIT.cpp yet to come!!
 
-- Longest consecutive sub-sequence
-  - see blind 75 solutions for solution
+- [Longest consecutive sub-sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/?envType=problem-list-v2&envId=oizxjoit)
 
 - [Find the longest sub-array whoose sum is k](https://www.geeksforgeeks.org/problems/longest-sub-array-with-sum-k0809/1)
 

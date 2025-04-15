@@ -774,6 +774,17 @@ Using **locks**, we ensure one thread completes before the other starts.
 
             return value + a
         ```
+- ```cpp
+        int atomicAdd_CAS(int* address, int val) {
+            int old = *address;
+            int assumed;
+            do {
+                assumed = old;
+                old = __sync_val_compare_and_swap(address, assumed, assumed + val);
+            } while (assumed != old);
+            return old;
+        }
+    ```
 ------
 ## Spinlocks
 - Spinlock is a synchronization mechanism used in operating systems to protect shared resources from single access by multiple threads or processes.
@@ -906,11 +917,11 @@ Using **locks**, we ensure one thread completes before the other starts.
 - A deadlock is a situation where a set of processes is blocked because each process is holding a resource and waiting for another resource acquired by some other process.
 - Necessary conditions for deadlock in OS:
     1) Mutually exclusion:
-        - Each resource can be accessed by at most one process.
+        - Each resource instance can be accessed by at most one process.
     2) Hold and wait:
-        - A process is holding at least one resource at a time and waiting for other resources.
+        - A process is holding at least one resource instance at a time and waiting for other resource instances.
     3) No Preemption: 
-        - A resource cannot be taken from a process unless the process release the resource.
+        - A resource instance cannot be taken from a process unless the process releases the resource instance.
     4) Cyclic dependency:
         - A set of processes waiting for each other in circular form.
 - Resource allocation graph:
